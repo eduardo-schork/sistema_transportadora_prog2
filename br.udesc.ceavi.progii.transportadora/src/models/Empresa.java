@@ -3,7 +3,7 @@ import java.util.ArrayList;
 public class Empresa {
 	private int id;
 	
-	private Endereco endereco;
+	private Endereco_old endereco;
 	
 	private ArrayList<Usuario> colaboradores;
 	

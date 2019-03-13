@@ -4,7 +4,7 @@ public class CentroDespacho {
 	
 	private Empresa empresaPai;
 	
-	private Endereco endereco;
+	private Endereco_old endereco;
 	
 	private PessoaFisica gerenteCentro;
 }

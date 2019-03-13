@@ -1,18 +1,9 @@
+package models;
 
 public class Endereco {
-	private int id;
-	
-	private String rua;
-	
-	private String bairro;
-	
-	private String cidade;
-	
-	private String estado;
-	
-	private String cep;
-	
-	private String complemento;
-	
-	private String referencia;
+
+    private int id;
+    private String rua;
+    private int numero;
+    private String cep;
 }

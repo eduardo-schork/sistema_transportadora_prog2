@@ -10,9 +10,9 @@ public class Entregas {
 	
 	private Date dataEfetivaEntrega;
 	
-	private Endereco enderecoDestino;
+	private Endereco_old enderecoDestino;
 	
-	private Endereco enderecoSaida;
+	private Endereco_old enderecoSaida;
 	
 	private Veiculo veiculo;
 	
