@@ -3,7 +3,7 @@
 Estudantes: André Cristen, Eduardo Schork, Lucas Dolsan e Lucas Levi Gonçalves
 
 ## Sobre: 
-O projeto Trans Udesc é uma inicitaiva que visa forncecer uma palicação em Java Desktop, para o gerenciamento de pequenas transportadoras de carga.
+O projeto Trans Udesc é uma inicitaiva que visa forneecer uma aplicação em Java Desktop, para o gerenciamento de pequenas transportadoras de carga.
 
 ## Módulo:
 O sistema contará com os seguintes módulos.
