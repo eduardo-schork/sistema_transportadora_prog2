@@ -16,12 +16,12 @@ import views.frames.FormVolume;
 
 public class MainForm implements Runnable {
 
-    public static void main(String[] args) {
-        MainForm tela = new MainForm();
-        Thread thread = new Thread(tela);
-
-        thread.start();
-    }
+//    public static void main(String[] args) {
+//        MainForm tela = new MainForm();
+//        Thread thread = new Thread(tela);
+//
+//        thread.start();
+//    }
 
     @Override
     public void run() {

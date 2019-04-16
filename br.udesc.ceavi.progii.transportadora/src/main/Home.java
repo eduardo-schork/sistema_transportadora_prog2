@@ -20,38 +20,16 @@ import views.grids.VeiculoGrid;
  */
 public class Home implements Runnable {
 
-   // public static void main(String[] args) {;
-    //    Home tela = new Home();
-    //    Thread thread = new Thread(tela);
-
-    //    thread.start();
-    //}
+   public static void main(String[] args) {
+       Home tela = new Home();
+       Thread thread = new Thread(tela);
+       thread.start();
+    }
 
     @Override
     public void run() {
         Menu menu = new Menu();
         menu.setVisible(true);
-        //Vai ser buscado do db
-//        List<Endereco> enderecos = new ArrayList<>();
-//
-//        //Cira objetos para serem exibidos no JTable
-//        for (int i = 1; i <= 15; i++) {
-//            Endereco end = new Endereco();
-//            end.setId(i);
-//            end.setBairro("Bairro" + i);
-//            end.setCep(10 * 3 + i);
-//            end.setCidade(("Cidade" + i * 10));
-//            enderecos.add(end);
-//        }
-//
-//        String[] colunas;
-//        colunas = new String[]{"#", "Bairro", "Cep", "Cidade"};
-//        EnderecoGrid enderecoGrid = new EnderecoGrid((List)enderecos, colunas);
-//        JFrame frame = new InstanceGridFrame((List)enderecos, "Endereços", enderecoGrid );
-//        
-//        frame.setResizable(false);
-//        frame.setLocationRelativeTo(null);
-//        frame.setVisible(true);
         menu.setVisible(true);
     }
 }

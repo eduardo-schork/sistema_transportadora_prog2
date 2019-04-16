@@ -7,7 +7,7 @@ package controllers;
 
 /**
  *
- * @author T-Gamer
+ * @author André Cristen
  */
 public class EntregaController extends BaseController{
 
