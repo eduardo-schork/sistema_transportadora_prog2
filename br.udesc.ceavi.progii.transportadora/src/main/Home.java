@@ -48,6 +48,9 @@ public class Home implements Runnable {
         colunas = new String[]{"#", "Bairro", "Cep", "Cidade"};
         EnderecoGrid enderecoGrid = new EnderecoGrid((List)enderecos, colunas);
         JFrame frame = new InstanceGridFrame((List)enderecos, "Endereços", enderecoGrid );
+        
+        frame.setResizable(false);
+        frame.setLocationRelativeTo(null);
         frame.setVisible(true);
         
         
@@ -64,6 +67,9 @@ public class Home implements Runnable {
         colunasVeiculos = new String[]{"#", "Aquisição", "Placa", "Status", "Tipo"};
         VeiculoGrid veiculoGrid = new VeiculoGrid((List)veiculos, colunasVeiculos);
         JFrame frameVeiculo = new InstanceGridFrame((List)veiculos, "Veiculos", veiculoGrid );
+        
+        frameVeiculo.setResizable(false);
+        frameVeiculo.setLocationRelativeTo(null);
         frameVeiculo.setVisible(true);
         menu.setVisible(true);
     }
