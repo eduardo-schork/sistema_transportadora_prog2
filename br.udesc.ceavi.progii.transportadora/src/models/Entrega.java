@@ -11,4 +11,53 @@ public class Entrega {
     private ArrayList<Volume> volumes;
     private TransportadoraRedespacho redespacho;
 
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public ArrayList<TrackingEntrega> getMovimentacoes() {
+        return movimentacoes;
+    }
+
+    public void setMovimentacoes(ArrayList<TrackingEntrega> movimentacoes) {
+        this.movimentacoes = movimentacoes;
+    }
+
+    public Endereco getEnderecoDestino() {
+        return enderecoDestino;
+    }
+
+    public void setEnderecoDestino(Endereco enderecoDestino) {
+        this.enderecoDestino = enderecoDestino;
+    }
+
+    public int getSituacao() {
+        return situacao;
+    }
+
+    public void setSituacao(int situacao) {
+        this.situacao = situacao;
+    }
+
+    public ArrayList<Volume> getVolumes() {
+        return volumes;
+    }
+
+    public void setVolumes(ArrayList<Volume> volumes) {
+        this.volumes = volumes;
+    }
+
+    public TransportadoraRedespacho getRedespacho() {
+        return redespacho;
+    }
+
+    public void setRedespacho(TransportadoraRedespacho redespacho) {
+        this.redespacho = redespacho;
+    }
+
+    
 }
