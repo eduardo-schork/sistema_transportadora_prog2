@@ -1,4 +1,4 @@
-package br.udesc.ceavi.progii.transudesc.view.menus;
+package views.misc;
 
 import controllers.VeiculoController;
 import java.awt.event.ActionEvent;
@@ -21,7 +21,7 @@ public class Menu extends JFrame {
 
     public Menu() {
 
-        setTitle("TransUdesc");
+        setTitle("TransUdesc - Sistema");
         setSize(1920, 1080);
 
         // Cria uma barra de menu para o JFrame

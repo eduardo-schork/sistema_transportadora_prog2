@@ -5,7 +5,7 @@
  */
 package main;
 
-import br.udesc.ceavi.progii.transudesc.view.menus.Menu;
+import views.misc.Menu;
 import java.util.ArrayList;
 import java.util.List;
 import javax.swing.JFrame;
