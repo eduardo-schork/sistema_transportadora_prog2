@@ -1,6 +1,7 @@
 package views.misc;
 
 import controllers.VeiculoController;
+import controllers.carregamentoController;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.ArrayList;
@@ -12,9 +13,14 @@ import javax.swing.JMenu;
 import javax.swing.JMenuBar;
 import javax.swing.JMenuItem;
 import javax.swing.JRadioButtonMenuItem;
+import models.Carregamento;
+import models.Endereco;
+import models.Pessoa;
 import models.Veiculo;
 import views.frames.InstanceGridActionsFrame;
 import views.frames.InstanceGridFrame;
+import views.grids.CarregamentoGrid;
+import views.grids.PessoaGrid;
 import views.grids.VeiculoGrid;
 
 public class Menu extends JFrame {
@@ -54,8 +60,28 @@ public class Menu extends JFrame {
         // Cria e adiciona um item para o menu
         JMenuItem carregamento = new JMenuItem("Carregamento");
 
-        carregamento.addActionListener((action) -> {
-            System.out.println("CARREGAMENTISSIMO");
+        carregamento.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent action) {
+                List<Carregamento> carregamentos = new ArrayList<>();
+                for (int i = 1; i <= 15; i++) {
+                    Carregamento carregamento = new Carregamento();
+                    Endereco endereco = new Endereco();
+                    carregamento.setId(i);
+                    carregamento.setEnderecoChegada(endereco);
+                    carregamento.setEnderecoSaida(endereco);
+                    carregamentos.add(carregamento);
+                }
+                String[] colunasCarregamentos;
+                colunasCarregamentos = new String[]{"#", "Endereço chegada", "Endereço saída"};
+                CarregamentoGrid carregamentoGrid = new CarregamentoGrid((List)carregamentos, colunasCarregamentos);
+                carregamentoController controller = new carregamentoController();
+                JFrame frameCarregamento = new InstanceGridActionsFrame(controller, "Carregamentos", carregamentoGrid );
+                
+                frameCarregamento.setResizable(false);
+                frameCarregamento.setLocationRelativeTo(null);
+                frameCarregamento.setVisible(true);
+            }
         });
 
         JMenuItem entrega_crud = new JMenuItem("Entrega");
@@ -72,8 +98,27 @@ public class Menu extends JFrame {
 
         JMenuItem pessoa = new JMenuItem("Pessoa");
 
-        pessoa.addActionListener((action) -> {
-
+        pessoa.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent action) {
+                List<Pessoa> pessoas = new ArrayList<>();
+                for (int i = 1; i <= 15; i++) {
+                    Pessoa pessoa = new Pessoa();
+                    pessoa.setId(i);
+                    pessoa.setNome("Zé número: " + i);
+                    pessoa.setSobrenome("Da silva "+ i);
+                    pessoas.add(pessoa);
+                }
+                String[] colunasPessoas;
+                colunasPessoas = new String[]{"#", "Endereço chegada", "Endereço saída"};
+                PessoaGrid pessoaGrid = new PessoaGrid((List)pessoas, colunasPessoas);
+                carregamentoController controller = new carregamentoController();
+                JFrame frameCarregamento = new InstanceGridActionsFrame(controller, "Pessoas", pessoaGrid );
+                
+                frameCarregamento.setResizable(false);
+                frameCarregamento.setLocationRelativeTo(null);
+                frameCarregamento.setVisible(true);
+            }
         });
         
         JMenuItem pessoa_fisica = new JMenuItem("Pessoa Física");
