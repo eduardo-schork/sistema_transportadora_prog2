@@ -31,6 +31,7 @@ public class Home implements Runnable {
     @Override
     public void run() {
         Menu menu = new Menu();
+        menu.setVisible(true);
         //Vai ser buscado do db
         List<Endereco> enderecos = new ArrayList<>();
 

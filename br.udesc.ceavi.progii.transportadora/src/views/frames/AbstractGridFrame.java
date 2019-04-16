@@ -16,7 +16,7 @@ import javax.swing.table.AbstractTableModel;
  *
  * @author André Cristen
  */
-public abstract class AbstractFrame extends JFrame {
+public abstract class AbstractGridFrame extends JFrame {
 
     /**
      * Table que sera mostrada no Frame
@@ -33,7 +33,7 @@ public abstract class AbstractFrame extends JFrame {
      */
     private List<Object> objetos;
 
-    public AbstractFrame(List<Object> objetos, String title, AbstractTableModel tableAppend) {
+    public AbstractGridFrame(List<Object> objetos, String title, AbstractTableModel tableAppend) {
         //Seta o titulo do frame
         super(title);
         //Seta os objetos recebidos

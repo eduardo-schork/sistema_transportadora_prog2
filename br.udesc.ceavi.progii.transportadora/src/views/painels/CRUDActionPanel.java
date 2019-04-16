@@ -14,7 +14,7 @@ import javax.swing.JPanel;
  * @since 08/04/2018
  */
 public class CRUDActionPanel extends JPanel {
-    private JButton btCancelar;
+    private JButton btVisualizar;
     private JButton btNovo;
     private JButton btGravar;
     private JButton btExcluir;
@@ -42,8 +42,8 @@ public class CRUDActionPanel extends JPanel {
         
         layout = new FlowLayout(FlowLayout.CENTER);
 
-        btCancelar = new JButton("Cancelar");
-        btCancelar.setSize(dimensaoBotao);
+        btVisualizar = new JButton("Visualizar");
+        btVisualizar.setSize(dimensaoBotao);
 
         btNovo = new JButton("Novo");
         btNovo.setSize(dimensaoBotao);
@@ -57,14 +57,14 @@ public class CRUDActionPanel extends JPanel {
 
     private void addComponents() {
         this.setLayout(layout);
-        this.add(btCancelar);
+        this.add(btVisualizar);
         this.add(btNovo);
         this.add(btExcluir);
         this.add(btGravar);
     }
 
     public JButton getBtCancelar() {
-        return btCancelar;
+        return btVisualizar;
     }
 
     public JButton getBtNovo() {
