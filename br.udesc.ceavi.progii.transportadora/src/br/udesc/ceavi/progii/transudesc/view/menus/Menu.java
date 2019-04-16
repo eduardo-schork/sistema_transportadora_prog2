@@ -37,12 +37,18 @@ public class Menu extends JFrame {
         JMenu cargas_menu = new JMenu("Cargas");
         JMenu consulta_entrega = new JMenu("Consultar Entregas");
 
+        JMenu consulta_entrega_menu = new JMenu("Consultar Entregas");
+        JMenu estatisticas_menu = new JMenu("Estatísticas");
+        
 //      Coloca na barra de menu
+        menuBar.add(estatisticas_menu);
         menuBar.add(crud_menu);
         menuBar.add(consulta_adm_menu);
         menuBar.add(verif_veiculos_menu);
         menuBar.add(cargas_menu);
         menuBar.add(relatorios_menu);
+        menuBar.add(consulta_entrega_menu);
+         
         menuBar.add(consulta_entrega);
 
         // Cria e adiciona um item para o menu
@@ -170,7 +176,15 @@ public class Menu extends JFrame {
 
         JMenuItem veiculos_verif_em_reparo = new JMenuItem("Veículos em reparo");
         JMenuItem veiculos_verif_aguard_reparo = new JMenuItem("Veículos aguardando reparo");
-
+        
+        
+        JMenuItem estatisticas_graficos = new JMenuItem("Gráficos");
+        JMenuItem estatisticas_contadores = new JMenuItem("Contadores");
+        
+        
+     
+        
+        
         ButtonGroup bg = new ButtonGroup();
         crud_menu.add(carregamento);
         crud_menu.add(entrega_crud);
@@ -190,7 +204,10 @@ public class Menu extends JFrame {
         consulta_adm_menu.add(motoristas);
         consulta_adm_menu.add(entregas);
         consulta_adm_menu.add(volumes);
-
-        consulta_entrega.add(entrega_consult);
+        
+        consulta_entrega_menu.add(entrega_consult);
+        
+        estatisticas_menu.add(estatisticas_graficos);
+        estatisticas_menu.add(estatisticas_contadores);
     }
 }
