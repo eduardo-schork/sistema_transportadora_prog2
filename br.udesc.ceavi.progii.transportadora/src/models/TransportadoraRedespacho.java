@@ -7,11 +7,29 @@ package models;
 
 /**
  *
- * @author 09795569961
+ * @author Lucas Dolsan
  */
 public class TransportadoraRedespacho {
     
     private int id;
     
     private PessoaJuridica pessoaJuridica;
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public PessoaJuridica getPessoaJuridica() {
+        return pessoaJuridica;
+    }
+
+    public void setPessoaJuridica(PessoaJuridica pessoaJuridica) {
+        this.pessoaJuridica = pessoaJuridica;
+    }
+    
+    
 }
