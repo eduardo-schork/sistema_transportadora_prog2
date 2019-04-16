@@ -10,11 +10,13 @@ import javax.swing.table.AbstractTableModel;
 
 /**
  *
- * @author T-Gamer
+ * @author André Cristen
+ * Deve ser usado para intancia de novos frames em aberturas de telas
+ * que contenham Grids internos.
  */
-public class EnderecoFrame extends AbstractFrame{
+public class InstanceGridFrame extends AbstractFrame{
     
-    public EnderecoFrame(List<Object> objetos, String title, AbstractTableModel tableAppend) {
+    public InstanceGridFrame(List<Object> objetos, String title, AbstractTableModel tableAppend) {
         super(objetos, title, tableAppend);
     }
     

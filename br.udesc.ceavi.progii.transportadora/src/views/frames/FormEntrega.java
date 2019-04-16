@@ -47,11 +47,11 @@ public class FormEntrega extends BaseForm {
         buttonAdicionarVolume = new JButton("Adicionar Volume");
         buttonAdicionarVolume.setSize(dimensaoBotao);
 
-        labelID = new JLabel("ID:");
-        labelEnderecoDestino = new JLabel("Endereço Destino:");
-        labelSituacao = new JLabel("Situação:");
-        labelVolume = new JLabel("Volume:");
-        labelRedespacho = new JLabel("Trans. Redespacho:");
+        labelID = new JLabel("ID:  ");
+        labelEnderecoDestino = new JLabel("Endereço Destino:  ");
+        labelSituacao = new JLabel("Situação:  ");
+        labelVolume = new JLabel("Volume:  ");
+        labelRedespacho = new JLabel("Trans. Redespacho:  ");
 
         labelID.setFont(new Font("Arial", Font.PLAIN, (int) 18));
         labelEnderecoDestino.setFont(new Font("Arial", Font.PLAIN, (int) 18));

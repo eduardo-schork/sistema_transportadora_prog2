@@ -37,11 +37,11 @@ public class FormVeiculo extends BaseForm {
     }
 
     private void initComponents() {
-        labelID = new JLabel("ID:");
-        labelPlaca = new JLabel("Placa:");
-        labelDataAquisicao = new JLabel("Data Aquisição:");
-        labelTipo = new JLabel("Tipo:");
-        labelStatus = new JLabel("Status:");
+        labelID = new JLabel("ID:  ");
+        labelPlaca = new JLabel("Placa:  ");
+        labelDataAquisicao = new JLabel("Data Aquisição:  ");
+        labelTipo = new JLabel("Tipo:  ");
+        labelStatus = new JLabel("Status:  ");
 
         labelID.setFont(new Font("Arial", Font.PLAIN, (int) 18));
         labelPlaca.setFont(new Font("Arial", Font.PLAIN, (int) 18));

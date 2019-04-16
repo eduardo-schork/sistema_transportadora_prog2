@@ -35,11 +35,11 @@ public class FormPessoaFisica extends BaseForm {
 
     private void initComponents() {
 
-        labelID = new JLabel("ID:");
-        labelNome = new JLabel("Nome:");
-        labelSobrenome = new JLabel("Sobrenome:");
-        labelCPF = new JLabel("CPF:");
-        labelDataNascimento = new JLabel("Data Nascimento:");
+        labelID = new JLabel("ID:  ");
+        labelNome = new JLabel("Nome:  ");
+        labelSobrenome = new JLabel("Sobrenome:  ");
+        labelCPF = new JLabel("CPF:  ");
+        labelDataNascimento = new JLabel("Data Nascimento:  ");
 
         labelID.setFont(new Font("Arial", Font.PLAIN, (int) 18));
         labelNome.setFont(new Font("Arial", Font.PLAIN, (int) 18));

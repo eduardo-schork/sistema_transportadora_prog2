@@ -42,14 +42,14 @@ public class FormTransRedespacho extends BaseForm {
 
     private void initComponents() {
 
-        labelID = new JLabel("ID:");
-        labelPessoaJuridica = new JLabel("Pessoa:");
-        labelPessoaID = new JLabel("Pessoa ID:");
-        labelNome = new JLabel("Nome:");
-        labelSobrenome = new JLabel("Sobrenome:");
-        labelNomeFantasia = new JLabel("Nome Fantasia:");
-        labelCNPJ = new JLabel("CNPJ:");
-        labelIE = new javax.swing.JLabel("IE:");
+        labelID = new JLabel("ID:  ");
+        labelPessoaJuridica = new JLabel("Pessoa:  ");
+        labelPessoaID = new JLabel("Pessoa ID:  ");
+        labelNome = new JLabel("Nome:  ");
+        labelSobrenome = new JLabel("Sobrenome:  ");
+        labelNomeFantasia = new JLabel("Nome Fantasia:  ");
+        labelCNPJ = new JLabel("CNPJ:  ");
+        labelIE = new javax.swing.JLabel("IE:  ");
 
         labelID.setFont(new Font("Arial", Font.PLAIN, (int) 18));
         labelPessoaJuridica.setFont(new Font("Arial", Font.PLAIN, (int) 18));

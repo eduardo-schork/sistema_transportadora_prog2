@@ -5,33 +5,34 @@
  */
 package views.grids;
 
-import controllers.EnderecoController;
-import java.util.ArrayList;
 import java.util.List;
-import models.Endereco;
+import models.Veiculo;
 
 /**
  *
  * @author André Cristen
  */
-public class EnderecoGrid extends AbstractGrid{
+public class VeiculoGrid extends AbstractGrid{
 
-    public EnderecoGrid(List<Object> linhas, String[] colunas) {
+    public VeiculoGrid(List<Object> linhas, String[] colunas) {
         super(linhas, colunas);
     }
-    
+
+    @Override
     public Object getValueAt(int rowIndex, int columnIndex) {
-        Endereco endereco = (Endereco)super.getLinhas().get(rowIndex);
+      Veiculo veiculo = (Veiculo)super.getLinhas().get(rowIndex);
 
         switch (columnIndex) {
             case 0:
-                return endereco.getId();
+                return veiculo.getId();
             case 1:
-                return endereco.getBairro();
+                return veiculo.getDataAquisicao();
             case 2:
-                return endereco.getCep();
+                return veiculo.getPlaca();
             case 3:
-                return endereco.getCidade();
+                return veiculo.getStatus();
+            case 4:
+                return veiculo.getTipo();
             default:
                 return null;
         }

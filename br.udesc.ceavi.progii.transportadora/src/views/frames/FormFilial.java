@@ -41,9 +41,9 @@ public class FormFilial extends BaseForm {
         buttonAdicionarVolume = new JButton("Adicionar Volume");
         buttonAdicionarVolume.setSize(dimensaoBotao);
 
-        labelID = new JLabel("ID:");
-        labelNome = new JLabel("Nome:");
-        labelEndereco = new JLabel("Endereço:");
+        labelID = new JLabel("ID:  ");
+        labelNome = new JLabel("Nome:  ");
+        labelEndereco = new JLabel("Endereço:  ");
 
         labelID.setFont(new Font("Arial", Font.PLAIN, (int) 18));
         labelNome.setFont(new Font("Arial", Font.PLAIN, (int) 18));

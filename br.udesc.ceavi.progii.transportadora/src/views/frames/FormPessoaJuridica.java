@@ -36,10 +36,10 @@ public class FormPessoaJuridica extends BaseForm {
     }
 
     private void initComponents() {
-        labelID = new JLabel("ID:");
-        labelNome = new JLabel("Nome:");
-        labelSobrenome = new JLabel("Sobrenome:");
-        labelNomeFantasia = new JLabel("Nome Fantasia:");
+        labelID = new JLabel("ID:  ");
+        labelNome = new JLabel("Nome:  ");
+        labelSobrenome = new JLabel("Sobrenome:  ");
+        labelNomeFantasia = new JLabel("Nome Fantasia:  ");
         labelCNPJ = new JLabel("CNPJ:");
         labelIE = new JLabel("IE:");
 

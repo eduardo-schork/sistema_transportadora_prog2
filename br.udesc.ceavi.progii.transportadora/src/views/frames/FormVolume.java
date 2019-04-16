@@ -32,10 +32,10 @@ public class FormVolume extends BaseForm {
     }
     
     private void initComponents() {
-        labelID = new JLabel("ID:");
-        labelPesoBruto = new JLabel("Peso Bruto:");
-        labelPesoLiquido = new JLabel("Peso Líquido:");
-        labelCubagem = new JLabel("Cubagem:");
+        labelID = new JLabel("ID:  ");
+        labelPesoBruto = new JLabel("Peso Bruto:  ");
+        labelPesoLiquido = new JLabel("Peso Líquido:  ");
+        labelCubagem = new JLabel("Cubagem:  ");
 
         labelID.setFont(new Font("Arial", Font.PLAIN, (int) 18));
         labelPesoBruto.setFont(new Font("Arial", Font.PLAIN, (int) 18));

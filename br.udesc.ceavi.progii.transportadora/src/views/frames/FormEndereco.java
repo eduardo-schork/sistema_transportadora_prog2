@@ -41,14 +41,14 @@ public class FormEndereco extends BaseForm {
 
     private void initComponents() {
 
-        labelID = new JLabel("ID:");
-        labelNumero = new JLabel("Numero:");
-        labelCEP = new JLabel("CEP:");
-        labelRua = new JLabel("Rua:");
-        labelBairro = new JLabel("Bairro:");
-        labelCidade = new JLabel("Cidade:");
-        labelEstado = new JLabel("Estado:");
-        labelPais = new JLabel("Pais:");
+        labelID = new JLabel("ID:  ");
+        labelNumero = new JLabel("Numero:  ");
+        labelCEP = new JLabel("CEP:  ");
+        labelRua = new JLabel("Rua:  ");
+        labelBairro = new JLabel("Bairro:  ");
+        labelCidade = new JLabel("Cidade:  ");
+        labelEstado = new JLabel("Estado:  ");
+        labelPais = new JLabel("Pais:  ");
 
         labelID.setFont(new Font("Arial", Font.PLAIN, (int)18));
         labelNumero.setFont(new Font("Arial", Font.PLAIN, (int)18));

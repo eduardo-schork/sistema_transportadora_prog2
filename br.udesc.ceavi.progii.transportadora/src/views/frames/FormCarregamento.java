@@ -49,10 +49,10 @@ public class FormCarregamento extends BaseForm {
         buttonAdicionarEntrega = new JButton("Adicionar Entrega");
         buttonAdicionarEntrega.setSize(dimensaoBotao);
 
-        labelID = new JLabel("ID:");
-        labelEntrega = new JLabel("Entrega:");
-        labelEnderecoSaida = new JLabel("Endereço Saída:");
-        labelEnderecoChegada = new JLabel("Endereço Chegada:");
+        labelID = new JLabel("ID:  ");
+        labelEntrega = new JLabel("Entrega:  ");
+        labelEnderecoSaida = new JLabel("Endereço Saída:  ");
+        labelEnderecoChegada = new JLabel("Endereço Chegada:  ");
 
         labelID.setFont(new Font("Arial", Font.PLAIN, (int) 18));
         labelEntrega.setFont(new Font("Arial", Font.PLAIN, (int) 18));
