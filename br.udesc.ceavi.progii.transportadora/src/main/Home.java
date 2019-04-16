@@ -71,5 +71,6 @@ public class Home implements Runnable {
         frameVeiculo.setResizable(false);
         frameVeiculo.setLocationRelativeTo(null);
         frameVeiculo.setVisible(true);
+        menu.setVisible(true);
     }
 }
