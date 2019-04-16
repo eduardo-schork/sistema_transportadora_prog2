@@ -41,8 +41,7 @@ public class Menu extends JFrame {
         JMenuItem carregamento = new JMenuItem("Carregamento");
         JMenuItem entrega_crud = new JMenuItem("Entrega");
         JMenuItem filial = new JMenuItem("Filial");
-        JMenuItem pessoa_fisica = new JMenuItem("Pessoa Física");
-        JMenuItem pessoa_juridica = new JMenuItem("Pessoa Juridica");
+        JMenuItem pessoa= new JMenuItem("Pessoa");
         JMenuItem usuario = new JMenuItem("Usuario");
         JMenuItem veiculo = new JMenuItem("Veiculo");
         JMenuItem volume = new JMenuItem("Volume");
@@ -58,13 +57,11 @@ public class Menu extends JFrame {
         JMenuItem veiculos_verif_em_reparo = new JMenuItem("Veículos em reparo");
         JMenuItem veiculos_verif_aguard_reparo = new JMenuItem("Veículos aguardando reparo");
         
-        
         ButtonGroup bg = new ButtonGroup();
         crud_menu.add(carregamento);
         crud_menu.add(entrega_crud);
         crud_menu.add(filial);
-        crud_menu.add(pessoa_fisica);
-        crud_menu.add(pessoa_juridica);
+        crud_menu.add(pessoa);
         crud_menu.add(usuario);
         crud_menu.add(veiculo);
         crud_menu.add(volume);

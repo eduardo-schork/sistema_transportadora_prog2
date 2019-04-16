@@ -65,5 +65,6 @@ public class Home implements Runnable {
         VeiculoGrid veiculoGrid = new VeiculoGrid((List)veiculos, colunasVeiculos);
         JFrame frameVeiculo = new InstanceGridFrame((List)veiculos, "Veiculos", veiculoGrid );
         frameVeiculo.setVisible(true);
+        menu.setVisible(true);
     }
 }
