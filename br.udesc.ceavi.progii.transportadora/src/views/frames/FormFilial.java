@@ -2,6 +2,8 @@ package views.frames;
 
 import java.awt.Dimension;
 import java.awt.Font;
+import java.awt.GridBagConstraints;
+import java.awt.GridBagLayout;
 import java.awt.GridLayout;
 import java.awt.LayoutManager;
 import javax.swing.JButton;
@@ -24,12 +26,14 @@ public class FormFilial extends BaseForm {
     private Dimension dimensaoBotao;
     private JButton buttonAdicionarVolume;
 
+    private GridBagConstraints cons;
+
     private JPanel panelFormulario;
     private Dimension dimensao;
     private LayoutManager layout;
 
     public FormFilial() {
-        super("Formulário Filial", new Dimension(400, 150));
+        super("Formulário Filial", new Dimension(400, 200));
 
         initComponents();
         addComponents();
@@ -65,19 +69,58 @@ public class FormFilial extends BaseForm {
         textFieldNome.setFont(new Font("Arial", Font.PLAIN, (int) 18));
         comboBoxEndereco.setFont(new Font("Arial", Font.PLAIN, (int) 18));
 
-        layout = new GridLayout(3, 2);
+        layout = new GridBagLayout();
 
         panelFormulario = new JPanel();
         panelFormulario.setLayout(layout);
     }
 
     private void addComponents() {
-        panelFormulario.add(labelID);
-        panelFormulario.add(textFieldID);
-        panelFormulario.add(labelNome);
-        panelFormulario.add(textFieldNome);
-        panelFormulario.add(labelEndereco);
-        panelFormulario.add(comboBoxEndereco);
+
+        cons = new GridBagConstraints();
+        cons.gridx = 0;
+        cons.gridy = 0;
+        cons.gridwidth = 1;
+        cons.fill = GridBagConstraints.HORIZONTAL;
+        panelFormulario.add(labelID, cons);
+
+        cons = new GridBagConstraints();
+        cons.gridx = 1;
+        cons.gridy = 0;
+        cons.gridwidth = 1;
+        cons.ipadx = 200;
+        cons.fill = GridBagConstraints.HORIZONTAL;
+        panelFormulario.add(textFieldID, cons);
+
+        cons = new GridBagConstraints();
+        cons.gridx = 0;
+        cons.gridy = 1;
+        cons.gridwidth = 1;
+        cons.fill = GridBagConstraints.HORIZONTAL;
+        panelFormulario.add(labelNome, cons);
+
+        cons = new GridBagConstraints();
+        cons.gridx = 1;
+        cons.gridy = 1;
+        cons.gridwidth = 1;
+        cons.ipadx = 200;
+        cons.fill = GridBagConstraints.HORIZONTAL;
+        panelFormulario.add(textFieldNome, cons);
+
+        cons = new GridBagConstraints();
+        cons.gridx = 0;
+        cons.gridy = 2;
+        cons.gridwidth = 1;
+        cons.fill = GridBagConstraints.HORIZONTAL;
+        panelFormulario.add(labelEndereco, cons);
+
+        cons = new GridBagConstraints();
+        cons.gridx = 1;
+        cons.gridy = 2;
+        cons.gridwidth = 1;
+        cons.ipadx = 200;
+        cons.fill = GridBagConstraints.HORIZONTAL;
+        panelFormulario.add(comboBoxEndereco, cons);
 
         super.addFormulario(panelFormulario);
     }

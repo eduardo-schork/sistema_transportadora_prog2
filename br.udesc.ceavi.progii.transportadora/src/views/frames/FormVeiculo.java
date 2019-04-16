@@ -2,6 +2,8 @@ package views.frames;
 
 import java.awt.Dimension;
 import java.awt.Font;
+import java.awt.GridBagConstraints;
+import java.awt.GridBagLayout;
 import java.awt.GridLayout;
 import java.awt.LayoutManager;
 import javax.swing.JComboBox;
@@ -26,11 +28,13 @@ public class FormVeiculo extends BaseForm {
     private JComboBox comboBoxStatus;
     private JPanel panelFormulario;
 
+    private GridBagConstraints cons;
+
     private Dimension dimensao;
     private LayoutManager layout;
 
     public FormVeiculo() {
-        super("Formulário Veiculo", new Dimension(400, 200));
+        super("Formulário Veiculo", new Dimension(450, 250));
 
         initComponents();
         addComponents();
@@ -48,7 +52,7 @@ public class FormVeiculo extends BaseForm {
         labelDataAquisicao.setFont(new Font("Arial", Font.PLAIN, (int) 18));
         labelTipo.setFont(new Font("Arial", Font.PLAIN, (int) 18));
         labelStatus.setFont(new Font("Arial", Font.PLAIN, (int) 18));
-        
+
         labelID.setHorizontalAlignment(SwingConstants.RIGHT);
         labelPlaca.setHorizontalAlignment(SwingConstants.RIGHT);
         labelDataAquisicao.setHorizontalAlignment(SwingConstants.RIGHT);
@@ -66,30 +70,96 @@ public class FormVeiculo extends BaseForm {
         comboBoxStatus.setSelectedIndex(-1);
 
         textFieldID.setEditable(false);
-        
+
         textFieldID.setFont(new Font("Arial", Font.PLAIN, (int) 18));
         textFieldPlaca.setFont(new Font("Arial", Font.PLAIN, (int) 18));
         textFieldDataAquisicao.setFont(new Font("Arial", Font.PLAIN, (int) 18));
         comboBoxTipo.setFont(new Font("Arial", Font.PLAIN, (int) 18));
         comboBoxStatus.setFont(new Font("Arial", Font.PLAIN, (int) 18));
-        
-        layout = new GridLayout(5, 2);
+
+        layout = new GridBagLayout();
 
         panelFormulario = new JPanel();
         panelFormulario.setLayout(layout);
     }
 
     private void addComponents() {
-        panelFormulario.add(labelID);
-        panelFormulario.add(textFieldID);
-        panelFormulario.add(labelPlaca);
-        panelFormulario.add(textFieldPlaca);
-        panelFormulario.add(labelDataAquisicao);
-        panelFormulario.add(textFieldDataAquisicao);
-        panelFormulario.add(labelTipo);
-        panelFormulario.add(comboBoxTipo);
-        panelFormulario.add(labelStatus);
-        panelFormulario.add(comboBoxStatus);
+
+        cons = new GridBagConstraints();
+        cons.gridx = 0;
+        cons.gridy = 0;
+        cons.gridwidth = 1;
+        cons.fill = GridBagConstraints.HORIZONTAL;
+        panelFormulario.add(labelID, cons);
+
+        cons = new GridBagConstraints();
+        cons.gridx = 1;
+        cons.gridy = 0;
+        cons.gridwidth = 1;
+        cons.ipadx = 50;
+        cons.fill = GridBagConstraints.HORIZONTAL;
+        panelFormulario.add(textFieldID, cons);
+
+        cons = new GridBagConstraints();
+        cons.gridx = 0;
+        cons.gridy = 1;
+        cons.gridwidth = 1;
+        cons.fill = GridBagConstraints.HORIZONTAL;
+        panelFormulario.add(labelPlaca, cons);
+
+        cons = new GridBagConstraints();
+        cons.gridx = 1;
+        cons.gridy = 1;
+        cons.gridwidth = 1;
+        cons.ipadx = 50;
+        cons.fill = GridBagConstraints.HORIZONTAL;
+        panelFormulario.add(textFieldPlaca, cons);
+
+        cons = new GridBagConstraints();
+        cons.gridx = 0;
+        cons.gridy = 2;
+        cons.gridwidth = 1;
+        cons.fill = GridBagConstraints.HORIZONTAL;
+        panelFormulario.add(labelDataAquisicao, cons);
+
+        cons = new GridBagConstraints();
+        cons.gridx = 1;
+        cons.gridy = 2;
+        cons.gridwidth = 1;
+        cons.ipadx = 50;
+        cons.fill = GridBagConstraints.HORIZONTAL;
+        panelFormulario.add(textFieldDataAquisicao, cons);
+
+        cons = new GridBagConstraints();
+        cons.gridx = 0;
+        cons.gridy = 3;
+        cons.gridwidth = 1;
+        cons.fill = GridBagConstraints.HORIZONTAL;
+        panelFormulario.add(labelTipo, cons);
+
+        cons = new GridBagConstraints();
+        cons.gridx = 1;
+        cons.gridy = 3;
+        cons.gridwidth = 1;
+        cons.ipadx = 50;
+        cons.fill = GridBagConstraints.HORIZONTAL;
+        panelFormulario.add(comboBoxTipo, cons);
+
+        cons = new GridBagConstraints();
+        cons.gridx = 0;
+        cons.gridy = 4;
+        cons.gridwidth = 1;
+        cons.fill = GridBagConstraints.HORIZONTAL;
+        panelFormulario.add(labelStatus, cons);
+
+        cons = new GridBagConstraints();
+        cons.gridx = 1;
+        cons.gridy = 4;
+        cons.gridwidth = 1;
+        cons.ipadx = 50;
+        cons.fill = GridBagConstraints.HORIZONTAL;
+        panelFormulario.add(comboBoxStatus, cons);
+
         super.addFormulario(panelFormulario);
     }
 }

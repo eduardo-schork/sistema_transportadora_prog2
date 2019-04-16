@@ -2,6 +2,8 @@ package views.frames;
 
 import java.awt.Dimension;
 import java.awt.Font;
+import java.awt.GridBagConstraints;
+import java.awt.GridBagLayout;
 import java.awt.GridLayout;
 import java.awt.LayoutManager;
 import javax.swing.JLabel;
@@ -16,18 +18,21 @@ public class FormPessoaFisica extends BaseForm {
     private JLabel labelSobrenome;
     private JLabel labelCPF;
     private JLabel labelDataNascimento;
+    
     private JTextField textFieldID;
     private JTextField textFieldNome;
     private JTextField textFieldSobrenome;
     private JTextField textFieldCPF;
     private JTextField textFieldDataNascimento;
+    
+    private GridBagConstraints cons;
+    
     private JPanel panelFormulario;
-
     private Dimension dimensao;
     private LayoutManager layout;
 
     public FormPessoaFisica() {
-        super("Formulário Pessoa Física", new Dimension(400, 200));
+        super("Formulário Pessoa Física", new Dimension(400, 250));
 
         initComponents();
         addComponents();
@@ -67,22 +72,87 @@ public class FormPessoaFisica extends BaseForm {
         textFieldCPF.setFont(new Font("Arial", Font.PLAIN, (int) 18));
         textFieldDataNascimento.setFont(new Font("Arial", Font.PLAIN, (int) 18));
 
-        layout = new GridLayout(5, 2);
+        layout = new GridBagLayout();
         panelFormulario = new JPanel();
         panelFormulario.setLayout(layout);
     }
 
     private void addComponents() {
-        panelFormulario.add(labelID);
-        panelFormulario.add(textFieldID);
-        panelFormulario.add(labelNome);
-        panelFormulario.add(textFieldNome);
-        panelFormulario.add(labelSobrenome);
-        panelFormulario.add(textFieldSobrenome);
-        panelFormulario.add(labelCPF);
-        panelFormulario.add(textFieldCPF);
-        panelFormulario.add(labelDataNascimento);
-        panelFormulario.add(textFieldDataNascimento);
+        cons = new GridBagConstraints();
+        cons.gridx = 0;
+        cons.gridy = 0;
+        cons.gridwidth = 1;
+        cons.fill = GridBagConstraints.HORIZONTAL;
+        panelFormulario.add(labelID, cons);
+
+        cons = new GridBagConstraints();
+        cons.gridx = 1;
+        cons.gridy = 0;
+        cons.gridwidth = 1;
+        cons.ipadx = 200;
+        cons.fill = GridBagConstraints.HORIZONTAL;
+        panelFormulario.add(textFieldID, cons);
+
+        cons = new GridBagConstraints();
+        cons.gridx = 0;
+        cons.gridy = 1;
+        cons.gridwidth = 1;
+        cons.fill = GridBagConstraints.HORIZONTAL;
+        panelFormulario.add(labelNome, cons);
+
+        cons = new GridBagConstraints();
+        cons.gridx = 1;
+        cons.gridy = 1;
+        cons.gridwidth = 1;
+        cons.ipadx = 200;
+        cons.fill = GridBagConstraints.HORIZONTAL;
+        panelFormulario.add(textFieldNome, cons);
+
+        cons = new GridBagConstraints();
+        cons.gridx = 0;
+        cons.gridy = 2;
+        cons.gridwidth = 1;
+        cons.fill = GridBagConstraints.HORIZONTAL;
+        panelFormulario.add(labelSobrenome, cons);
+
+        cons = new GridBagConstraints();
+        cons.gridx = 1;
+        cons.gridy = 2;
+        cons.gridwidth = 1;
+        cons.ipadx = 200;
+        cons.fill = GridBagConstraints.HORIZONTAL;
+        panelFormulario.add(textFieldSobrenome, cons);
+        
+        cons = new GridBagConstraints();
+        cons.gridx = 0;
+        cons.gridy = 3;
+        cons.gridwidth = 1;
+        cons.fill = GridBagConstraints.HORIZONTAL;
+        panelFormulario.add(labelCPF, cons);
+
+        cons = new GridBagConstraints();
+        cons.gridx = 1;
+        cons.gridy = 3;
+        cons.gridwidth = 1;
+        cons.ipadx = 200;
+        cons.fill = GridBagConstraints.HORIZONTAL;
+        panelFormulario.add(textFieldCPF, cons);
+
+        cons = new GridBagConstraints();
+        cons.gridx = 0;
+        cons.gridy = 4;
+        cons.gridwidth = 1;
+        cons.fill = GridBagConstraints.HORIZONTAL;
+        panelFormulario.add(labelDataNascimento, cons);
+
+        cons = new GridBagConstraints();
+        cons.gridx = 1;
+        cons.gridy = 4;
+        cons.gridwidth = 1;
+        cons.ipadx = 200;
+        cons.fill = GridBagConstraints.HORIZONTAL;
+        panelFormulario.add(textFieldDataNascimento, cons);
+
         super.addFormulario(panelFormulario);
     }
 }

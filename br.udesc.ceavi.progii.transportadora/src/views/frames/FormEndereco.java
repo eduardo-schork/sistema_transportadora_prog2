@@ -2,6 +2,8 @@ package views.frames;
 
 import java.awt.Dimension;
 import java.awt.Font;
+import java.awt.GridBagConstraints;
+import java.awt.GridBagLayout;
 import java.awt.GridLayout;
 import java.awt.LayoutManager;
 import javax.swing.JLabel;
@@ -19,6 +21,7 @@ public class FormEndereco extends BaseForm {
     private JLabel labelCidade;
     private JLabel labelEstado;
     private JLabel labelPais;
+
     private JTextField textFieldID;
     private JTextField textFieldNumero;
     private JTextField textFieldCEP;
@@ -28,12 +31,14 @@ public class FormEndereco extends BaseForm {
     private JTextField textFieldEstado;
     private JTextField textFieldPais;
 
+    private GridBagConstraints cons;
+
     private JPanel panelFormulario;
     private Dimension dimensao;
     private LayoutManager layout;
 
     public FormEndereco() {
-        super("Formulário Endereco", new Dimension(400, 300));
+        super("Formulário Endereço", new Dimension(450, 300));
 
         initComponents();
         addComponents();
@@ -48,17 +53,17 @@ public class FormEndereco extends BaseForm {
         labelBairro = new JLabel("Bairro:  ");
         labelCidade = new JLabel("Cidade:  ");
         labelEstado = new JLabel("Estado:  ");
-        labelPais = new JLabel("Pais:  ");
+        labelPais = new JLabel("País:  ");
 
-        labelID.setFont(new Font("Arial", Font.PLAIN, (int)18));
-        labelNumero.setFont(new Font("Arial", Font.PLAIN, (int)18));
-        labelCEP.setFont(new Font("Arial", Font.PLAIN, (int)18));
-        labelRua.setFont(new Font("Arial", Font.PLAIN, (int)18));
-        labelBairro.setFont(new Font("Arial", Font.PLAIN, (int)18));
-        labelCidade.setFont(new Font("Arial", Font.PLAIN, (int)18));
-        labelEstado.setFont(new Font("Arial", Font.PLAIN, (int)18));
-        labelPais.setFont(new Font("Arial", Font.PLAIN, (int)18));
-        
+        labelID.setFont(new Font("Arial", Font.PLAIN, (int) 18));
+        labelNumero.setFont(new Font("Arial", Font.PLAIN, (int) 18));
+        labelCEP.setFont(new Font("Arial", Font.PLAIN, (int) 18));
+        labelRua.setFont(new Font("Arial", Font.PLAIN, (int) 18));
+        labelBairro.setFont(new Font("Arial", Font.PLAIN, (int) 18));
+        labelCidade.setFont(new Font("Arial", Font.PLAIN, (int) 18));
+        labelEstado.setFont(new Font("Arial", Font.PLAIN, (int) 18));
+        labelPais.setFont(new Font("Arial", Font.PLAIN, (int) 18));
+
         labelID.setHorizontalAlignment(SwingConstants.RIGHT);
         labelNumero.setHorizontalAlignment(SwingConstants.RIGHT);
         labelCEP.setHorizontalAlignment(SwingConstants.RIGHT);
@@ -76,9 +81,9 @@ public class FormEndereco extends BaseForm {
         textFieldCidade = new JTextField();
         textFieldEstado = new JTextField();
         textFieldPais = new JTextField();
-
-        textFieldID.setEditable(false);
         
+        textFieldID.setEditable(false);
+
         textFieldID.setFont(new Font("Arial", Font.PLAIN, (int) 18));
         textFieldNumero.setFont(new Font("Arial", Font.PLAIN, (int) 18));
         textFieldCEP.setFont(new Font("Arial", Font.PLAIN, (int) 18));
@@ -87,30 +92,135 @@ public class FormEndereco extends BaseForm {
         textFieldCidade.setFont(new Font("Arial", Font.PLAIN, (int) 18));
         textFieldEstado.setFont(new Font("Arial", Font.PLAIN, (int) 18));
         textFieldPais.setFont(new Font("Arial", Font.PLAIN, (int) 18));
-        
-        layout = new GridLayout(8, 2);
+
+        layout = new GridBagLayout();
 
         panelFormulario = new JPanel();
         panelFormulario.setLayout(layout);
     }
 
     private void addComponents() {
-        panelFormulario.add(labelID);
-        panelFormulario.add(textFieldID);
-        panelFormulario.add(labelNumero);
-        panelFormulario.add(textFieldNumero);
-        panelFormulario.add(labelCEP);
-        panelFormulario.add(textFieldCEP);
-        panelFormulario.add(labelRua);
-        panelFormulario.add(textFieldRua);
-        panelFormulario.add(labelBairro);
-        panelFormulario.add(textFieldBairro);
-        panelFormulario.add(labelCidade);
-        panelFormulario.add(textFieldCidade);
-        panelFormulario.add(labelEstado);
-        panelFormulario.add(textFieldEstado);
-        panelFormulario.add(labelPais);
-        panelFormulario.add(textFieldPais);
+
+        cons = new GridBagConstraints();
+        cons.gridx = 0;
+        cons.gridy = 0;
+        cons.gridwidth = 1;
+        cons.fill = GridBagConstraints.HORIZONTAL;
+        panelFormulario.add(labelID, cons);
+
+        cons = new GridBagConstraints();
+        cons.gridx = 1;
+        cons.gridy = 0;
+        cons.gridwidth = 1;
+        cons.ipadx = 200;
+        cons.fill = GridBagConstraints.HORIZONTAL;
+        panelFormulario.add(textFieldID, cons);
+
+        cons = new GridBagConstraints();
+        cons.gridx = 0;
+        cons.gridy = 1;
+        cons.gridwidth = 1;
+        cons.fill = GridBagConstraints.HORIZONTAL;
+        panelFormulario.add(labelNumero, cons);
+
+        cons = new GridBagConstraints();
+        cons.gridx = 1;
+        cons.gridy = 1;
+        cons.gridwidth = 1;
+        cons.ipadx = 200;
+        cons.fill = GridBagConstraints.HORIZONTAL;
+        panelFormulario.add(textFieldNumero, cons);
+
+        cons = new GridBagConstraints();
+        cons.gridx = 0;
+        cons.gridy = 2;
+        cons.gridwidth = 1;
+        cons.fill = GridBagConstraints.HORIZONTAL;
+        panelFormulario.add(labelCEP, cons);
+
+        cons = new GridBagConstraints();
+        cons.gridx = 1;
+        cons.gridy = 2;
+        cons.gridwidth = 1;
+        cons.ipadx = 200;
+        cons.fill = GridBagConstraints.HORIZONTAL;
+        panelFormulario.add(textFieldCEP, cons);
+
+        cons = new GridBagConstraints();
+        cons.gridx = 0;
+        cons.gridy = 3;
+        cons.gridwidth = 1;
+        cons.fill = GridBagConstraints.HORIZONTAL;
+        panelFormulario.add(labelRua, cons);
+
+        cons = new GridBagConstraints();
+        cons.gridx = 1;
+        cons.gridy = 3;
+        cons.gridwidth = 1;
+        cons.ipadx = 200;
+        cons.fill = GridBagConstraints.HORIZONTAL;
+        panelFormulario.add(textFieldRua, cons);
+
+        cons = new GridBagConstraints();
+        cons.gridx = 0;
+        cons.gridy = 4;
+        cons.gridwidth = 1;
+        cons.fill = GridBagConstraints.HORIZONTAL;
+        panelFormulario.add(labelBairro, cons);
+
+        cons = new GridBagConstraints();
+        cons.gridx = 1;
+        cons.gridy = 4;
+        cons.gridwidth = 1;
+        cons.ipadx = 200;
+        cons.fill = GridBagConstraints.HORIZONTAL;
+        panelFormulario.add(textFieldBairro, cons);
+
+        cons = new GridBagConstraints();
+        cons.gridx = 0;
+        cons.gridy = 5;
+        cons.gridwidth = 1;
+        cons.fill = GridBagConstraints.HORIZONTAL;
+        panelFormulario.add(labelCidade, cons);
+
+        cons = new GridBagConstraints();
+        cons.gridx = 1;
+        cons.gridy = 5;
+        cons.gridwidth = 1;
+        cons.ipadx = 200;
+        cons.fill = GridBagConstraints.HORIZONTAL;
+        panelFormulario.add(textFieldCidade, cons);
+
+        cons = new GridBagConstraints();
+        cons.gridx = 0;
+        cons.gridy = 6;
+        cons.gridwidth = 1;
+        cons.fill = GridBagConstraints.HORIZONTAL;
+        panelFormulario.add(labelEstado, cons);
+
+        cons = new GridBagConstraints();
+        cons.gridx = 1;
+        cons.gridy = 6;
+        cons.gridwidth = 1;
+        cons.ipadx = 200;
+        cons.fill = GridBagConstraints.HORIZONTAL;
+        panelFormulario.add(textFieldEstado, cons);
+
+        cons = new GridBagConstraints();
+        cons.gridx = 0;
+        cons.gridy = 7;
+        cons.gridwidth = 1;
+        cons.fill = GridBagConstraints.HORIZONTAL;
+        panelFormulario.add(labelPais, cons);
+
+        cons = new GridBagConstraints();
+        cons.gridx = 1;
+        cons.gridy = 7;
+        cons.gridwidth = 1;
+        cons.ipadx = 200;
+        cons.fill = GridBagConstraints.HORIZONTAL;
+        panelFormulario.add(textFieldPais, cons);
+
         super.addFormulario(panelFormulario);
     }
 }

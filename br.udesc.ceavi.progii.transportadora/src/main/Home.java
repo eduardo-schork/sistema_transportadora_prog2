@@ -20,12 +20,12 @@ import views.grids.VeiculoGrid;
  */
 public class Home implements Runnable {
 
-    public static void main(String[] args) {
-        Home tela = new Home();
-        Thread thread = new Thread(tela);
+   // public static void main(String[] args) {;
+    //    Home tela = new Home();
+    //    Thread thread = new Thread(tela);
 
-        thread.start();
-    }
+    //    thread.start();
+    //}
 
     @Override
     public void run() {
