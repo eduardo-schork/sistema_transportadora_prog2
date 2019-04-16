@@ -3,18 +3,16 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package transudesc;
+package models;
 
 /**
  *
  * @author 09795569961
  */
-public class Filial {
+public class PessoaJuridica extends Pessoa{
+    private String nomeFantasia;
     
-    private int id;
+    private long cnpj;
     
-    private String nome;
-    
-    private Endereco endereco;
-    
+    private String ie;
 }

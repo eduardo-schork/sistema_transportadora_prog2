@@ -3,20 +3,22 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package transudesc;
+package models;
+
+import java.sql.Date;
+import java.util.ArrayList;
 
 /**
  *
  * @author 09795569961
  */
-public class Endereco {
-
+public class Carregamento {
     private int id;
-    private int numero;
-    private int cep;
-    private String rua;
-    private String bairro;
-    private String cidade;
-    private String uf;
-    private String pais;
+    
+    private ArrayList<Entrega> entregas;
+    
+    private Endereco enderecoSaida;
+    
+    private Endereco enderecoChegada;
+    
 }

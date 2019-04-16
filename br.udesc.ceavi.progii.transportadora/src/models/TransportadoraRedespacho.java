@@ -3,24 +3,15 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package transudesc;
+package models;
 
 /**
  *
  * @author 09795569961
  */
-public class Usuario {
-
+public class TransportadoraRedespacho {
+    
     private int id;
-
-    private Pessoa pessoa;
-
-    /*
-       4 Motorista, 3 Mecanico, 2 Cliente, 1 Administrador.
-     */
-    private int tipo;
-
-    private String login;
-
-    private String senha;
+    
+    private PessoaJuridica pessoaJuridica;
 }
