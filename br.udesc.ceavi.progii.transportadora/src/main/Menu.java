@@ -2,6 +2,8 @@ package main;
 
 import controllers.VeiculoController;
 import controllers.CarregamentoController;
+import controllers.UsuarioController;
+import controllers.VolumeController;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.ArrayList;
@@ -16,12 +18,21 @@ import javax.swing.JRadioButtonMenuItem;
 import models.Carregamento;
 import models.Endereco;
 import models.Pessoa;
+import models.Usuario;
 import models.Veiculo;
+import models.Volume;
 import views.frames.InstanceGridActionsFrame;
 import views.frames.InstanceGridFrame;
 import views.grids.CarregamentoGrid;
 import views.grids.PessoaGrid;
 import views.grids.VeiculoGrid;
+import views.grids.VolumeGrid;
+import views.grids.UsuarioGrid;
+
+/**
+ *
+ * @author Lucas Levi Gonçalves
+ */
 
 public class Menu extends JFrame {
 
@@ -41,8 +52,6 @@ public class Menu extends JFrame {
         JMenu consulta_adm_menu = new JMenu("Consultas - Administrador");
         JMenu verif_veiculos_menu = new JMenu("Verificar veículos");
         JMenu cargas_menu = new JMenu("Cargas");
-        JMenu consulta_entrega = new JMenu("Consultar Entregas");
-
         JMenu consulta_entrega_menu = new JMenu("Consultar Entregas");
         JMenu estatisticas_menu = new JMenu("Estatísticas");
         
@@ -55,8 +64,6 @@ public class Menu extends JFrame {
         menuBar.add(relatorios_menu);
         menuBar.add(consulta_entrega_menu);
          
-        menuBar.add(consulta_entrega);
-
         // Cria e adiciona um item para o menu
         JMenuItem carregamento = new JMenuItem("Carregamento");
 
@@ -120,23 +127,25 @@ public class Menu extends JFrame {
                 frameCarregamento.setVisible(true);
             }
         });
-        
-        JMenuItem pessoa_fisica = new JMenuItem("Pessoa Física");
-
-        pessoa_fisica.addActionListener((action) -> {
-
-        });
-
-        JMenuItem pessoa_juridica = new JMenuItem("Pessoa Juridica");
-
-        pessoa_juridica.addActionListener((action) -> {
-
-        });
-
-        JMenuItem usuario = new JMenuItem("Usuario");
+              
+        JMenuItem usuario = new JMenuItem("Usuário");
 
         usuario.addActionListener((action) -> {
+            usuario.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent action) {
+                List<Usuario> usuario = new ArrayList<>();
+                String[] colunasUsuarios;
+                colunasUsuarios = new String[]{"#", "Pessoa", "Login"};
+                UsuarioGrid usuarioGrid = new UsuarioGrid((List)usuario, colunasUsuarios);
+                UsuarioController controller = new UsuarioController();
+                JFrame frameCarregamento = new InstanceGridActionsFrame(controller, "Usuário", usuarioGrid );
 
+                frameCarregamento.setResizable(false);
+                frameCarregamento.setLocationRelativeTo(null);
+                frameCarregamento.setVisible(true);
+            }
+        }); 
         });
 
         JMenuItem veiculo = new JMenuItem("Veiculo");
@@ -168,6 +177,21 @@ public class Menu extends JFrame {
         JMenuItem volume = new JMenuItem("Volume");
 
         volume.addActionListener((action) -> {
+            volume.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent action) {
+                List<Volume> volume = new ArrayList<>();
+                String[] colunasVolumes;
+                colunasVolumes = new String[]{"#", "Peso Líquido", "Peso Bruto", "Cubagem"};
+                VolumeGrid volumeGrid = new VolumeGrid((List)volume, colunasVolumes);
+                VolumeController controller = new VolumeController();
+                JFrame frameCarregamento = new InstanceGridActionsFrame(controller, "Volume", volumeGrid );
+
+                frameCarregamento.setResizable(false);
+                frameCarregamento.setLocationRelativeTo(null);
+                frameCarregamento.setVisible(true);
+            }
+        });    
 
         });
 
@@ -180,7 +204,7 @@ public class Menu extends JFrame {
         JMenuItem clientes = new JMenuItem("Clientes");
 
         clientes.addActionListener((action) -> {
-
+                
         });
 
         JMenuItem consulta_veiculos = new JMenuItem("Veiculos");
