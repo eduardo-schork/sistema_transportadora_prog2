@@ -14,23 +14,35 @@ import javax.swing.table.AbstractTableModel;
 
 /**
  *
- * @author T-Gamer
+ * @author André Cristen
  */
 public abstract class AbstractFrame extends JFrame {
 
+    /**
+     * Table que sera mostrada no Frame
+     */
     private JTable tableObjetos;
+
+    /**
+     * Scroll para table
+     */
     private JScrollPane scrollTable;
 
+    /**
+     * Lista com todos os objetos que serao mostrados no Grid
+     */
     private List<Object> objetos;
 
     public AbstractFrame(List<Object> objetos, String title, AbstractTableModel tableAppend) {
+        //Seta o titulo do frame
         super(title);
-
+        //Seta os objetos recebidos
         this.objetos = objetos;
-
+        //Inicia com a table a ser inserida
         initialize(tableAppend);
+        //Adiciona os componets
         addComponents();
-
+        //Seta um tamanho para o Frame
         super.setSize(800, 600);
         super.setDefaultCloseOperation(EXIT_ON_CLOSE);
     }
