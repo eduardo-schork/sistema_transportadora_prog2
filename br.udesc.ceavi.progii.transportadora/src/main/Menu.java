@@ -1,7 +1,7 @@
-package views.misc;
+package main;
 
 import controllers.VeiculoController;
-import controllers.carregamentoController;
+import controllers.CarregamentoController;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.ArrayList;
@@ -75,7 +75,7 @@ public class Menu extends JFrame {
                 String[] colunasCarregamentos;
                 colunasCarregamentos = new String[]{"#", "Endereço chegada", "Endereço saída"};
                 CarregamentoGrid carregamentoGrid = new CarregamentoGrid((List)carregamentos, colunasCarregamentos);
-                carregamentoController controller = new carregamentoController();
+                CarregamentoController controller = new CarregamentoController();
                 JFrame frameCarregamento = new InstanceGridActionsFrame(controller, "Carregamentos", carregamentoGrid );
                 
                 frameCarregamento.setResizable(false);
@@ -112,7 +112,7 @@ public class Menu extends JFrame {
                 String[] colunasPessoas;
                 colunasPessoas = new String[]{"#", "Endereço chegada", "Endereço saída"};
                 PessoaGrid pessoaGrid = new PessoaGrid((List)pessoas, colunasPessoas);
-                carregamentoController controller = new carregamentoController();
+                CarregamentoController controller = new CarregamentoController();
                 JFrame frameCarregamento = new InstanceGridActionsFrame(controller, "Pessoas", pessoaGrid );
                 
                 frameCarregamento.setResizable(false);

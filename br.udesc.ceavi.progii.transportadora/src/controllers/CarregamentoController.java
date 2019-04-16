@@ -9,7 +9,7 @@ package controllers;
  *
  * @author T-Gamer
  */
-public class carregamentoController extends BaseController{
+public class CarregamentoController extends BaseController{
 
     @Override
     public boolean add() {
@@ -33,6 +33,16 @@ public class carregamentoController extends BaseController{
     public boolean view() {
        System.out.println("VIEW");
         return true;
+    }
+
+    @Override
+    public boolean addPost() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public boolean editPost() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
     
 }
