@@ -5,6 +5,7 @@ import java.awt.Font;
 import java.awt.GridBagConstraints;
 import java.awt.GridBagLayout;
 import java.awt.GridLayout;
+import java.awt.Insets;
 import java.awt.LayoutManager;
 import javax.swing.JButton;
 import javax.swing.JComboBox;
@@ -15,7 +16,6 @@ import javax.swing.JTable;
 import javax.swing.JTextField;
 import javax.swing.SwingConstants;
 import models.SituacaoEntrega;
-
 
 public class FormEntrega extends BaseForm {
 
@@ -31,9 +31,9 @@ public class FormEntrega extends BaseForm {
     private JComboBox comboBoxVolume;
     private JComboBox comboBoxRedespacho;
     private JTable tabelaVolumes;
-    
+
     private GridBagConstraints cons;
-    
+
     private Dimension dimensaoBotao;
     private JButton buttonAdicionarVolume;
 
@@ -42,7 +42,7 @@ public class FormEntrega extends BaseForm {
     private LayoutManager layout;
 
     public FormEntrega() {
-        super("Formulário Entrega", new Dimension(750, 500));
+        super("Formulário Entrega", new Dimension(750, 550));
 
         initComponents();
         addComponents();
@@ -84,12 +84,12 @@ public class FormEntrega extends BaseForm {
 
         //fill data com redespachos
         comboBoxRedespacho = new JComboBox();
-        
+
         textFieldID.setEditable(false);
-        
-        String[] colunas = {"#", "P. Líquido","P. Bruto","Cubagem"};
+
+        String[] colunas = {"#", "P. Líquido", "P. Bruto", "Cubagem"};
         Object[][] dados = {};
-        
+
         tabelaVolumes = new JTable(dados, colunas);
         tabelaVolumes.setEnabled(false);
 
@@ -106,10 +106,11 @@ public class FormEntrega extends BaseForm {
     }
 
     private void addComponents() {
-        
+
         cons = new GridBagConstraints();
         cons.gridx = 0;
         cons.gridy = 0;
+        cons.insets = new Insets(5, 0, 5, 0);
         cons.gridwidth = 1;
         cons.fill = GridBagConstraints.HORIZONTAL;
         panelFormulario.add(labelID, cons);
@@ -118,13 +119,15 @@ public class FormEntrega extends BaseForm {
         cons.gridx = 1;
         cons.gridy = 0;
         cons.gridwidth = 1;
+        cons.insets = new Insets(5, 0, 5, 0);
         cons.ipadx = 200;
         cons.fill = GridBagConstraints.HORIZONTAL;
         panelFormulario.add(textFieldID, cons);
-        
+
         cons = new GridBagConstraints();
         cons.gridx = 0;
         cons.gridy = 1;
+        cons.insets = new Insets(5, 0, 5, 0);
         cons.gridwidth = 1;
         cons.fill = GridBagConstraints.HORIZONTAL;
         panelFormulario.add(labelEnderecoDestino, cons);
@@ -132,14 +135,16 @@ public class FormEntrega extends BaseForm {
         cons = new GridBagConstraints();
         cons.gridx = 1;
         cons.gridy = 1;
+        cons.insets = new Insets(5, 0, 5, 0);
         cons.gridwidth = 1;
         cons.ipadx = 200;
         cons.fill = GridBagConstraints.HORIZONTAL;
         panelFormulario.add(comboBoxEnderecoDestino, cons);
-        
+
         cons = new GridBagConstraints();
         cons.gridx = 0;
         cons.gridy = 2;
+        cons.insets = new Insets(5, 0, 5, 0);
         cons.gridwidth = 1;
         cons.fill = GridBagConstraints.HORIZONTAL;
         panelFormulario.add(labelSituacao, cons);
@@ -148,13 +153,15 @@ public class FormEntrega extends BaseForm {
         cons.gridx = 1;
         cons.gridy = 2;
         cons.gridwidth = 1;
+        cons.insets = new Insets(5, 0, 5, 0);
         cons.ipadx = 200;
         cons.fill = GridBagConstraints.HORIZONTAL;
         panelFormulario.add(comboBoxSituacao, cons);
-        
+
         cons = new GridBagConstraints();
         cons.gridx = 0;
         cons.gridy = 3;
+        cons.insets = new Insets(5, 0, 5, 0);
         cons.gridwidth = 1;
         cons.fill = GridBagConstraints.HORIZONTAL;
         panelFormulario.add(labelRedespacho, cons);
@@ -163,6 +170,7 @@ public class FormEntrega extends BaseForm {
         cons.gridx = 1;
         cons.gridy = 3;
         cons.gridwidth = 1;
+        cons.insets = new Insets(5, 0, 5, 0);
         cons.ipadx = 200;
         cons.fill = GridBagConstraints.HORIZONTAL;
         panelFormulario.add(comboBoxRedespacho, cons);
@@ -170,6 +178,7 @@ public class FormEntrega extends BaseForm {
         cons = new GridBagConstraints();
         cons.gridx = 0;
         cons.gridy = 4;
+        cons.insets = new Insets(5, 0, 5, 0);
         cons.gridwidth = 1;
         cons.fill = GridBagConstraints.HORIZONTAL;
         panelFormulario.add(labelVolume, cons);
@@ -177,14 +186,16 @@ public class FormEntrega extends BaseForm {
         cons = new GridBagConstraints();
         cons.gridx = 1;
         cons.gridy = 4;
+        cons.insets = new Insets(5, 0, 5, 0);
         cons.gridwidth = 1;
         cons.ipadx = 200;
         cons.fill = GridBagConstraints.HORIZONTAL;
         panelFormulario.add(comboBoxVolume, cons);
-        
+
         cons = new GridBagConstraints();
         cons.gridx = 1;
         cons.gridy = 5;
+        cons.insets = new Insets(5, 0, 5, 0);
         cons.gridwidth = 1;
         cons.fill = GridBagConstraints.HORIZONTAL;
         panelFormulario.add(buttonAdicionarVolume, cons);
@@ -192,6 +203,7 @@ public class FormEntrega extends BaseForm {
         cons = new GridBagConstraints();
         cons.gridx = 0;
         cons.gridy = 6;
+        cons.insets = new Insets(5, 0, 5, 0);
         cons.ipadx = 350;
         cons.ipady = 200;
         cons.gridwidth = 2;

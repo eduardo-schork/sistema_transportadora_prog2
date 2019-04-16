@@ -4,6 +4,7 @@ import java.awt.Dimension;
 import java.awt.Font;
 import java.awt.GridBagConstraints;
 import java.awt.GridBagLayout;
+import java.awt.Insets;
 import java.awt.LayoutManager;
 import javax.swing.JPanel;
 import javax.swing.JLabel;
@@ -33,7 +34,7 @@ public class FormPessoaJuridica extends BaseForm {
     private LayoutManager layout;
 
     public FormPessoaJuridica() {
-        super("Formulário Pessoa Jurídica", new Dimension(400, 250));
+        super("Formulário Pessoa Jurídica", new Dimension(400, 300));
 
         initComponents();
         addComponents();
@@ -88,12 +89,14 @@ public class FormPessoaJuridica extends BaseForm {
         cons.gridx = 0;
         cons.gridy = 0;
         cons.gridwidth = 1;
+        cons.insets = new Insets(5, 0, 5, 0);
         cons.fill = GridBagConstraints.HORIZONTAL;
         panelFormulario.add(labelID, cons);
 
         cons = new GridBagConstraints();
         cons.gridx = 1;
         cons.gridy = 0;
+        cons.insets = new Insets(5, 0, 5, 0);
         cons.gridwidth = 1;
         cons.ipadx = 200;
         cons.fill = GridBagConstraints.HORIZONTAL;
@@ -102,6 +105,7 @@ public class FormPessoaJuridica extends BaseForm {
         cons = new GridBagConstraints();
         cons.gridx = 0;
         cons.gridy = 1;
+        cons.insets = new Insets(5, 0, 5, 0);
         cons.gridwidth = 1;
         cons.fill = GridBagConstraints.HORIZONTAL;
         panelFormulario.add(labelNome, cons);
@@ -109,6 +113,7 @@ public class FormPessoaJuridica extends BaseForm {
         cons = new GridBagConstraints();
         cons.gridx = 1;
         cons.gridy = 1;
+        cons.insets = new Insets(5, 0, 5, 0);
         cons.gridwidth = 1;
         cons.ipadx = 200;
         cons.fill = GridBagConstraints.HORIZONTAL;
@@ -117,6 +122,7 @@ public class FormPessoaJuridica extends BaseForm {
         cons = new GridBagConstraints();
         cons.gridx = 0;
         cons.gridy = 2;
+        cons.insets = new Insets(5, 0, 5, 0);
         cons.gridwidth = 1;
         cons.fill = GridBagConstraints.HORIZONTAL;
         panelFormulario.add(labelSobrenome, cons);
@@ -124,6 +130,7 @@ public class FormPessoaJuridica extends BaseForm {
         cons = new GridBagConstraints();
         cons.gridx = 1;
         cons.gridy = 2;
+        cons.insets = new Insets(5, 0, 5, 0);
         cons.gridwidth = 1;
         cons.ipadx = 200;
         cons.fill = GridBagConstraints.HORIZONTAL;
@@ -132,6 +139,7 @@ public class FormPessoaJuridica extends BaseForm {
         cons = new GridBagConstraints();
         cons.gridx = 0;
         cons.gridy = 3;
+        cons.insets = new Insets(5, 0, 5, 0);
         cons.gridwidth = 1;
         cons.fill = GridBagConstraints.HORIZONTAL;
         panelFormulario.add(labelNomeFantasia, cons);
@@ -139,6 +147,7 @@ public class FormPessoaJuridica extends BaseForm {
         cons = new GridBagConstraints();
         cons.gridx = 1;
         cons.gridy = 3;
+        cons.insets = new Insets(5, 0, 5, 0);
         cons.gridwidth = 1;
         cons.ipadx = 200;
         cons.fill = GridBagConstraints.HORIZONTAL;
@@ -146,6 +155,7 @@ public class FormPessoaJuridica extends BaseForm {
 
         cons = new GridBagConstraints();
         cons.gridx = 0;
+        cons.insets = new Insets(5, 0, 5, 0);
         cons.gridy = 4;
         cons.gridwidth = 1;
         cons.fill = GridBagConstraints.HORIZONTAL;
@@ -154,6 +164,7 @@ public class FormPessoaJuridica extends BaseForm {
         cons = new GridBagConstraints();
         cons.gridx = 1;
         cons.gridy = 4;
+        cons.insets = new Insets(5, 0, 5, 0);
         cons.gridwidth = 1;
         cons.ipadx = 200;
         cons.fill = GridBagConstraints.HORIZONTAL;
@@ -162,6 +173,7 @@ public class FormPessoaJuridica extends BaseForm {
         cons = new GridBagConstraints();
         cons.gridx = 0;
         cons.gridy = 5;
+        cons.insets = new Insets(5, 0, 5, 0);
         cons.gridwidth = 1;
         cons.fill = GridBagConstraints.HORIZONTAL;
         panelFormulario.add(labelIE, cons);
@@ -169,6 +181,7 @@ public class FormPessoaJuridica extends BaseForm {
         cons = new GridBagConstraints();
         cons.gridx = 1;
         cons.gridy = 5;
+        cons.insets = new Insets(5, 0, 5, 0);
         cons.gridwidth = 1;
         cons.ipadx = 200;
         cons.fill = GridBagConstraints.HORIZONTAL;

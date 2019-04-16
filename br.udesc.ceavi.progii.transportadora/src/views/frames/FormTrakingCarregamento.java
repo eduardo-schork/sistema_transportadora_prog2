@@ -5,6 +5,7 @@ import java.awt.Font;
 import java.awt.GridBagConstraints;
 import java.awt.GridBagLayout;
 import java.awt.GridLayout;
+import java.awt.Insets;
 import java.awt.LayoutManager;
 import javax.swing.JComboBox;
 import javax.swing.JLabel;
@@ -25,13 +26,13 @@ public class FormTrakingCarregamento extends BaseForm {
     private JComboBox comboBoxCarregamento;
 
     private GridBagConstraints cons;
-    
+
     private JPanel panelFormulario;
     private Dimension dimensao;
     private LayoutManager layout;
 
     public FormTrakingCarregamento() {
-        super("Formulário Tracking de Carregamento", new Dimension(400, 200));
+        super("Formulário Tracking de Carregamento", new Dimension(400, 250));
 
         initComponents();
         addComponents();
@@ -76,6 +77,7 @@ public class FormTrakingCarregamento extends BaseForm {
         cons = new GridBagConstraints();
         cons.gridx = 0;
         cons.gridy = 0;
+        cons.insets = new Insets(5, 0, 5, 0);
         cons.gridwidth = 1;
         cons.fill = GridBagConstraints.HORIZONTAL;
         panelFormulario.add(labelID, cons);
@@ -84,13 +86,15 @@ public class FormTrakingCarregamento extends BaseForm {
         cons.gridx = 1;
         cons.gridy = 0;
         cons.gridwidth = 1;
+        cons.insets = new Insets(5, 0, 5, 0);
         cons.ipadx = 200;
         cons.fill = GridBagConstraints.HORIZONTAL;
         panelFormulario.add(textFieldID, cons);
-        
-      cons = new GridBagConstraints();
+
+        cons = new GridBagConstraints();
         cons.gridx = 0;
         cons.gridy = 1;
+        cons.insets = new Insets(5, 0, 5, 0);
         cons.gridwidth = 1;
         cons.fill = GridBagConstraints.HORIZONTAL;
         panelFormulario.add(labelSituacao, cons);
@@ -98,13 +102,15 @@ public class FormTrakingCarregamento extends BaseForm {
         cons = new GridBagConstraints();
         cons.gridx = 1;
         cons.gridy = 1;
+        cons.insets = new Insets(5, 0, 5, 0);
         cons.gridwidth = 1;
         cons.ipadx = 200;
         cons.fill = GridBagConstraints.HORIZONTAL;
         panelFormulario.add(comboBoxSituacao, cons);
-        
+
         cons = new GridBagConstraints();
         cons.gridx = 0;
+        cons.insets = new Insets(5, 0, 5, 0);
         cons.gridy = 2;
         cons.gridwidth = 1;
         cons.fill = GridBagConstraints.HORIZONTAL;
@@ -113,6 +119,7 @@ public class FormTrakingCarregamento extends BaseForm {
         cons = new GridBagConstraints();
         cons.gridx = 1;
         cons.gridy = 2;
+        cons.insets = new Insets(5, 0, 5, 0);
         cons.gridwidth = 1;
         cons.ipadx = 200;
         cons.fill = GridBagConstraints.HORIZONTAL;
@@ -120,6 +127,7 @@ public class FormTrakingCarregamento extends BaseForm {
 
         cons = new GridBagConstraints();
         cons.gridx = 0;
+        cons.insets = new Insets(5, 0, 5, 0);
         cons.gridy = 3;
         cons.gridwidth = 1;
         cons.fill = GridBagConstraints.HORIZONTAL;
@@ -128,6 +136,7 @@ public class FormTrakingCarregamento extends BaseForm {
         cons = new GridBagConstraints();
         cons.gridx = 1;
         cons.gridy = 3;
+        cons.insets = new Insets(5, 0, 5, 0);
         cons.gridwidth = 1;
         cons.ipadx = 200;
         cons.fill = GridBagConstraints.HORIZONTAL;

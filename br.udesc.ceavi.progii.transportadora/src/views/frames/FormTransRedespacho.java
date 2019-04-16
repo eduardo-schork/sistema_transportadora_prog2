@@ -4,7 +4,7 @@ import java.awt.Dimension;
 import java.awt.Font;
 import java.awt.GridBagConstraints;
 import java.awt.GridBagLayout;
-import java.awt.GridLayout;
+import java.awt.Insets;
 import java.awt.LayoutManager;
 import javax.swing.JLabel;
 import javax.swing.JComboBox;
@@ -40,7 +40,7 @@ public class FormTransRedespacho extends BaseForm {
     private LayoutManager layout;
 
     public FormTransRedespacho() {
-        super("Formulário Transportadora Redespacho", new Dimension(400, 350));
+        super("Formulário Transportadora Redespacho", new Dimension(400, 400));
 
         initComponents();
         addComponents();
@@ -106,6 +106,7 @@ public class FormTransRedespacho extends BaseForm {
         cons = new GridBagConstraints();
         cons.gridx = 0;
         cons.gridy = 0;
+        cons.insets = new Insets(5, 0, 5, 0);
         cons.gridwidth = 1;
         cons.fill = GridBagConstraints.HORIZONTAL;
         panelFormulario.add(labelID, cons);
@@ -114,20 +115,15 @@ public class FormTransRedespacho extends BaseForm {
         cons.gridx = 1;
         cons.gridy = 0;
         cons.gridwidth = 1;
+        cons.insets = new Insets(5, 0, 5, 0);
         cons.ipadx = 200;
         cons.fill = GridBagConstraints.HORIZONTAL;
         panelFormulario.add(textFieldID, cons);
 
         cons = new GridBagConstraints();
         cons.gridx = 0;
-        cons.gridy = 1;
-        cons.gridwidth = 2;
-        cons.fill = GridBagConstraints.HORIZONTAL;
-        panelFormulario.add(new JLabel(" "), cons);
-        
-        cons = new GridBagConstraints();
-        cons.gridx = 0;
         cons.gridy = 2;
+        cons.insets = new Insets(5, 0, 5, 0);
         cons.gridwidth = 2;
         cons.fill = GridBagConstraints.HORIZONTAL;
         panelFormulario.add(labelSelecione, cons);
@@ -135,6 +131,7 @@ public class FormTransRedespacho extends BaseForm {
         cons = new GridBagConstraints();
         cons.gridx = 0;
         cons.gridy = 3;
+        cons.insets = new Insets(5, 0, 5, 0);
         cons.gridwidth = 1;
         cons.fill = GridBagConstraints.HORIZONTAL;
         panelFormulario.add(labelPessoaJuridica, cons);
@@ -142,6 +139,7 @@ public class FormTransRedespacho extends BaseForm {
         cons = new GridBagConstraints();
         cons.gridx = 1;
         cons.gridy = 3;
+        cons.insets = new Insets(5, 0, 5, 0);
         cons.gridwidth = 1;
         cons.ipadx = 200;
         cons.fill = GridBagConstraints.HORIZONTAL;
@@ -149,6 +147,7 @@ public class FormTransRedespacho extends BaseForm {
 
         cons = new GridBagConstraints();
         cons.gridx = 0;
+        cons.insets = new Insets(5, 0, 5, 0);
         cons.gridy = 4;
         cons.gridwidth = 1;
         cons.fill = GridBagConstraints.HORIZONTAL;
@@ -157,6 +156,7 @@ public class FormTransRedespacho extends BaseForm {
         cons = new GridBagConstraints();
         cons.gridx = 1;
         cons.gridy = 4;
+        cons.insets = new Insets(5, 0, 5, 0);
         cons.gridwidth = 1;
         cons.ipadx = 200;
         cons.fill = GridBagConstraints.HORIZONTAL;
@@ -165,6 +165,7 @@ public class FormTransRedespacho extends BaseForm {
         cons = new GridBagConstraints();
         cons.gridx = 0;
         cons.gridy = 5;
+        cons.insets = new Insets(5, 0, 5, 0);
         cons.gridwidth = 1;
         cons.fill = GridBagConstraints.HORIZONTAL;
         panelFormulario.add(labelNome, cons);
@@ -172,6 +173,7 @@ public class FormTransRedespacho extends BaseForm {
         cons = new GridBagConstraints();
         cons.gridx = 1;
         cons.gridy = 5;
+        cons.insets = new Insets(5, 0, 5, 0);
         cons.gridwidth = 1;
         cons.ipadx = 200;
         cons.fill = GridBagConstraints.HORIZONTAL;
@@ -180,6 +182,7 @@ public class FormTransRedespacho extends BaseForm {
         cons = new GridBagConstraints();
         cons.gridx = 0;
         cons.gridy = 6;
+        cons.insets = new Insets(5, 0, 5, 0);
         cons.gridwidth = 1;
         cons.fill = GridBagConstraints.HORIZONTAL;
         panelFormulario.add(labelSobrenome, cons);
@@ -187,6 +190,7 @@ public class FormTransRedespacho extends BaseForm {
         cons = new GridBagConstraints();
         cons.gridx = 1;
         cons.gridy = 6;
+        cons.insets = new Insets(5, 0, 5, 0);
         cons.gridwidth = 1;
         cons.ipadx = 200;
         cons.fill = GridBagConstraints.HORIZONTAL;
@@ -195,6 +199,7 @@ public class FormTransRedespacho extends BaseForm {
         cons = new GridBagConstraints();
         cons.gridx = 0;
         cons.gridy = 7;
+        cons.insets = new Insets(5, 0, 5, 0);
         cons.gridwidth = 1;
         cons.fill = GridBagConstraints.HORIZONTAL;
         panelFormulario.add(labelNomeFantasia, cons);
@@ -202,6 +207,7 @@ public class FormTransRedespacho extends BaseForm {
         cons = new GridBagConstraints();
         cons.gridx = 1;
         cons.gridy = 7;
+        cons.insets = new Insets(5, 0, 5, 0);
         cons.gridwidth = 1;
         cons.ipadx = 200;
         cons.fill = GridBagConstraints.HORIZONTAL;
@@ -210,6 +216,7 @@ public class FormTransRedespacho extends BaseForm {
         cons = new GridBagConstraints();
         cons.gridx = 0;
         cons.gridy = 8;
+        cons.insets = new Insets(5, 0, 5, 0);
         cons.gridwidth = 1;
         cons.fill = GridBagConstraints.HORIZONTAL;
         panelFormulario.add(labelCNPJ, cons);
@@ -217,6 +224,7 @@ public class FormTransRedespacho extends BaseForm {
         cons = new GridBagConstraints();
         cons.gridx = 1;
         cons.gridy = 8;
+        cons.insets = new Insets(5, 0, 5, 0);
         cons.gridwidth = 1;
         cons.ipadx = 200;
         cons.fill = GridBagConstraints.HORIZONTAL;
@@ -225,6 +233,7 @@ public class FormTransRedespacho extends BaseForm {
         cons = new GridBagConstraints();
         cons.gridx = 0;
         cons.gridy = 9;
+        cons.insets = new Insets(5, 0, 5, 0);
         cons.gridwidth = 1;
         cons.fill = GridBagConstraints.HORIZONTAL;
         panelFormulario.add(labelIE, cons);
@@ -232,6 +241,7 @@ public class FormTransRedespacho extends BaseForm {
         cons = new GridBagConstraints();
         cons.gridx = 1;
         cons.gridy = 9;
+        cons.insets = new Insets(5, 0, 5, 0);
         cons.gridwidth = 1;
         cons.ipadx = 200;
         cons.fill = GridBagConstraints.HORIZONTAL;

@@ -5,6 +5,7 @@ import java.awt.Font;
 import java.awt.GridBagConstraints;
 import java.awt.GridBagLayout;
 import java.awt.GridLayout;
+import java.awt.Insets;
 import java.awt.LayoutManager;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
@@ -30,7 +31,7 @@ public class FormVolume extends BaseForm {
     private LayoutManager layout;
 
     public FormVolume() {
-        super("Formulário Volume", new Dimension(400, 200));
+        super("Formulário Volume", new Dimension(400, 250));
 
         initComponents();
         addComponents();
@@ -75,12 +76,14 @@ public class FormVolume extends BaseForm {
         cons = new GridBagConstraints();
         cons.gridx = 0;
         cons.gridy = 0;
+        cons.insets = new Insets(5, 0, 5, 0);
         cons.gridwidth = 1;
         cons.fill = GridBagConstraints.HORIZONTAL;
         panelFormulario.add(labelID, cons);
 
         cons = new GridBagConstraints();
         cons.gridx = 1;
+        cons.insets = new Insets(5, 0, 5, 0);
         cons.gridy = 0;
         cons.gridwidth = 1;
         cons.ipadx = 200;
@@ -90,6 +93,7 @@ public class FormVolume extends BaseForm {
         cons = new GridBagConstraints();
         cons.gridx = 0;
         cons.gridy = 1;
+        cons.insets = new Insets(5, 0, 5, 0);
         cons.gridwidth = 1;
         cons.fill = GridBagConstraints.HORIZONTAL;
         panelFormulario.add(labelPesoBruto, cons);
@@ -98,6 +102,7 @@ public class FormVolume extends BaseForm {
         cons.gridx = 1;
         cons.gridy = 1;
         cons.gridwidth = 1;
+        cons.insets = new Insets(5, 0, 5, 0);
         cons.ipadx = 200;
         cons.fill = GridBagConstraints.HORIZONTAL;
         panelFormulario.add(textFieldPesoBruto, cons);
@@ -105,6 +110,7 @@ public class FormVolume extends BaseForm {
         cons = new GridBagConstraints();
         cons.gridx = 0;
         cons.gridy = 2;
+        cons.insets = new Insets(5, 0, 5, 0);
         cons.gridwidth = 1;
         cons.fill = GridBagConstraints.HORIZONTAL;
         panelFormulario.add(labelPesoLiquido, cons);
@@ -113,6 +119,7 @@ public class FormVolume extends BaseForm {
         cons.gridx = 1;
         cons.gridy = 2;
         cons.gridwidth = 1;
+        cons.insets = new Insets(5, 0, 5, 0);
         cons.ipadx = 200;
         cons.fill = GridBagConstraints.HORIZONTAL;
         panelFormulario.add(textFieldPesoLiquido, cons);
@@ -120,6 +127,7 @@ public class FormVolume extends BaseForm {
         cons = new GridBagConstraints();
         cons.gridx = 0;
         cons.gridy = 3;
+        cons.insets = new Insets(5, 0, 5, 0);
         cons.gridwidth = 1;
         cons.fill = GridBagConstraints.HORIZONTAL;
         panelFormulario.add(labelCubagem, cons);
@@ -127,6 +135,7 @@ public class FormVolume extends BaseForm {
         cons = new GridBagConstraints();
         cons.gridx = 1;
         cons.gridy = 3;
+        cons.insets = new Insets(5, 0, 5, 0);
         cons.gridwidth = 1;
         cons.ipadx = 200;
         cons.fill = GridBagConstraints.HORIZONTAL;

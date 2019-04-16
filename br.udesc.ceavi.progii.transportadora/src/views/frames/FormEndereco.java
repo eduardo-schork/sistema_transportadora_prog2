@@ -5,6 +5,7 @@ import java.awt.Font;
 import java.awt.GridBagConstraints;
 import java.awt.GridBagLayout;
 import java.awt.GridLayout;
+import java.awt.Insets;
 import java.awt.LayoutManager;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
@@ -38,7 +39,7 @@ public class FormEndereco extends BaseForm {
     private LayoutManager layout;
 
     public FormEndereco() {
-        super("Formulário Endereço", new Dimension(450, 300));
+        super("Formulário Endereço", new Dimension(450, 350));
 
         initComponents();
         addComponents();
@@ -81,7 +82,7 @@ public class FormEndereco extends BaseForm {
         textFieldCidade = new JTextField();
         textFieldEstado = new JTextField();
         textFieldPais = new JTextField();
-        
+
         textFieldID.setEditable(false);
 
         textFieldID.setFont(new Font("Arial", Font.PLAIN, (int) 18));
@@ -104,6 +105,7 @@ public class FormEndereco extends BaseForm {
         cons = new GridBagConstraints();
         cons.gridx = 0;
         cons.gridy = 0;
+        cons.insets = new Insets(5, 0, 5, 0);
         cons.gridwidth = 1;
         cons.fill = GridBagConstraints.HORIZONTAL;
         panelFormulario.add(labelID, cons);
@@ -111,6 +113,7 @@ public class FormEndereco extends BaseForm {
         cons = new GridBagConstraints();
         cons.gridx = 1;
         cons.gridy = 0;
+        cons.insets = new Insets(5, 0, 5, 0);
         cons.gridwidth = 1;
         cons.ipadx = 200;
         cons.fill = GridBagConstraints.HORIZONTAL;
@@ -119,6 +122,7 @@ public class FormEndereco extends BaseForm {
         cons = new GridBagConstraints();
         cons.gridx = 0;
         cons.gridy = 1;
+        cons.insets = new Insets(5, 0, 5, 0);
         cons.gridwidth = 1;
         cons.fill = GridBagConstraints.HORIZONTAL;
         panelFormulario.add(labelNumero, cons);
@@ -126,6 +130,7 @@ public class FormEndereco extends BaseForm {
         cons = new GridBagConstraints();
         cons.gridx = 1;
         cons.gridy = 1;
+        cons.insets = new Insets(5, 0, 5, 0);
         cons.gridwidth = 1;
         cons.ipadx = 200;
         cons.fill = GridBagConstraints.HORIZONTAL;
@@ -134,6 +139,7 @@ public class FormEndereco extends BaseForm {
         cons = new GridBagConstraints();
         cons.gridx = 0;
         cons.gridy = 2;
+        cons.insets = new Insets(5, 0, 5, 0);
         cons.gridwidth = 1;
         cons.fill = GridBagConstraints.HORIZONTAL;
         panelFormulario.add(labelCEP, cons);
@@ -141,6 +147,7 @@ public class FormEndereco extends BaseForm {
         cons = new GridBagConstraints();
         cons.gridx = 1;
         cons.gridy = 2;
+        cons.insets = new Insets(5, 0, 5, 0);
         cons.gridwidth = 1;
         cons.ipadx = 200;
         cons.fill = GridBagConstraints.HORIZONTAL;
@@ -149,6 +156,7 @@ public class FormEndereco extends BaseForm {
         cons = new GridBagConstraints();
         cons.gridx = 0;
         cons.gridy = 3;
+        cons.insets = new Insets(5, 0, 5, 0);
         cons.gridwidth = 1;
         cons.fill = GridBagConstraints.HORIZONTAL;
         panelFormulario.add(labelRua, cons);
@@ -156,6 +164,7 @@ public class FormEndereco extends BaseForm {
         cons = new GridBagConstraints();
         cons.gridx = 1;
         cons.gridy = 3;
+        cons.insets = new Insets(5, 0, 5, 0);
         cons.gridwidth = 1;
         cons.ipadx = 200;
         cons.fill = GridBagConstraints.HORIZONTAL;
@@ -164,12 +173,14 @@ public class FormEndereco extends BaseForm {
         cons = new GridBagConstraints();
         cons.gridx = 0;
         cons.gridy = 4;
+        cons.insets = new Insets(5, 0, 5, 0);
         cons.gridwidth = 1;
         cons.fill = GridBagConstraints.HORIZONTAL;
         panelFormulario.add(labelBairro, cons);
 
         cons = new GridBagConstraints();
         cons.gridx = 1;
+        cons.insets = new Insets(5, 0, 5, 0);
         cons.gridy = 4;
         cons.gridwidth = 1;
         cons.ipadx = 200;
@@ -178,6 +189,7 @@ public class FormEndereco extends BaseForm {
 
         cons = new GridBagConstraints();
         cons.gridx = 0;
+        cons.insets = new Insets(5, 0, 5, 0);
         cons.gridy = 5;
         cons.gridwidth = 1;
         cons.fill = GridBagConstraints.HORIZONTAL;
@@ -186,6 +198,7 @@ public class FormEndereco extends BaseForm {
         cons = new GridBagConstraints();
         cons.gridx = 1;
         cons.gridy = 5;
+        cons.insets = new Insets(5, 0, 5, 0);
         cons.gridwidth = 1;
         cons.ipadx = 200;
         cons.fill = GridBagConstraints.HORIZONTAL;
@@ -195,12 +208,14 @@ public class FormEndereco extends BaseForm {
         cons.gridx = 0;
         cons.gridy = 6;
         cons.gridwidth = 1;
+        cons.insets = new Insets(5, 0, 5, 0);
         cons.fill = GridBagConstraints.HORIZONTAL;
         panelFormulario.add(labelEstado, cons);
 
         cons = new GridBagConstraints();
         cons.gridx = 1;
         cons.gridy = 6;
+        cons.insets = new Insets(5, 0, 5, 0);
         cons.gridwidth = 1;
         cons.ipadx = 200;
         cons.fill = GridBagConstraints.HORIZONTAL;
@@ -209,6 +224,7 @@ public class FormEndereco extends BaseForm {
         cons = new GridBagConstraints();
         cons.gridx = 0;
         cons.gridy = 7;
+        cons.insets = new Insets(5, 0, 5, 0);
         cons.gridwidth = 1;
         cons.fill = GridBagConstraints.HORIZONTAL;
         panelFormulario.add(labelPais, cons);
@@ -217,6 +233,7 @@ public class FormEndereco extends BaseForm {
         cons.gridx = 1;
         cons.gridy = 7;
         cons.gridwidth = 1;
+        cons.insets = new Insets(5, 0, 5, 0);
         cons.ipadx = 200;
         cons.fill = GridBagConstraints.HORIZONTAL;
         panelFormulario.add(textFieldPais, cons);

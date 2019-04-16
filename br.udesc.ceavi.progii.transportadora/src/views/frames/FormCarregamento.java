@@ -10,6 +10,7 @@ import java.awt.Font;
 import java.awt.GridBagConstraints;
 import java.awt.GridBagLayout;
 import java.awt.GridLayout;
+import java.awt.Insets;
 import java.awt.LayoutManager;
 import javax.swing.JButton;
 import javax.swing.JComboBox;
@@ -49,7 +50,7 @@ public class FormCarregamento extends BaseForm {
     private LayoutManager layout;
 
     public FormCarregamento() {
-        super("Formulário Carregamento", new Dimension(400, 450));
+        super("Formulário Carregamento", new Dimension(400, 500));
 
         initComponents();
         addComponents();
@@ -57,7 +58,7 @@ public class FormCarregamento extends BaseForm {
 
     private void initComponents() {
 
-        dimensaoBotao = new Dimension(100, 40);
+        dimensaoBotao = new Dimension(100, 60);
         buttonAdicionarEntrega = new JButton("Adicionar Entrega");
         buttonAdicionarEntrega.setSize(dimensaoBotao);
 
@@ -99,7 +100,7 @@ public class FormCarregamento extends BaseForm {
 
         tabelaEntregas = new JTable(dados, colunas);
         tabelaEntregas.setEnabled(false);
-        
+
         layout = new GridBagLayout();
         panelFormulario = new JPanel();
         panelFormulario.setLayout(layout);
@@ -111,6 +112,7 @@ public class FormCarregamento extends BaseForm {
         cons.gridx = 0;
         cons.gridy = 0;
         cons.gridwidth = 1;
+        cons.insets = new Insets(5, 0, 5, 0);
         cons.fill = GridBagConstraints.HORIZONTAL;
         panelFormulario.add(labelID, cons);
 
@@ -119,6 +121,7 @@ public class FormCarregamento extends BaseForm {
         cons.gridy = 0;
         cons.ipadx = 200;
         cons.gridwidth = 1;
+        cons.insets = new Insets(5, 0, 5, 0);
         cons.fill = GridBagConstraints.HORIZONTAL;
         panelFormulario.add(textFieldID, cons);
 
@@ -126,12 +129,14 @@ public class FormCarregamento extends BaseForm {
         cons.gridx = 0;
         cons.gridy = 1;
         cons.gridwidth = 1;
+        cons.insets = new Insets(5, 0, 5, 0);
         cons.fill = GridBagConstraints.HORIZONTAL;
         panelFormulario.add(labelEnderecoSaida, cons);
 
         cons = new GridBagConstraints();
         cons.gridx = 1;
         cons.gridy = 1;
+        cons.insets = new Insets(5, 0, 5, 0);
         cons.ipadx = 200;
         cons.gridwidth = 1;
         cons.fill = GridBagConstraints.HORIZONTAL;
@@ -140,6 +145,7 @@ public class FormCarregamento extends BaseForm {
         cons = new GridBagConstraints();
         cons.gridx = 0;
         cons.gridy = 2;
+        cons.insets = new Insets(5, 0, 5, 0);
         cons.gridwidth = 1;
         cons.fill = GridBagConstraints.HORIZONTAL;
         panelFormulario.add(labelEntrega, cons);
@@ -147,6 +153,7 @@ public class FormCarregamento extends BaseForm {
         cons = new GridBagConstraints();
         cons.gridx = 1;
         cons.gridy = 2;
+        cons.insets = new Insets(5, 0, 5, 0);
         cons.ipadx = 200;
         cons.gridwidth = 1;
         cons.fill = GridBagConstraints.HORIZONTAL;
@@ -155,6 +162,7 @@ public class FormCarregamento extends BaseForm {
         cons = new GridBagConstraints();
         cons.gridx = 1;
         cons.gridy = 3;
+        cons.insets = new Insets(10, 0, 10, 0);
         cons.gridwidth = 1;
         cons.fill = GridBagConstraints.HORIZONTAL;
         panelFormulario.add(buttonAdicionarEntrega, cons);
@@ -162,6 +170,7 @@ public class FormCarregamento extends BaseForm {
         cons = new GridBagConstraints();
         cons.gridx = 0;
         cons.gridy = 4;
+        cons.insets = new Insets(5, 0, 5, 0);
         cons.ipadx = 350;
         cons.ipady = 200;
         cons.gridwidth = 2;

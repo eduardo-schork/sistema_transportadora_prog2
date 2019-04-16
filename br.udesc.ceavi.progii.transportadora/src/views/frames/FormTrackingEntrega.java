@@ -1,11 +1,10 @@
 package views.frames;
 
-//private int id;
 import java.awt.Dimension;
 import java.awt.Font;
 import java.awt.GridBagConstraints;
 import java.awt.GridBagLayout;
-import java.awt.GridLayout;
+import java.awt.Insets;
 import java.awt.LayoutManager;
 import javax.swing.JComboBox;
 import javax.swing.JLabel;
@@ -20,7 +19,7 @@ public class FormTrackingEntrega extends BaseForm {
     private JLabel labelData;
     private JLabel labelUsuario;
     private JLabel labelEntrega;
-    
+
     private JTextField textFieldID;
     private JComboBox comboBoxSituacao;
     private JTextField textFieldData;
@@ -34,7 +33,7 @@ public class FormTrackingEntrega extends BaseForm {
     private LayoutManager layout;
 
     public FormTrackingEntrega() {
-        super("Formulário Tracking de Entrega", new Dimension(400, 200));
+        super("Formulário Tracking de Entrega", new Dimension(400, 250));
 
         initComponents();
         addComponents();
@@ -53,7 +52,7 @@ public class FormTrackingEntrega extends BaseForm {
         labelUsuario.setFont(new Font("Arial", Font.PLAIN, (int) 18));
         labelData.setFont(new Font("Arial", Font.PLAIN, (int) 18));
         labelEntrega.setFont(new Font("Arial", Font.PLAIN, (int) 18));
-        
+
         labelID.setHorizontalAlignment(SwingConstants.RIGHT);
         labelSituacao.setHorizontalAlignment(SwingConstants.RIGHT);
         labelUsuario.setHorizontalAlignment(SwingConstants.RIGHT);
@@ -84,6 +83,7 @@ public class FormTrackingEntrega extends BaseForm {
         cons = new GridBagConstraints();
         cons.gridx = 0;
         cons.gridy = 0;
+        cons.insets = new Insets(5, 0, 5, 0);
         cons.gridwidth = 1;
         cons.fill = GridBagConstraints.HORIZONTAL;
         panelFormulario.add(labelID, cons);
@@ -91,6 +91,7 @@ public class FormTrackingEntrega extends BaseForm {
         cons = new GridBagConstraints();
         cons.gridx = 1;
         cons.gridy = 0;
+        cons.insets = new Insets(5, 0, 5, 0);
         cons.gridwidth = 1;
         cons.ipadx = 200;
         cons.fill = GridBagConstraints.HORIZONTAL;
@@ -99,6 +100,7 @@ public class FormTrackingEntrega extends BaseForm {
         cons = new GridBagConstraints();
         cons.gridx = 0;
         cons.gridy = 1;
+        cons.insets = new Insets(5, 0, 5, 0);
         cons.gridwidth = 1;
         cons.fill = GridBagConstraints.HORIZONTAL;
         panelFormulario.add(labelID, cons);
@@ -106,14 +108,16 @@ public class FormTrackingEntrega extends BaseForm {
         cons = new GridBagConstraints();
         cons.gridx = 1;
         cons.gridy = 1;
+        cons.insets = new Insets(5, 0, 5, 0);
         cons.gridwidth = 1;
         cons.ipadx = 200;
         cons.fill = GridBagConstraints.HORIZONTAL;
         panelFormulario.add(textFieldID, cons);
-        
+
         cons = new GridBagConstraints();
         cons.gridx = 0;
         cons.gridy = 2;
+        cons.insets = new Insets(5, 0, 5, 0);
         cons.gridwidth = 1;
         cons.fill = GridBagConstraints.HORIZONTAL;
         panelFormulario.add(labelSituacao, cons);
@@ -122,6 +126,7 @@ public class FormTrackingEntrega extends BaseForm {
         cons.gridx = 1;
         cons.gridy = 2;
         cons.gridwidth = 1;
+        cons.insets = new Insets(5, 0, 5, 0);
         cons.ipadx = 200;
         cons.fill = GridBagConstraints.HORIZONTAL;
         panelFormulario.add(comboBoxSituacao, cons);
@@ -129,6 +134,7 @@ public class FormTrackingEntrega extends BaseForm {
         cons = new GridBagConstraints();
         cons.gridx = 0;
         cons.gridy = 3;
+        cons.insets = new Insets(5, 0, 5, 0);
         cons.gridwidth = 1;
         cons.fill = GridBagConstraints.HORIZONTAL;
         panelFormulario.add(labelUsuario, cons);
@@ -136,14 +142,16 @@ public class FormTrackingEntrega extends BaseForm {
         cons = new GridBagConstraints();
         cons.gridx = 1;
         cons.gridy = 3;
+        cons.insets = new Insets(5, 0, 5, 0);
         cons.gridwidth = 1;
         cons.ipadx = 200;
         cons.fill = GridBagConstraints.HORIZONTAL;
         panelFormulario.add(comboBoxUsuario, cons);
-  
+
         cons = new GridBagConstraints();
         cons.gridx = 0;
         cons.gridy = 4;
+        cons.insets = new Insets(5, 0, 5, 0);
         cons.gridwidth = 1;
         cons.fill = GridBagConstraints.HORIZONTAL;
         panelFormulario.add(labelData, cons);
@@ -151,6 +159,7 @@ public class FormTrackingEntrega extends BaseForm {
         cons = new GridBagConstraints();
         cons.gridx = 1;
         cons.gridy = 4;
+        cons.insets = new Insets(5, 0, 5, 0);
         cons.gridwidth = 1;
         cons.ipadx = 200;
         cons.fill = GridBagConstraints.HORIZONTAL;
