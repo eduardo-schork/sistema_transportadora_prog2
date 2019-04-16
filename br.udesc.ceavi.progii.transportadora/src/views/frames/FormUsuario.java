@@ -37,11 +37,11 @@ public class FormUsuario extends BaseForm {
     }
 
     private void initComponents() {
-        labelID = new JLabel("ID:");
-        labelPessoa = new JLabel("Pessoa:");
-        labelTipo = new JLabel("Tipo:");
-        labelLogin = new JLabel("Login:");
-        labelSenha = new javax.swing.JLabel("Senha:");
+        labelID = new JLabel("ID:  ");
+        labelPessoa = new JLabel("Pessoa:  ");
+        labelTipo = new JLabel("Tipo:  ");
+        labelLogin = new JLabel("Login:  ");
+        labelSenha = new javax.swing.JLabel("Senha:  ");
 
         labelID.setFont(new Font("Arial", Font.PLAIN, (int) 18));
         labelPessoa.setFont(new Font("Arial", Font.PLAIN, (int) 18));
