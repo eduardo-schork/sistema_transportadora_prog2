@@ -2,6 +2,7 @@ package main;
 
 import controllers.VeiculoController;
 import controllers.CarregamentoController;
+import controllers.TransportadoraRedespachoController;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.ArrayList;
@@ -16,11 +17,13 @@ import javax.swing.JRadioButtonMenuItem;
 import models.Carregamento;
 import models.Endereco;
 import models.Pessoa;
+import models.TransportadoraRedespacho;
 import models.Veiculo;
 import views.frames.InstanceGridActionsFrame;
 import views.frames.InstanceGridFrame;
 import views.grids.CarregamentoGrid;
 import views.grids.PessoaGrid;
+import views.grids.TransportadoraRedespachoGrid;
 import views.grids.VeiculoGrid;
 
 public class Menu extends JFrame {
@@ -171,12 +174,6 @@ public class Menu extends JFrame {
 
         });
 
-        JMenuItem cargas = new JMenuItem("Cargas");
-
-        cargas.addActionListener((action) -> {
-
-        });
-
         JMenuItem clientes = new JMenuItem("Clientes");
 
         clientes.addActionListener((action) -> {
@@ -215,8 +212,20 @@ public class Menu extends JFrame {
 
         JMenuItem transportadora = new JMenuItem("Trasportadora Redespacho");
 
-        transportadora.addActionListener((action) -> {
+        transportadora.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent action) {
+                List<TransportadoraRedespacho> transRedespacho = new ArrayList<>();
+                String[] colunasTransRedespacho;
+                colunasTransRedespacho = new String[]{"#", "Pessoa Jurídica"};
+                TransportadoraRedespachoGrid transResGrid = new TransportadoraRedespachoGrid((List)transRedespacho, colunasTransRedespacho);
+                TransportadoraRedespachoController controller = new TransportadoraRedespachoController();
+                JFrame frameRedespacho = new InstanceGridActionsFrame(controller, "Transportadoras Redespacho", transResGrid );
                 
+                frameRedespacho.setResizable(false);
+                frameRedespacho.setLocationRelativeTo(null);
+                frameRedespacho.setVisible(true);
+            }
         });
 
         JMenuItem veiculos_verif_em_reparo = new JMenuItem("Veículos em reparo");
@@ -243,7 +252,6 @@ public class Menu extends JFrame {
         verif_veiculos_menu.add(veiculos_verif_em_reparo);
         verif_veiculos_menu.add(veiculos_verif_aguard_reparo);
 
-        consulta_adm_menu.add(cargas);
         consulta_adm_menu.add(clientes);
         consulta_adm_menu.add(consulta_veiculos);
         consulta_adm_menu.add(motoristas);
