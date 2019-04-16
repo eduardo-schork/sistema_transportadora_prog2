@@ -8,6 +8,7 @@ import br.udesc.ceavi.progii.transudesc.view.frames.FormTransRedespacho;
 import br.udesc.ceavi.progii.transudesc.view.frames.FormUsuario;
 import br.udesc.ceavi.progii.transudesc.view.frames.FormVeiculo;
 import br.udesc.ceavi.progii.transudesc.view.frames.FormVolume;
+import br.udesc.ceavi.progii.transudesc.view.menus.Menu;
 import javax.swing.JFrame;
 
 public class TelaPrincipal implements Runnable {
@@ -21,8 +22,9 @@ public class TelaPrincipal implements Runnable {
 
     @Override
     public void run() {
-        JFrame frame = new FormEntrega();
+        Menu menu = new Menu();
+//        JFrame frame = new FormEntrega();
 
-        frame.setVisible(true);
+        menu.setVisible(true);
     }
 }
