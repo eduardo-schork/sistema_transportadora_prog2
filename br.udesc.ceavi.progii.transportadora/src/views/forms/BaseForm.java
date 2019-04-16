@@ -1,5 +1,6 @@
-package views.frames;
+package views.forms;
 
+import controllers.BaseController;
 import views.painels.FormPanel;
 import java.awt.BorderLayout;
 import java.awt.Container;
@@ -10,6 +11,9 @@ import javax.swing.JPanel;
 
 public class BaseForm extends JFrame {
 
+    private String action;
+    private Object objeto;
+    private BaseController controller;
     private JPanel basePanel;
     private JPanel formPanel;
     private LayoutManager layout;
@@ -42,5 +46,35 @@ public class BaseForm extends JFrame {
     public void addFormulario(Container container) {
         basePanel.add(container, BorderLayout.CENTER);
     }
+    
+    public void run(){
+        this.setVisible(true);
+    }
+
+    public String getAction() {
+        return action;
+    }
+
+    public void setAction(String action) {
+        this.action = action;
+    }
+
+    public Object getObjeto() {
+        return objeto;
+    }
+
+    public void setObjeto(Object objeto) {
+        this.objeto = objeto;
+    }
+
+    public BaseController getController() {
+        return controller;
+    }
+
+    public void setController(BaseController controller) {
+        this.controller = controller;
+    }
+    
+    
 
 }

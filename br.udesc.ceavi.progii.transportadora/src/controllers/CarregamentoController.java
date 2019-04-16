@@ -5,6 +5,8 @@
  */
 package controllers;
 
+import views.forms.FormCarregamento;
+
 /**
  *
  * @author Lucas Dolsan
@@ -13,24 +15,26 @@ public class CarregamentoController extends BaseController{
 
     @Override
     public boolean add() {
-        System.out.println("ADD");
+        FormCarregamento view = new FormCarregamento();
+        view.run();
         return true;
     }
 
     @Override
-    public boolean edit() {
-        System.out.println("EDIT");
+    public boolean edit(int id) {
+        FormCarregamento view = new FormCarregamento();
+        view.run();
         return true;
     }
 
     @Override
-    public boolean delete() {
+    public boolean delete(int id) {
         System.out.println("DELETE");
         return true;
     }
 
     @Override
-    public boolean view() {
+    public boolean view(int id) {
        System.out.println("VIEW");
         return true;
     }

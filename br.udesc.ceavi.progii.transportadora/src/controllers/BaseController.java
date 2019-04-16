@@ -24,7 +24,7 @@ public abstract class BaseController {
     /**
      * Metodo utilizado para abrir o from de edicao do objeto 
      */
-    public abstract boolean edit();
+    public abstract boolean edit(int identificador);
     
     /**
      * Metodo utilizado para publicar o objeto, utilizado na acao salvar do form
@@ -34,10 +34,10 @@ public abstract class BaseController {
     /**
      * Metodo que inicia a exclusao do objeto
      */
-    public abstract boolean delete();
+    public abstract boolean delete(int identificador);
 
     /**
      * Metodo utilizado para abrir o form de visualizacao do objeto
      */
-    public abstract boolean view();
+    public abstract boolean view(int identificador);
 }

@@ -6,7 +6,9 @@ import java.awt.Dimension;
 import java.awt.FlowLayout;
 import java.awt.LayoutManager;
 import javax.swing.JButton;
+import javax.swing.JOptionPane;
 import javax.swing.JPanel;
+import javax.swing.JTable;
 
 /**
  * Esta classe define o painel para as funcionalidades CRUD para o sistema
@@ -15,21 +17,23 @@ import javax.swing.JPanel;
  * @since 08/04/2018
  */
 public class CRUDActionPanel extends JPanel {
+
     private JButton btVisualizar;
     private JButton btNovo;
     private JButton btEditar;
     private JButton btExcluir;
 
+    private JTable tableGrid;
     private LayoutManager layout;
 
     private Dimension dimensaoBotao;
     private Dimension dimensaoPainel;
-    
+
     private Container parent;
 
-    public CRUDActionPanel(Container parent, BaseController controller) {
+    public CRUDActionPanel(Container parent, BaseController controller, JTable tableGrid) {
         this.parent = parent;
-        
+        this.tableGrid = tableGrid;
         initComponents(controller);
         addComponents();
 
@@ -38,9 +42,9 @@ public class CRUDActionPanel extends JPanel {
     }
 
     private void initComponents(BaseController controller) {
-        dimensaoBotao = new Dimension(100,20);
+        dimensaoBotao = new Dimension(100, 20);
         dimensaoPainel = new Dimension(parent.getWidth(), 30);
-        
+
         layout = new FlowLayout(FlowLayout.CENTER);
 
         btNovo = new JButton("Adicionar");
@@ -52,18 +56,30 @@ public class CRUDActionPanel extends JPanel {
         btEditar = new JButton("Editar");
         btEditar.setSize(dimensaoBotao);
         btEditar.addActionListener((e) -> {
-            controller.edit();
+            int idSelecionada = this.getIdRowTable();
+            if (idSelecionada > 0) {
+                controller.edit(idSelecionada);
+            }
         });
         btVisualizar = new JButton("Visualizar");
         btVisualizar.setSize(dimensaoBotao);
         btVisualizar.addActionListener((e) -> {
-            controller.view();
+            int idSelecionada = this.getIdRowTable();
+            if (idSelecionada > 0) {
+                controller.view(idSelecionada);
+            }
         });
 
         btExcluir = new JButton("Excluir");
         btExcluir.setSize(dimensaoBotao);
         btExcluir.addActionListener((e) -> {
-            controller.delete();
+            int idSelecionada = this.getIdRowTable();
+            if (idSelecionada > 0) {
+                int reply = JOptionPane.showConfirmDialog(this, "Tem certeza que deseja realmente excluir este registro?", "Atenção!", JOptionPane.YES_NO_OPTION);
+                if (reply == JOptionPane.YES_OPTION) {
+                    controller.delete(idSelecionada);
+                }
+            }
         });
     }
 
@@ -90,5 +106,16 @@ public class CRUDActionPanel extends JPanel {
     public JButton getBtExcluir() {
         return btExcluir;
     }
-        
+
+    public int getIdRowTable() {
+        int column = 0;
+        int row = this.tableGrid.getSelectedRow();
+        if (row > 0) {
+            String value = this.tableGrid.getModel().getValueAt(row, column).toString();
+            return Integer.parseInt(value);
+        } else {
+            JOptionPane.showMessageDialog(null, "Selecione uma linha");
+        }
+        return 0;
+    }
 }

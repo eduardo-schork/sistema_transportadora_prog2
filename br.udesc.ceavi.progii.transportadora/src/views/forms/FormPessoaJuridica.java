@@ -1,4 +1,4 @@
-package views.frames;
+package views.forms;
 
 import java.awt.Dimension;
 import java.awt.Font;
@@ -6,25 +6,26 @@ import java.awt.GridBagConstraints;
 import java.awt.GridBagLayout;
 import java.awt.Insets;
 import java.awt.LayoutManager;
-import javax.swing.JComboBox;
-import javax.swing.JLabel;
 import javax.swing.JPanel;
+import javax.swing.JLabel;
 import javax.swing.JTextField;
 import javax.swing.SwingConstants;
 
-public class FormTrackingEntrega extends BaseForm {
+public class FormPessoaJuridica extends BaseForm {
 
     private JLabel labelID;
-    private JLabel labelSituacao;
-    private JLabel labelData;
-    private JLabel labelUsuario;
-    private JLabel labelEntrega;
+    private JLabel labelNome;
+    private JLabel labelSobrenome;
+    private JLabel labelNomeFantasia;
+    private JLabel labelCNPJ;
+    private JLabel labelIE;
 
     private JTextField textFieldID;
-    private JComboBox comboBoxSituacao;
-    private JTextField textFieldData;
-    private JComboBox comboBoxUsuario;
-    private JComboBox comboBoxEntrega;
+    private JTextField textFieldNome;
+    private JTextField textFieldSobrenome;
+    private JTextField textFieldNomeFantasia;
+    private JTextField textFieldCNPJ;
+    private JTextField textFieldIE;
 
     private GridBagConstraints cons;
 
@@ -32,46 +33,50 @@ public class FormTrackingEntrega extends BaseForm {
     private Dimension dimensao;
     private LayoutManager layout;
 
-    public FormTrackingEntrega() {
-        super("Formulário Tracking de Entrega", new Dimension(400, 250));
+    public FormPessoaJuridica() {
+        super("Formulário Pessoa Jurídica", new Dimension(400, 300));
 
         initComponents();
         addComponents();
     }
 
     private void initComponents() {
-
         labelID = new JLabel("ID:  ");
-        labelEntrega = new JLabel("Entrega:  ");
-        labelSituacao = new JLabel("Situação:  ");
-        labelData = new JLabel("Data:  ");
-        labelUsuario = new JLabel("Usuário:  ");
+        labelNome = new JLabel("Nome:  ");
+        labelSobrenome = new JLabel("Sobrenome:  ");
+        labelNomeFantasia = new JLabel("Nome Fantasia:  ");
+        labelCNPJ = new JLabel("CNPJ:  ");
+        labelIE = new JLabel("IE:  ");
 
         labelID.setFont(new Font("Arial", Font.PLAIN, (int) 18));
-        labelSituacao.setFont(new Font("Arial", Font.PLAIN, (int) 18));
-        labelUsuario.setFont(new Font("Arial", Font.PLAIN, (int) 18));
-        labelData.setFont(new Font("Arial", Font.PLAIN, (int) 18));
-        labelEntrega.setFont(new Font("Arial", Font.PLAIN, (int) 18));
+        labelNome.setFont(new Font("Arial", Font.PLAIN, (int) 18));
+        labelSobrenome.setFont(new Font("Arial", Font.PLAIN, (int) 18));
+        labelNomeFantasia.setFont(new Font("Arial", Font.PLAIN, (int) 18));
+        labelCNPJ.setFont(new Font("Arial", Font.PLAIN, (int) 18));
+        labelIE.setFont(new Font("Arial", Font.PLAIN, (int) 18));
 
         labelID.setHorizontalAlignment(SwingConstants.RIGHT);
-        labelSituacao.setHorizontalAlignment(SwingConstants.RIGHT);
-        labelUsuario.setHorizontalAlignment(SwingConstants.RIGHT);
-        labelData.setHorizontalAlignment(SwingConstants.RIGHT);
-        labelEntrega.setHorizontalAlignment(SwingConstants.RIGHT);
+        labelNome.setHorizontalAlignment(SwingConstants.RIGHT);
+        labelSobrenome.setHorizontalAlignment(SwingConstants.RIGHT);
+        labelNomeFantasia.setHorizontalAlignment(SwingConstants.RIGHT);
+        labelCNPJ.setHorizontalAlignment(SwingConstants.RIGHT);
+        labelIE.setHorizontalAlignment(SwingConstants.RIGHT);
 
         textFieldID = new JTextField();
-        comboBoxSituacao = new JComboBox();
-        comboBoxUsuario = new JComboBox();
-        textFieldData = new JTextField();
-        comboBoxEntrega = new JComboBox();
+        textFieldNome = new JTextField();
+        textFieldSobrenome = new JTextField();
+        textFieldNomeFantasia = new JTextField();
+        textFieldCNPJ = new JTextField();
+        textFieldIE = new JTextField();
 
         textFieldID.setEditable(false);
 
         textFieldID.setFont(new Font("Arial", Font.PLAIN, (int) 18));
-        comboBoxSituacao.setFont(new Font("Arial", Font.PLAIN, (int) 18));
-        comboBoxUsuario.setFont(new Font("Arial", Font.PLAIN, (int) 18));
-        textFieldData.setFont(new Font("Arial", Font.PLAIN, (int) 18));
-        comboBoxEntrega.setFont(new Font("Arial", Font.PLAIN, (int) 18));
+        textFieldNome.setFont(new Font("Arial", Font.PLAIN, (int) 18));
+        textFieldSobrenome.setFont(new Font("Arial", Font.PLAIN, (int) 18));
+        textFieldNomeFantasia.setFont(new Font("Arial", Font.PLAIN, (int) 18));
+        textFieldCNPJ.setFont(new Font("Arial", Font.PLAIN, (int) 18));
+        textFieldIE.setFont(new Font("Arial", Font.PLAIN, (int) 18));
 
         layout = new GridBagLayout();
 
@@ -83,8 +88,8 @@ public class FormTrackingEntrega extends BaseForm {
         cons = new GridBagConstraints();
         cons.gridx = 0;
         cons.gridy = 0;
-        cons.insets = new Insets(5, 0, 5, 0);
         cons.gridwidth = 1;
+        cons.insets = new Insets(5, 0, 5, 0);
         cons.fill = GridBagConstraints.HORIZONTAL;
         panelFormulario.add(labelID, cons);
 
@@ -103,7 +108,7 @@ public class FormTrackingEntrega extends BaseForm {
         cons.insets = new Insets(5, 0, 5, 0);
         cons.gridwidth = 1;
         cons.fill = GridBagConstraints.HORIZONTAL;
-        panelFormulario.add(labelID, cons);
+        panelFormulario.add(labelNome, cons);
 
         cons = new GridBagConstraints();
         cons.gridx = 1;
@@ -112,7 +117,7 @@ public class FormTrackingEntrega extends BaseForm {
         cons.gridwidth = 1;
         cons.ipadx = 200;
         cons.fill = GridBagConstraints.HORIZONTAL;
-        panelFormulario.add(textFieldID, cons);
+        panelFormulario.add(textFieldNome, cons);
 
         cons = new GridBagConstraints();
         cons.gridx = 0;
@@ -120,16 +125,16 @@ public class FormTrackingEntrega extends BaseForm {
         cons.insets = new Insets(5, 0, 5, 0);
         cons.gridwidth = 1;
         cons.fill = GridBagConstraints.HORIZONTAL;
-        panelFormulario.add(labelSituacao, cons);
+        panelFormulario.add(labelSobrenome, cons);
 
         cons = new GridBagConstraints();
         cons.gridx = 1;
         cons.gridy = 2;
-        cons.gridwidth = 1;
         cons.insets = new Insets(5, 0, 5, 0);
+        cons.gridwidth = 1;
         cons.ipadx = 200;
         cons.fill = GridBagConstraints.HORIZONTAL;
-        panelFormulario.add(comboBoxSituacao, cons);
+        panelFormulario.add(textFieldSobrenome, cons);
 
         cons = new GridBagConstraints();
         cons.gridx = 0;
@@ -137,7 +142,7 @@ public class FormTrackingEntrega extends BaseForm {
         cons.insets = new Insets(5, 0, 5, 0);
         cons.gridwidth = 1;
         cons.fill = GridBagConstraints.HORIZONTAL;
-        panelFormulario.add(labelUsuario, cons);
+        panelFormulario.add(labelNomeFantasia, cons);
 
         cons = new GridBagConstraints();
         cons.gridx = 1;
@@ -146,15 +151,15 @@ public class FormTrackingEntrega extends BaseForm {
         cons.gridwidth = 1;
         cons.ipadx = 200;
         cons.fill = GridBagConstraints.HORIZONTAL;
-        panelFormulario.add(comboBoxUsuario, cons);
+        panelFormulario.add(textFieldNomeFantasia, cons);
 
         cons = new GridBagConstraints();
         cons.gridx = 0;
-        cons.gridy = 4;
         cons.insets = new Insets(5, 0, 5, 0);
+        cons.gridy = 4;
         cons.gridwidth = 1;
         cons.fill = GridBagConstraints.HORIZONTAL;
-        panelFormulario.add(labelData, cons);
+        panelFormulario.add(labelCNPJ, cons);
 
         cons = new GridBagConstraints();
         cons.gridx = 1;
@@ -163,7 +168,24 @@ public class FormTrackingEntrega extends BaseForm {
         cons.gridwidth = 1;
         cons.ipadx = 200;
         cons.fill = GridBagConstraints.HORIZONTAL;
-        panelFormulario.add(textFieldData, cons);
+        panelFormulario.add(textFieldCNPJ, cons);
+
+        cons = new GridBagConstraints();
+        cons.gridx = 0;
+        cons.gridy = 5;
+        cons.insets = new Insets(5, 0, 5, 0);
+        cons.gridwidth = 1;
+        cons.fill = GridBagConstraints.HORIZONTAL;
+        panelFormulario.add(labelIE, cons);
+
+        cons = new GridBagConstraints();
+        cons.gridx = 1;
+        cons.gridy = 5;
+        cons.insets = new Insets(5, 0, 5, 0);
+        cons.gridwidth = 1;
+        cons.ipadx = 200;
+        cons.fill = GridBagConstraints.HORIZONTAL;
+        panelFormulario.add(textFieldIE, cons);
 
         super.addFormulario(panelFormulario);
     }

@@ -17,19 +17,19 @@ public class UsuarioController extends BaseController{
     }
 
     @Override
-    public boolean edit() {
+    public boolean edit(int id) {
         System.out.println("EDIT");
         return true;
     }
 
     @Override
-    public boolean delete() {
+    public boolean delete(int id) {
         System.out.println("DELETE");
         return true;
     }
 
     @Override
-    public boolean view() {
+    public boolean view(int id) {
        System.out.println("VIEW");
         return true;
     }

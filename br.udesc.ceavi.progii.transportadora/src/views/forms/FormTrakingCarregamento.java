@@ -1,4 +1,4 @@
-package views.frames;
+package views.forms;
 
 import java.awt.Dimension;
 import java.awt.Font;
@@ -7,22 +7,23 @@ import java.awt.GridBagLayout;
 import java.awt.GridLayout;
 import java.awt.Insets;
 import java.awt.LayoutManager;
+import javax.swing.JComboBox;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.JTextField;
 import javax.swing.SwingConstants;
 
-public class FormVolume extends BaseForm {
+public class FormTrakingCarregamento extends BaseForm {
 
     private JLabel labelID;
-    private JLabel labelPesoBruto;
-    private JLabel labelPesoLiquido;
-    private JLabel labelCubagem;
+    private JLabel labelSituacao;
+    private JLabel labelData;
+    private JLabel labelCarregamento;
 
     private JTextField textFieldID;
-    private JTextField textFieldPesoBruto;
-    private JTextField textFieldPesoLiquido;
-    private JTextField textFieldCubagem;
+    private JComboBox comboBoxSituacao;
+    private JTextField textFieldData;
+    private JComboBox comboBoxCarregamento;
 
     private GridBagConstraints cons;
 
@@ -30,40 +31,41 @@ public class FormVolume extends BaseForm {
     private Dimension dimensao;
     private LayoutManager layout;
 
-    public FormVolume() {
-        super("Formulário Volume", new Dimension(400, 250));
+    public FormTrakingCarregamento() {
+        super("Formulário Tracking de Carregamento", new Dimension(400, 250));
 
         initComponents();
         addComponents();
     }
 
     private void initComponents() {
+
         labelID = new JLabel("ID:  ");
-        labelPesoBruto = new JLabel("Peso Bruto:  ");
-        labelPesoLiquido = new JLabel("Peso Líquido:  ");
-        labelCubagem = new JLabel("Cubagem:  ");
+        labelSituacao = new JLabel("Situação:  ");
+        labelData = new JLabel("Data:  ");
+        labelCarregamento = new JLabel("Carregamento:  ");
 
         labelID.setFont(new Font("Arial", Font.PLAIN, (int) 18));
-        labelPesoBruto.setFont(new Font("Arial", Font.PLAIN, (int) 18));
-        labelPesoLiquido.setFont(new Font("Arial", Font.PLAIN, (int) 18));
-        labelCubagem.setFont(new Font("Arial", Font.PLAIN, (int) 18));
+        labelSituacao.setFont(new Font("Arial", Font.PLAIN, (int) 18));
+        labelCarregamento.setFont(new Font("Arial", Font.PLAIN, (int) 18));
+        labelData.setFont(new Font("Arial", Font.PLAIN, (int) 18));
 
         labelID.setHorizontalAlignment(SwingConstants.RIGHT);
-        labelPesoBruto.setHorizontalAlignment(SwingConstants.RIGHT);
-        labelPesoLiquido.setHorizontalAlignment(SwingConstants.RIGHT);
-        labelCubagem.setHorizontalAlignment(SwingConstants.RIGHT);
+        labelSituacao.setHorizontalAlignment(SwingConstants.RIGHT);
+        labelCarregamento.setHorizontalAlignment(SwingConstants.RIGHT);
+        labelData.setHorizontalAlignment(SwingConstants.RIGHT);
 
         textFieldID = new JTextField();
-        textFieldPesoBruto = new JTextField();
-        textFieldPesoLiquido = new JTextField();
-        textFieldCubagem = new JTextField();
+        comboBoxSituacao = new JComboBox();
+        comboBoxCarregamento = new JComboBox();
+        textFieldData = new JTextField();
 
         textFieldID.setEditable(false);
 
         textFieldID.setFont(new Font("Arial", Font.PLAIN, (int) 18));
-        textFieldPesoBruto.setFont(new Font("Arial", Font.PLAIN, (int) 18));
-        textFieldPesoLiquido.setFont(new Font("Arial", Font.PLAIN, (int) 18));
-        textFieldCubagem.setFont(new Font("Arial", Font.PLAIN, (int) 18));
+        comboBoxSituacao.setFont(new Font("Arial", Font.PLAIN, (int) 18));
+        comboBoxCarregamento.setFont(new Font("Arial", Font.PLAIN, (int) 18));
+        textFieldData.setFont(new Font("Arial", Font.PLAIN, (int) 18));
 
         layout = new GridBagLayout();
 
@@ -72,7 +74,6 @@ public class FormVolume extends BaseForm {
     }
 
     private void addComponents() {
-
         cons = new GridBagConstraints();
         cons.gridx = 0;
         cons.gridy = 0;
@@ -83,9 +84,9 @@ public class FormVolume extends BaseForm {
 
         cons = new GridBagConstraints();
         cons.gridx = 1;
-        cons.insets = new Insets(5, 0, 5, 0);
         cons.gridy = 0;
         cons.gridwidth = 1;
+        cons.insets = new Insets(5, 0, 5, 0);
         cons.ipadx = 200;
         cons.fill = GridBagConstraints.HORIZONTAL;
         panelFormulario.add(textFieldID, cons);
@@ -96,41 +97,41 @@ public class FormVolume extends BaseForm {
         cons.insets = new Insets(5, 0, 5, 0);
         cons.gridwidth = 1;
         cons.fill = GridBagConstraints.HORIZONTAL;
-        panelFormulario.add(labelPesoBruto, cons);
+        panelFormulario.add(labelSituacao, cons);
 
         cons = new GridBagConstraints();
         cons.gridx = 1;
         cons.gridy = 1;
-        cons.gridwidth = 1;
         cons.insets = new Insets(5, 0, 5, 0);
+        cons.gridwidth = 1;
         cons.ipadx = 200;
         cons.fill = GridBagConstraints.HORIZONTAL;
-        panelFormulario.add(textFieldPesoBruto, cons);
+        panelFormulario.add(comboBoxSituacao, cons);
 
         cons = new GridBagConstraints();
         cons.gridx = 0;
-        cons.gridy = 2;
         cons.insets = new Insets(5, 0, 5, 0);
+        cons.gridy = 2;
         cons.gridwidth = 1;
         cons.fill = GridBagConstraints.HORIZONTAL;
-        panelFormulario.add(labelPesoLiquido, cons);
+        panelFormulario.add(labelCarregamento, cons);
 
         cons = new GridBagConstraints();
         cons.gridx = 1;
         cons.gridy = 2;
-        cons.gridwidth = 1;
         cons.insets = new Insets(5, 0, 5, 0);
+        cons.gridwidth = 1;
         cons.ipadx = 200;
         cons.fill = GridBagConstraints.HORIZONTAL;
-        panelFormulario.add(textFieldPesoLiquido, cons);
+        panelFormulario.add(comboBoxCarregamento, cons);
 
         cons = new GridBagConstraints();
         cons.gridx = 0;
-        cons.gridy = 3;
         cons.insets = new Insets(5, 0, 5, 0);
+        cons.gridy = 3;
         cons.gridwidth = 1;
         cons.fill = GridBagConstraints.HORIZONTAL;
-        panelFormulario.add(labelCubagem, cons);
+        panelFormulario.add(labelData, cons);
 
         cons = new GridBagConstraints();
         cons.gridx = 1;
@@ -139,7 +140,7 @@ public class FormVolume extends BaseForm {
         cons.gridwidth = 1;
         cons.ipadx = 200;
         cons.fill = GridBagConstraints.HORIZONTAL;
-        panelFormulario.add(textFieldCubagem, cons);
+        panelFormulario.add(textFieldData, cons);
 
         super.addFormulario(panelFormulario);
     }

@@ -57,7 +57,7 @@ public class AbstractGridFrameActions extends JFrame{
     private void initialize(AbstractTableModel tableModel, BaseController controller) {
         tableObjetos = new JTable(tableModel);
         scrollTable = new JScrollPane(tableObjetos);
-        CRUDActionPanel crudActions = new CRUDActionPanel(this, controller );
+        CRUDActionPanel crudActions = new CRUDActionPanel(this, controller, tableObjetos);
         scrollActions = new JPanel();
         scrollActions.add(crudActions);
     }
