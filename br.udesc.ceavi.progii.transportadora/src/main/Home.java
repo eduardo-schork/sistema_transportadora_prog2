@@ -26,17 +26,17 @@ public class Home implements Runnable{
 
     @Override
     public void run() {
-        //Vai ser buscado do bd
+        //Vai ser buscado do db
        List<Endereco> enderecos = new ArrayList<>();
        
         //Cira objetos para serem exibidos no JTable
         for (int i = 1; i <= 15; i++) {
-            Endereco socio = new Endereco();
-            socio.setId(i);
-            socio.setBairro("Bairro" + i);
-            socio.setCep(10*3+i);
-            socio.setCidade(("Cidade"+i * 10));
-            enderecos.add(socio);
+            Endereco end = new Endereco();
+            end.setId(i);
+            end.setBairro("Bairro" + i);
+            end.setCep(10*3+i);
+            end.setCidade(("Cidade"+i * 10));
+            enderecos.add(end);
         }
   
         String[] colunas;
