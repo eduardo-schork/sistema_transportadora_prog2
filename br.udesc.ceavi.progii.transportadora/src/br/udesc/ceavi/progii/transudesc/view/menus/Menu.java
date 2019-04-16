@@ -24,6 +24,7 @@ public class Menu extends JFrame {
          
         JMenu cadastros = new JMenu("Cadastros");
         JMenu consulta = new JMenu("Consultas");
+        JMenu veiculos = new JMenu("Veículos");
 //        JMenu editMenu = new JMenu("Editar");
         menuBar.add(cadastros);
         menuBar.add(consulta);
@@ -43,7 +44,7 @@ public class Menu extends JFrame {
         
         JMenuItem cargas = new JMenuItem("Cargas");
         JMenuItem clientes = new JMenuItem("Clientes");
-        JMenuItem veiculos = new JMenuItem("Veiculos");
+        JMenuItem consulta_veiculos = new JMenuItem("Veiculos");
         JMenuItem motoristas = new JMenuItem("Motoristas");
         JMenuItem entregas = new JMenuItem("Entregas");
         JMenuItem volumes = new JMenuItem("Volumes");
@@ -63,7 +64,7 @@ public class Menu extends JFrame {
         
         consulta.add(cargas);
         consulta.add(clientes);
-        consulta.add(veiculos);
+        consulta.add(consulta_veiculos);
         consulta.add(motoristas);
         consulta.add(entregas);
         consulta.add(volumes);
