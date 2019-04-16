@@ -1,4 +1,4 @@
-package br.udesc.ceavi.progii.transudesc.view.panels;
+package views.painels;
 
 import java.awt.Container;
 import java.awt.Dimension;

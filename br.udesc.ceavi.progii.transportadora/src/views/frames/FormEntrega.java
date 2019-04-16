@@ -1,32 +1,25 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-package br.udesc.ceavi.progii.transudesc.view.frames;
+package views.frames;
 
 import java.awt.Dimension;
+import java.awt.Font;
 import java.awt.GridLayout;
-import java.awt.Label;
 import java.awt.LayoutManager;
 import javax.swing.JButton;
 import javax.swing.JComboBox;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.JTextField;
+import javax.swing.SwingConstants;
 import models.SituacaoEntrega;
 
-/**
- *
- * @author Schork
- */
+
 public class FormEntrega extends BaseForm {
 
-    private Label labelID;
-    private Label labelEnderecoDestino;
-    private Label labelSituacao;
-    private Label labelVolume;
-    private Label labelRedespacho;
+    private JLabel labelID;
+    private JLabel labelEnderecoDestino;
+    private JLabel labelSituacao;
+    private JLabel labelVolume;
+    private JLabel labelRedespacho;
 
     private JTextField textFieldID;
     private JComboBox comboBoxEnderecoDestino;
@@ -42,7 +35,7 @@ public class FormEntrega extends BaseForm {
     private LayoutManager layout;
 
     public FormEntrega() {
-        super("Formulário Entrega", new Dimension(350, 250));
+        super("Formulário Entrega", new Dimension(400, 250));
 
         initComponents();
         addComponents();
@@ -54,11 +47,24 @@ public class FormEntrega extends BaseForm {
         buttonAdicionarVolume = new JButton("Adicionar Volume");
         buttonAdicionarVolume.setSize(dimensaoBotao);
 
-        labelID = new Label("ID:");
-        labelEnderecoDestino = new Label("Endereço Destino:");
-        labelSituacao = new Label("Situação:");
-        labelVolume = new Label("Volume:");
-        labelRedespacho = new Label("Trans. Redespacho:");
+        labelID = new JLabel("ID:");
+        labelEnderecoDestino = new JLabel("Endereço Destino:");
+        labelSituacao = new JLabel("Situação:");
+        labelVolume = new JLabel("Volume:");
+        labelRedespacho = new JLabel("Trans. Redespacho:");
+
+        labelID.setFont(new Font("Arial", Font.PLAIN, (int) 18));
+        labelEnderecoDestino.setFont(new Font("Arial", Font.PLAIN, (int) 18));
+        labelSituacao.setFont(new Font("Arial", Font.PLAIN, (int) 18));
+        labelVolume.setFont(new Font("Arial", Font.PLAIN, (int) 18));
+        labelRedespacho.setFont(new Font("Arial", Font.PLAIN, (int) 18));
+
+        labelID.setHorizontalAlignment(SwingConstants.RIGHT);
+        labelEnderecoDestino.setHorizontalAlignment(SwingConstants.RIGHT);
+        labelSituacao.setHorizontalAlignment(SwingConstants.RIGHT);
+        labelSituacao.setHorizontalAlignment(SwingConstants.RIGHT);
+        labelVolume.setHorizontalAlignment(SwingConstants.RIGHT);
+        labelRedespacho.setHorizontalAlignment(SwingConstants.RIGHT);
 
         textFieldID = new JTextField();
         //fill data com enderecos
@@ -71,6 +77,14 @@ public class FormEntrega extends BaseForm {
 
         //fill data com redespachos
         comboBoxRedespacho = new JComboBox();
+        
+        textFieldID.setEditable(false);
+
+        textFieldID.setFont(new Font("Arial", Font.PLAIN, (int) 18));
+        comboBoxEnderecoDestino.setFont(new Font("Arial", Font.PLAIN, (int) 18));
+        comboBoxSituacao.setFont(new Font("Arial", Font.PLAIN, (int) 18));
+        comboBoxVolume.setFont(new Font("Arial", Font.PLAIN, (int) 18));
+        comboBoxRedespacho.setFont(new Font("Arial", Font.PLAIN, (int) 18));
 
         layout = new GridLayout(6, 2);
 
