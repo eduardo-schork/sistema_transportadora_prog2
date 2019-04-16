@@ -3,22 +3,21 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package transudesc;
+package models;
 
-import java.sql.Date;
 import java.util.ArrayList;
 
 /**
  *
  * @author 09795569961
  */
-public class Carregamento {
+public class Entrega {
+
     private int id;
-    
-    private ArrayList<Entrega> entregas;
-    
-    private Endereco enderecoSaida;
-    
-    private Endereco enderecoChegada;
+    private ArrayList<TrackingEntrega> movimentacoes;
+    private Endereco enderecoDestino;
+    private int situacao;
+    private ArrayList<Volume> volumes;
+    private TransportadoraRedespacho redespacho;
     
 }

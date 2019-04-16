@@ -7,8 +7,8 @@ import java.awt.LayoutManager;
 import javax.swing.JComboBox;
 import javax.swing.JPanel;
 import javax.swing.JTextField;
-import transudesc.StatusVeiculo;
-import transudesc.TipoVeiculo;
+import models.StatusVeiculo;
+import models.TipoVeiculo;
 
 public class FormVeiculo extends BaseForm {
 

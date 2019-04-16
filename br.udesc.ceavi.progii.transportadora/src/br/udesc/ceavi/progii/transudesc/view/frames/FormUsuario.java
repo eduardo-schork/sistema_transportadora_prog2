@@ -7,7 +7,7 @@ import java.awt.LayoutManager;
 import javax.swing.JComboBox;
 import javax.swing.JPanel;
 import javax.swing.JTextField;
-import transudesc.TipoPessoa;
+import models.TipoPessoa;
 
 public class FormUsuario extends BaseForm{
 

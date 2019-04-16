@@ -1,4 +1,4 @@
-package transudesc;
+package models;
 
 public enum SituacaoEntrega {
     SOLICITADA_COLETA("Solicitada Entrega"),

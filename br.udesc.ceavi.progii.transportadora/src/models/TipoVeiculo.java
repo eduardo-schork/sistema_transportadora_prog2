@@ -1,4 +1,4 @@
-package transudesc;
+package models;
 
 public enum TipoVeiculo {
     CARRO("Carro"),

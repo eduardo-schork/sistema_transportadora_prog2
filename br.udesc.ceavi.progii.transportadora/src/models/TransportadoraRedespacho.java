@@ -3,16 +3,15 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package transudesc;
+package models;
 
 /**
  *
  * @author 09795569961
  */
-public class PessoaJuridica extends Pessoa{
-    private String nomeFantasia;
+public class TransportadoraRedespacho {
     
-    private long cnpj;
+    private int id;
     
-    private String ie;
+    private PessoaJuridica pessoaJuridica;
 }

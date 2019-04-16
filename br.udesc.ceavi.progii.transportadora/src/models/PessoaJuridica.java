@@ -3,22 +3,16 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package transudesc;
-
-import java.sql.Date;
+package models;
 
 /**
  *
  * @author 09795569961
  */
-public class Veiculo {
+public class PessoaJuridica extends Pessoa{
+    private String nomeFantasia;
     
-    private int id;
+    private long cnpj;
     
-    private String placa;
-    
-    private Date dataAquisicao;
-    private int tipo;
-  
-    private int status;
+    private String ie;
 }

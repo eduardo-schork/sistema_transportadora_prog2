@@ -3,16 +3,18 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package transudesc;
-
-import java.sql.Date;
+package models;
 
 /**
  *
  * @author 09795569961
  */
-public class PessoaFisica extends Pessoa {
-    private long cpf;
-
-    private Date dataNascimento;
+public class Volume {
+    private int id;
+    
+    private float pesoLiquido;
+    
+    private float pesoBruto;
+    
+    private double cubagem;
 }

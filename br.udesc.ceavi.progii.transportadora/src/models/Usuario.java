@@ -1,4 +1,4 @@
-package transudesc;
+package models;
 
 public class Usuario {
 

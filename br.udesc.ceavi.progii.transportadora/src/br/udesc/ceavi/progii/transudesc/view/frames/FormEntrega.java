@@ -14,7 +14,7 @@ import javax.swing.JComboBox;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.JTextField;
-import transudesc.SituacaoEntrega;
+import models.SituacaoEntrega;
 
 /**
  *

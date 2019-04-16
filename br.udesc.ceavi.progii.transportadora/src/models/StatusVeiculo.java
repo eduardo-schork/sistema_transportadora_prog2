@@ -1,4 +1,4 @@
-package transudesc;
+package models;
 
 public enum StatusVeiculo {
     EM_MANUTENCAO("Em Manutenção"),
