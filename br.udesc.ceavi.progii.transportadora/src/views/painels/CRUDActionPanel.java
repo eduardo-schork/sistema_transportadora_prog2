@@ -1,5 +1,6 @@
 package views.painels;
 
+import controllers.BaseController;
 import java.awt.Container;
 import java.awt.Dimension;
 import java.awt.FlowLayout;
@@ -16,7 +17,7 @@ import javax.swing.JPanel;
 public class CRUDActionPanel extends JPanel {
     private JButton btVisualizar;
     private JButton btNovo;
-    private JButton btGravar;
+    private JButton btEditar;
     private JButton btExcluir;
 
     private LayoutManager layout;
@@ -26,41 +27,52 @@ public class CRUDActionPanel extends JPanel {
     
     private Container parent;
 
-    public CRUDActionPanel(Container parent) {
+    public CRUDActionPanel(Container parent, BaseController controller) {
         this.parent = parent;
         
-        initComponents();
+        initComponents(controller);
         addComponents();
 
         super.setVisible(true);
         super.setSize(dimensaoPainel);
     }
 
-    private void initComponents() {
+    private void initComponents(BaseController controller) {
         dimensaoBotao = new Dimension(100,20);
         dimensaoPainel = new Dimension(parent.getWidth(), 30);
         
         layout = new FlowLayout(FlowLayout.CENTER);
 
+        btNovo = new JButton("Adicionar");
+        btNovo.setSize(dimensaoBotao);
+        btNovo.addActionListener((e) -> {
+            controller.add();
+        });
+
+        btEditar = new JButton("Editar");
+        btEditar.setSize(dimensaoBotao);
+        btEditar.addActionListener((e) -> {
+            controller.edit();
+        });
         btVisualizar = new JButton("Visualizar");
         btVisualizar.setSize(dimensaoBotao);
-
-        btNovo = new JButton("Novo");
-        btNovo.setSize(dimensaoBotao);
-
-        btGravar = new JButton("Gravar");
-        btGravar.setSize(dimensaoBotao);
+        btVisualizar.addActionListener((e) -> {
+            controller.view();
+        });
 
         btExcluir = new JButton("Excluir");
         btExcluir.setSize(dimensaoBotao);
+        btExcluir.addActionListener((e) -> {
+            controller.delete();
+        });
     }
 
     private void addComponents() {
         this.setLayout(layout);
-        this.add(btVisualizar);
         this.add(btNovo);
+        this.add(btEditar);
+        this.add(btVisualizar);
         this.add(btExcluir);
-        this.add(btGravar);
     }
 
     public JButton getBtCancelar() {
@@ -72,7 +84,7 @@ public class CRUDActionPanel extends JPanel {
     }
 
     public JButton getBtGravar() {
-        return btGravar;
+        return btEditar;
     }
 
     public JButton getBtExcluir() {

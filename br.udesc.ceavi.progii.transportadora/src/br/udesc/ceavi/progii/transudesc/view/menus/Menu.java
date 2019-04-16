@@ -1,7 +1,10 @@
 package br.udesc.ceavi.progii.transudesc.view.menus;
 
+import controllers.VeiculoController;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.util.ArrayList;
+import java.util.List;
 import javax.swing.ButtonGroup;
 import javax.swing.JCheckBoxMenuItem;
 import javax.swing.JFrame;
@@ -9,6 +12,10 @@ import javax.swing.JMenu;
 import javax.swing.JMenuBar;
 import javax.swing.JMenuItem;
 import javax.swing.JRadioButtonMenuItem;
+import models.Veiculo;
+import views.frames.InstanceGridActionsFrame;
+import views.frames.InstanceGridFrame;
+import views.grids.VeiculoGrid;
 
 public class Menu extends JFrame {
 
@@ -83,8 +90,28 @@ public class Menu extends JFrame {
 
         JMenuItem veiculo = new JMenuItem("Veiculo");
 
-        veiculo.addActionListener((action) -> {
-
+        veiculo.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent action) {
+                List<Veiculo> veiculos = new ArrayList<>();
+                for (int i = 1; i <= 15; i++) {
+                    Veiculo veiculo = new Veiculo();
+                    veiculo.setId(i);
+                    veiculo.setPlaca("PLACA-" + i);
+                    veiculo.setStatus(10*3+i);
+                    veiculo.setTipo(i * 10);
+                    veiculos.add(veiculo);
+                }
+                String[] colunasVeiculos;
+                colunasVeiculos = new String[]{"#", "Aquisição", "Placa", "Status", "Tipo"};
+                VeiculoGrid veiculoGrid = new VeiculoGrid((List)veiculos, colunasVeiculos);
+                VeiculoController controller = new VeiculoController();
+                JFrame frameVeiculo = new InstanceGridActionsFrame(controller, "Veiculos", veiculoGrid );
+                
+                frameVeiculo.setResizable(false);
+                frameVeiculo.setLocationRelativeTo(null);
+                frameVeiculo.setVisible(true);
+            }
         });
 
         JMenuItem volume = new JMenuItem("Volume");
@@ -138,7 +165,7 @@ public class Menu extends JFrame {
         JMenuItem transportadora = new JMenuItem("Trasportadora Redespacho");
 
         transportadora.addActionListener((action) -> {
-
+                
         });
 
         JMenuItem veiculos_verif_em_reparo = new JMenuItem("Veículos em reparo");

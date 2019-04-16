@@ -44,7 +44,7 @@ public abstract class AbstractGridFrame extends JFrame {
         addComponents();
         //Seta um tamanho para o Frame
         super.setSize(800, 600);
-        super.setDefaultCloseOperation(EXIT_ON_CLOSE);
+        super.setDefaultCloseOperation(HIDE_ON_CLOSE);
     }
 
     private void initialize(AbstractTableModel tableModel) {
