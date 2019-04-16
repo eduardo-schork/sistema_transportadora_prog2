@@ -11,10 +11,8 @@ import java.sql.Date;
  *
  * @author 09795569961
  */
-public class PessoaFisica extends Pessoa{
-    private String sobrenome;
-    
+public class PessoaFisica extends Pessoa {
     private long cpf;
-    
+
     private Date dataNascimento;
 }

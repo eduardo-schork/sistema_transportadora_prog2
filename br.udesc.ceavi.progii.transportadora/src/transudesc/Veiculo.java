@@ -18,21 +18,7 @@ public class Veiculo {
     private String placa;
     
     private Date dataAquisicao;
-    
-    /**
-     * CARRO
-     * CAMINHAO
-     * FURGAO
-     * UTILITARIO
-     */
     private int tipo;
-    
-    /**
-     * EM MANUTENCAO
-     * OPERANDO
-     * DESATIVADO
-     * AGUARDANDO MANUTENCAO
-     * PRONTO PARA OPERAR
-     */
+  
     private int status;
 }
