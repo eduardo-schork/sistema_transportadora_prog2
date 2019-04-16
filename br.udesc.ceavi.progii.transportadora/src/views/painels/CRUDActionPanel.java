@@ -10,9 +10,8 @@ import javax.swing.JPanel;
 /**
  * Esta classe define o painel para as funcionalidades CRUD para o sistema
  *
- * @author Márcio José Mantau
- * @version 1.0
- * @since 12/03/2018
+ * @author Lucas Levi Gonçalves
+ * @since 08/04/2018
  */
 public class CRUDActionPanel extends JPanel {
     private JButton btCancelar;
