@@ -7,7 +7,7 @@ package controllers;
 
 /**
  *
- * @author T-Gamer
+ * @author André Cristen
  */
 public class VeiculoController extends BaseController{
 
@@ -34,5 +34,17 @@ public class VeiculoController extends BaseController{
        System.out.println("VIEW");
         return true;
     }
+
+    @Override
+    public boolean addPost() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public boolean editPost() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+    
+    
     
 }

@@ -11,7 +11,9 @@ import javax.swing.table.AbstractTableModel;
 
 /**
  *
- * @author T-Gamer
+ * @author André Cristen
+ * Deve ser usado para intancia de novos frames em aberturas de telas
+ * que contenham Grids internos e contem as acoes padroes de CRUD para o modelo.
  */
 public class InstanceGridActionsFrame extends AbstractGridFrameActions{
     

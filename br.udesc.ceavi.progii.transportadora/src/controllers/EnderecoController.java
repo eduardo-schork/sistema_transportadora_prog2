@@ -11,7 +11,7 @@ import models.Endereco;
 
 /**
  *
- * @author 09046167976
+ * @author André Cristen
  */
 public class EnderecoController extends BaseController{
     
@@ -37,6 +37,16 @@ public class EnderecoController extends BaseController{
 
     @Override
     public boolean view() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public boolean addPost() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public boolean editPost() {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 }

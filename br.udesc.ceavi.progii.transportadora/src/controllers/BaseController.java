@@ -10,8 +10,16 @@ package controllers;
  * @author T-Gamer
  */
 public abstract class BaseController {
+
     public abstract boolean add();
+    
+    public abstract boolean addPost();
+
     public abstract boolean edit();
+    
+    public abstract boolean editPost();
+
     public abstract boolean delete();
+
     public abstract boolean view();
 }
