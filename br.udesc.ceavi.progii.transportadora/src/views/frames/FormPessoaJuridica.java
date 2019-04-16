@@ -2,7 +2,8 @@ package views.frames;
 
 import java.awt.Dimension;
 import java.awt.Font;
-import java.awt.GridLayout;
+import java.awt.GridBagConstraints;
+import java.awt.GridBagLayout;
 import java.awt.LayoutManager;
 import javax.swing.JPanel;
 import javax.swing.JLabel;
@@ -17,19 +18,22 @@ public class FormPessoaJuridica extends BaseForm {
     private JLabel labelNomeFantasia;
     private JLabel labelCNPJ;
     private JLabel labelIE;
+
     private JTextField textFieldID;
     private JTextField textFieldNome;
     private JTextField textFieldSobrenome;
     private JTextField textFieldNomeFantasia;
     private JTextField textFieldCNPJ;
     private JTextField textFieldIE;
-    private JPanel panelFormulario;
 
+    private GridBagConstraints cons;
+
+    private JPanel panelFormulario;
     private Dimension dimensao;
     private LayoutManager layout;
 
     public FormPessoaJuridica() {
-        super("Formulário Pessoa Jurídica", new Dimension(400, 200));
+        super("Formulário Pessoa Jurídica", new Dimension(400, 250));
 
         initComponents();
         addComponents();
@@ -40,18 +44,20 @@ public class FormPessoaJuridica extends BaseForm {
         labelNome = new JLabel("Nome:  ");
         labelSobrenome = new JLabel("Sobrenome:  ");
         labelNomeFantasia = new JLabel("Nome Fantasia:  ");
-        labelCNPJ = new JLabel("CNPJ:");
-        labelIE = new JLabel("IE:");
+        labelCNPJ = new JLabel("CNPJ:  ");
+        labelIE = new JLabel("IE:  ");
 
         labelID.setFont(new Font("Arial", Font.PLAIN, (int) 18));
         labelNome.setFont(new Font("Arial", Font.PLAIN, (int) 18));
         labelSobrenome.setFont(new Font("Arial", Font.PLAIN, (int) 18));
+        labelNomeFantasia.setFont(new Font("Arial", Font.PLAIN, (int) 18));
         labelCNPJ.setFont(new Font("Arial", Font.PLAIN, (int) 18));
         labelIE.setFont(new Font("Arial", Font.PLAIN, (int) 18));
 
         labelID.setHorizontalAlignment(SwingConstants.RIGHT);
         labelNome.setHorizontalAlignment(SwingConstants.RIGHT);
         labelSobrenome.setHorizontalAlignment(SwingConstants.RIGHT);
+        labelNomeFantasia.setHorizontalAlignment(SwingConstants.RIGHT);
         labelCNPJ.setHorizontalAlignment(SwingConstants.RIGHT);
         labelIE.setHorizontalAlignment(SwingConstants.RIGHT);
 
@@ -63,7 +69,7 @@ public class FormPessoaJuridica extends BaseForm {
         textFieldIE = new JTextField();
 
         textFieldID.setEditable(false);
-        
+
         textFieldID.setFont(new Font("Arial", Font.PLAIN, (int) 18));
         textFieldNome.setFont(new Font("Arial", Font.PLAIN, (int) 18));
         textFieldSobrenome.setFont(new Font("Arial", Font.PLAIN, (int) 18));
@@ -71,25 +77,103 @@ public class FormPessoaJuridica extends BaseForm {
         textFieldCNPJ.setFont(new Font("Arial", Font.PLAIN, (int) 18));
         textFieldIE.setFont(new Font("Arial", Font.PLAIN, (int) 18));
 
-        layout = new GridLayout(6, 2);
+        layout = new GridBagLayout();
 
         panelFormulario = new JPanel();
         panelFormulario.setLayout(layout);
     }
 
     private void addComponents() {
-        panelFormulario.add(labelID);
-        panelFormulario.add(textFieldID);
-        panelFormulario.add(labelNome);
-        panelFormulario.add(textFieldNome);
-        panelFormulario.add(labelSobrenome);
-        panelFormulario.add(textFieldSobrenome);
-        panelFormulario.add(labelNomeFantasia);
-        panelFormulario.add(textFieldNomeFantasia);
-        panelFormulario.add(labelCNPJ);
-        panelFormulario.add(textFieldCNPJ);
-        panelFormulario.add(labelIE);
-        panelFormulario.add(textFieldIE);
+        cons = new GridBagConstraints();
+        cons.gridx = 0;
+        cons.gridy = 0;
+        cons.gridwidth = 1;
+        cons.fill = GridBagConstraints.HORIZONTAL;
+        panelFormulario.add(labelID, cons);
+
+        cons = new GridBagConstraints();
+        cons.gridx = 1;
+        cons.gridy = 0;
+        cons.gridwidth = 1;
+        cons.ipadx = 200;
+        cons.fill = GridBagConstraints.HORIZONTAL;
+        panelFormulario.add(textFieldID, cons);
+
+        cons = new GridBagConstraints();
+        cons.gridx = 0;
+        cons.gridy = 1;
+        cons.gridwidth = 1;
+        cons.fill = GridBagConstraints.HORIZONTAL;
+        panelFormulario.add(labelNome, cons);
+
+        cons = new GridBagConstraints();
+        cons.gridx = 1;
+        cons.gridy = 1;
+        cons.gridwidth = 1;
+        cons.ipadx = 200;
+        cons.fill = GridBagConstraints.HORIZONTAL;
+        panelFormulario.add(textFieldNome, cons);
+
+        cons = new GridBagConstraints();
+        cons.gridx = 0;
+        cons.gridy = 2;
+        cons.gridwidth = 1;
+        cons.fill = GridBagConstraints.HORIZONTAL;
+        panelFormulario.add(labelSobrenome, cons);
+
+        cons = new GridBagConstraints();
+        cons.gridx = 1;
+        cons.gridy = 2;
+        cons.gridwidth = 1;
+        cons.ipadx = 200;
+        cons.fill = GridBagConstraints.HORIZONTAL;
+        panelFormulario.add(textFieldSobrenome, cons);
+
+        cons = new GridBagConstraints();
+        cons.gridx = 0;
+        cons.gridy = 3;
+        cons.gridwidth = 1;
+        cons.fill = GridBagConstraints.HORIZONTAL;
+        panelFormulario.add(labelNomeFantasia, cons);
+
+        cons = new GridBagConstraints();
+        cons.gridx = 1;
+        cons.gridy = 3;
+        cons.gridwidth = 1;
+        cons.ipadx = 200;
+        cons.fill = GridBagConstraints.HORIZONTAL;
+        panelFormulario.add(textFieldNomeFantasia, cons);
+
+        cons = new GridBagConstraints();
+        cons.gridx = 0;
+        cons.gridy = 4;
+        cons.gridwidth = 1;
+        cons.fill = GridBagConstraints.HORIZONTAL;
+        panelFormulario.add(labelCNPJ, cons);
+
+        cons = new GridBagConstraints();
+        cons.gridx = 1;
+        cons.gridy = 4;
+        cons.gridwidth = 1;
+        cons.ipadx = 200;
+        cons.fill = GridBagConstraints.HORIZONTAL;
+        panelFormulario.add(textFieldCNPJ, cons);
+
+        cons = new GridBagConstraints();
+        cons.gridx = 0;
+        cons.gridy = 5;
+        cons.gridwidth = 1;
+        cons.fill = GridBagConstraints.HORIZONTAL;
+        panelFormulario.add(labelIE, cons);
+
+        cons = new GridBagConstraints();
+        cons.gridx = 1;
+        cons.gridy = 5;
+        cons.gridwidth = 1;
+        cons.ipadx = 200;
+        cons.fill = GridBagConstraints.HORIZONTAL;
+        panelFormulario.add(textFieldIE, cons);
+
         super.addFormulario(panelFormulario);
     }
 }

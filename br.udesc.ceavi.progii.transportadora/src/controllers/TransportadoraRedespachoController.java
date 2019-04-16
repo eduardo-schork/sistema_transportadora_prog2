@@ -5,34 +5,39 @@
  */
 package controllers;
 
+import java.util.ArrayList;
+import java.util.List;
+import models.Endereco;
+
 /**
  *
  * @author Lucas Dolsan
  */
-public class CarregamentoController extends BaseController{
+public class TransportadoraRedespachoController extends BaseController{
+    
+    
+    public List<Endereco> getAllEnderecos(){
+        return new ArrayList<Endereco>();
+    }
 
     @Override
     public boolean add() {
-        System.out.println("ADD");
-        return true;
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
     @Override
     public boolean edit() {
-        System.out.println("EDIT");
-        return true;
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
     @Override
     public boolean delete() {
-        System.out.println("DELETE");
-        return true;
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
     @Override
     public boolean view() {
-       System.out.println("VIEW");
-        return true;
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
     @Override
@@ -44,5 +49,4 @@ public class CarregamentoController extends BaseController{
     public boolean editPost() {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
-    
 }

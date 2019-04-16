@@ -11,11 +11,8 @@ package models;
  */
 public class Volume {
     private int id;
-    
     private float pesoLiquido;
-    
     private float pesoBruto;
-    
     private double cubagem;
 
     public int getId() {

@@ -4,6 +4,9 @@ import controllers.VeiculoController;
 import controllers.CarregamentoController;
 import controllers.UsuarioController;
 import controllers.VolumeController;
+import controllers.EntregaController;
+import controllers.FilialController;
+import controllers.TransportadoraRedespachoController;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.ArrayList;
@@ -17,14 +20,20 @@ import javax.swing.JMenuItem;
 import javax.swing.JRadioButtonMenuItem;
 import models.Carregamento;
 import models.Endereco;
+import models.Entrega;
+import models.Filial;
 import models.Pessoa;
 import models.Usuario;
+import models.TransportadoraRedespacho;
 import models.Veiculo;
 import models.Volume;
 import views.frames.InstanceGridActionsFrame;
 import views.frames.InstanceGridFrame;
 import views.grids.CarregamentoGrid;
+import views.grids.EntregaGrid;
+import views.grids.FilialGrid;
 import views.grids.PessoaGrid;
+import views.grids.TransportadoraRedespachoGrid;
 import views.grids.VeiculoGrid;
 import views.grids.VolumeGrid;
 import views.grids.UsuarioGrid;
@@ -99,8 +108,27 @@ public class Menu extends JFrame {
 
         JMenuItem filial = new JMenuItem("Filial");
 
-        filial.addActionListener((action) -> {
-
+        filial.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent action) {
+                List<Filial> filiais = new ArrayList<>();
+                for (int i = 1; i <= 15; i++) {
+                    Filial filial = new Filial();
+                    filial.setId(i);
+                    filial.setEndereco(new Endereco());
+                    filial.setNome("Junior trans "+ i);
+                    filiais.add(filial);
+                }
+                String[] colunasFiliais;
+                colunasFiliais = new String[]{"#", "Endereço", "Nome"};
+                FilialGrid pessoaGrid = new FilialGrid((List)filiais, colunasFiliais);
+                FilialController controller = new FilialController();
+                JFrame frameCarregamento = new InstanceGridActionsFrame(controller, "Filiais", pessoaGrid );
+                
+                frameCarregamento.setResizable(false);
+                frameCarregamento.setLocationRelativeTo(null);
+                frameCarregamento.setVisible(true);
+            }
         });
 
         JMenuItem pessoa = new JMenuItem("Pessoa");
@@ -195,12 +223,6 @@ public class Menu extends JFrame {
 
         });
 
-        JMenuItem cargas = new JMenuItem("Cargas");
-
-        cargas.addActionListener((action) -> {
-
-        });
-
         JMenuItem clientes = new JMenuItem("Clientes");
 
         clientes.addActionListener((action) -> {
@@ -221,10 +243,29 @@ public class Menu extends JFrame {
 
         JMenuItem entregas = new JMenuItem("Entregas");
 
-        entregas.addActionListener((action) -> {
-
+        entregas.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent action) {
+               List<Entrega> entregas = new ArrayList<>();
+                for (int i = 1; i <= 15; i++) {
+                    Entrega entrega = new Entrega();
+                    entrega.setId(i);
+                    entrega.setEnderecoDestino(new Endereco());
+                    entrega.setRedespacho(new TransportadoraRedespacho());
+                    entregas.add(entrega);
+                }
+                String[] colunasEntregas;
+                colunasEntregas = new String[]{"#", "Endereco Destino", "Transportadora Redes."};
+                EntregaGrid entregaGrid = new EntregaGrid((List)entregas, colunasEntregas);
+                EntregaController controller = new EntregaController();
+                JFrame frameEntrega = new InstanceGridActionsFrame(controller, "Entregas", entregaGrid );
+                
+                frameEntrega.setResizable(false);
+                frameEntrega.setLocationRelativeTo(null);
+                frameEntrega.setVisible(true);
+            }
         });
-
+       
         JMenuItem volumes = new JMenuItem("Volumes");
 
         volumes.addActionListener((action) -> {
@@ -239,8 +280,20 @@ public class Menu extends JFrame {
 
         JMenuItem transportadora = new JMenuItem("Trasportadora Redespacho");
 
-        transportadora.addActionListener((action) -> {
+        transportadora.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent action) {
+                List<TransportadoraRedespacho> transRedespacho = new ArrayList<>();
+                String[] colunasTransRedespacho;
+                colunasTransRedespacho = new String[]{"#", "Pessoa Jurídica"};
+                TransportadoraRedespachoGrid transResGrid = new TransportadoraRedespachoGrid((List)transRedespacho, colunasTransRedespacho);
+                TransportadoraRedespachoController controller = new TransportadoraRedespachoController();
+                JFrame frameRedespacho = new InstanceGridActionsFrame(controller, "Transportadoras Redespacho", transResGrid );
                 
+                frameRedespacho.setResizable(false);
+                frameRedespacho.setLocationRelativeTo(null);
+                frameRedespacho.setVisible(true);
+            }
         });
 
         JMenuItem veiculos_verif_em_reparo = new JMenuItem("Veículos em reparo");
@@ -267,7 +320,6 @@ public class Menu extends JFrame {
         verif_veiculos_menu.add(veiculos_verif_em_reparo);
         verif_veiculos_menu.add(veiculos_verif_aguard_reparo);
 
-        consulta_adm_menu.add(cargas);
         consulta_adm_menu.add(clientes);
         consulta_adm_menu.add(consulta_veiculos);
         consulta_adm_menu.add(motoristas);
