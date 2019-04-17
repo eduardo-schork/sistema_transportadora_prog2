@@ -51,7 +51,7 @@ public class FormCarregamento extends BaseForm {
     private LayoutManager layout;
 
     public FormCarregamento() {
-        super("Formulário Carregamento", new Dimension(400, 500), new CarregamentoController());
+        super("Formulário Carregamento", new Dimension(450, 500), new CarregamentoController());
 
         initComponents();
         addComponents();
@@ -149,20 +149,35 @@ public class FormCarregamento extends BaseForm {
         cons.insets = new Insets(5, 0, 5, 0);
         cons.gridwidth = 1;
         cons.fill = GridBagConstraints.HORIZONTAL;
-        panelFormulario.add(labelEntrega, cons);
+        panelFormulario.add(labelEnderecoChegada, cons);
 
         cons = new GridBagConstraints();
         cons.gridx = 1;
         cons.gridy = 2;
         cons.insets = new Insets(5, 0, 5, 0);
-        cons.ipadx = 200;
         cons.gridwidth = 1;
         cons.fill = GridBagConstraints.HORIZONTAL;
         panelFormulario.add(comboBoxEnderecoChegada, cons);
 
         cons = new GridBagConstraints();
+        cons.gridx = 0;
+        cons.gridy = 3;
+        cons.insets = new Insets(5, 0, 5, 0);
+        cons.gridwidth = 1;
+        cons.fill = GridBagConstraints.HORIZONTAL;
+        panelFormulario.add(labelEntrega, cons);
+
+        cons = new GridBagConstraints();
         cons.gridx = 1;
         cons.gridy = 3;
+        cons.insets = new Insets(5, 0, 5, 0);
+        cons.gridwidth = 1;
+        cons.fill = GridBagConstraints.HORIZONTAL;
+        panelFormulario.add(comboBoxEntrega, cons);
+
+        cons = new GridBagConstraints();
+        cons.gridx = 1;
+        cons.gridy = 4;
         cons.insets = new Insets(10, 0, 10, 0);
         cons.gridwidth = 1;
         cons.fill = GridBagConstraints.HORIZONTAL;
@@ -170,7 +185,7 @@ public class FormCarregamento extends BaseForm {
 
         cons = new GridBagConstraints();
         cons.gridx = 0;
-        cons.gridy = 4;
+        cons.gridy = 5;
         cons.insets = new Insets(5, 0, 5, 0);
         cons.ipadx = 350;
         cons.ipady = 200;
