@@ -14,7 +14,7 @@ import views.forms.FormUsuario;
 public class UsuarioController extends BaseController {
 
     @Override
-    public boolean add() {
+    public boolean openInsertionFrom() {
         FormUsuario view = new FormUsuario();
         view.setResizable(false);
         view.setLocationRelativeTo(null);
@@ -23,7 +23,7 @@ public class UsuarioController extends BaseController {
     }
 
     @Override
-    public boolean edit(int id) {
+    public boolean openEditionForm(int id) {
         FormUsuario view = new FormUsuario();
         view.setResizable(false);
         view.setLocationRelativeTo(null);
@@ -47,12 +47,12 @@ public class UsuarioController extends BaseController {
     }
 
     @Override
-    public boolean addPost() {
+    public boolean insertObject() {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
     @Override
-    public boolean editPost() {
+    public boolean editObject() {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 

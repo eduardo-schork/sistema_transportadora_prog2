@@ -1,5 +1,5 @@
 package models;
-
+//representa todo tipo de pessoa que serão cadastradas no sistema. talvez devesse ser abstract
 public class Pessoa {
 
     private int id;

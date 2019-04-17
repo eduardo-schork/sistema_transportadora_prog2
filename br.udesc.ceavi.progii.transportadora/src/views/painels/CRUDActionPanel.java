@@ -14,6 +14,8 @@ import javax.swing.JTable;
 /**
  * Esta classe define o painel para as funcionalidades CRUD para o sistema
  *
+ * botões com as acões de CRUD
+ * 
  * @author Lucas Levi Gonçalves
  * @since 08/04/2018
  */
@@ -52,7 +54,7 @@ public class CRUDActionPanel extends JPanel {
         btNovo.setSize(dimensaoBotao);
         btNovo.setIcon(new ImageIcon(Class.class.getResource("/views/icons/addIcon.png")));
         btNovo.addActionListener((e) -> {
-            controller.add();
+            controller.openInsertionFrom();
         });
 
         btEditar = new JButton("Editar");
@@ -61,7 +63,7 @@ public class CRUDActionPanel extends JPanel {
         btEditar.addActionListener((e) -> {
             int idSelecionada = this.getIdRowTable();
             if (idSelecionada > 0) {
-                controller.edit(idSelecionada);
+                controller.openEditionForm(idSelecionada);
             }
         });
         btVisualizar = new JButton("Visualizar");

@@ -14,7 +14,7 @@ import views.forms.FormFilial;
 public class FilialController extends BaseController {
 
     @Override
-    public boolean add() {
+    public boolean openInsertionFrom() {
         FormFilial view = new FormFilial();
         view.setResizable(false);
         view.setLocationRelativeTo(null);
@@ -23,7 +23,7 @@ public class FilialController extends BaseController {
     }
 
     @Override
-    public boolean addPost() {
+    public boolean insertObject() {
         FormFilial view = new FormFilial();
         view.setResizable(false);
         view.setLocationRelativeTo(null);
@@ -32,12 +32,12 @@ public class FilialController extends BaseController {
     }
 
     @Override
-    public boolean edit(int id) {
+    public boolean openEditionForm(int id) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
     @Override
-    public boolean editPost() {
+    public boolean editObject() {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 

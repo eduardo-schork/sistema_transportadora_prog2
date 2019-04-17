@@ -1,5 +1,5 @@
 package models;
-
+// representa os tipos de pessoa no sistema
 public enum TipoPessoa {
     MOTORISTA("Motorista"),
     MECANICO("Mecânico"),

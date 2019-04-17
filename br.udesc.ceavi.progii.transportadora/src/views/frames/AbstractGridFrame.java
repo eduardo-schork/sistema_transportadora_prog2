@@ -15,6 +15,8 @@ import javax.swing.table.AbstractTableModel;
 /**
  *
  * @author André Cristen
+ * 
+ * o grid serve para listar as informacoes do sistema, é uma tabela
  */
 public abstract class AbstractGridFrame extends JFrame {
 

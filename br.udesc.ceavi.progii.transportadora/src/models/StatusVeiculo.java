@@ -1,5 +1,5 @@
 package models;
-
+ // representa status para veiuclos
 public enum StatusVeiculo {
     EM_MANUTENCAO("Em Manutenção"),
     OPERANDO("Operando"),

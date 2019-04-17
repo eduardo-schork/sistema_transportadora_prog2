@@ -1,5 +1,6 @@
 package models;
 
+//representa uma filial da empresa de transporte
 public class Filial {
 
     private int id;

@@ -105,13 +105,15 @@ public class Menu extends JFrame {
         entrega_crud.addActionListener((action) -> {
 
         });
-
+            //abaixo são adicionados todos os itens do menu e seus respectivos
+            //listeners para clique com suas ações a serem executadas
         JMenuItem filial = new JMenuItem("Filial");
 
         filial.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent action) {
                 List<Filial> filiais = new ArrayList<>();
+                //adicionamento de informação de placeholder, só pra mostrar como fica
                 for (int i = 1; i <= 15; i++) {
                     Filial filial = new Filial();
                     filial.setId(i);
@@ -137,6 +139,7 @@ public class Menu extends JFrame {
             @Override
             public void actionPerformed(ActionEvent action) {
                 List<Pessoa> pessoas = new ArrayList<>();
+                //mesmo esquema, só pra ver como fica...
                 for (int i = 1; i <= 15; i++) {
                     Pessoa pessoa = new Pessoa();
                     pessoa.setId(i);

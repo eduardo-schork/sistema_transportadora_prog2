@@ -15,8 +15,9 @@ import views.grids.EnderecoGrid;
 import views.grids.VeiculoGrid;
 
 /**
- *
- * @author 09046167976
+ *@author 09046167976
+ * 
+ * início do sistema, instancia o menu e seta como visivel
  */
 public class Home implements Runnable {
 
@@ -29,7 +30,6 @@ public class Home implements Runnable {
     @Override
     public void run() {
         Menu menu = new Menu();
-        menu.setVisible(true);
         menu.setVisible(true);
     }
 }

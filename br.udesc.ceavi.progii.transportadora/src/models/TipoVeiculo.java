@@ -1,5 +1,5 @@
 package models;
-
+//representa os tipos de veiculos no sistema
 public enum TipoVeiculo {
     CARRO("Carro"),
     CAMINHAO("Caminhão"),

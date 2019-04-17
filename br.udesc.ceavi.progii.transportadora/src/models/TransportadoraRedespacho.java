@@ -1,14 +1,5 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package models;
 
-/**
- *
- * @author Lucas Dolsan
- */
 public class TransportadoraRedespacho {
     
     private int id;
@@ -17,10 +8,6 @@ public class TransportadoraRedespacho {
 
     public int getId() {
         return id;
-    }
-
-    public void setId(int id) {
-        this.id = id;
     }
 
     public PessoaJuridica getPessoaJuridica() {

@@ -12,12 +12,9 @@ public class FormPanel extends JPanel {
 
     private JButton buttonSalvar;
     private JButton buttonCancelar;
-
     private LayoutManager layout;
-
     private Dimension dimensaoBotao;
     private Dimension dimensaoPanel;
-
     private Container parent;
 
     public FormPanel(Container parent, BaseController controller) {
@@ -40,7 +37,7 @@ public class FormPanel extends JPanel {
         buttonSalvar.addActionListener((e) -> {
             //Chama a acao com base no action
             //deve ser ou addPost ou editPost
-            controller.editPost();
+            controller.editObject();
         });
 
         buttonCancelar = new JButton("Cancelar");

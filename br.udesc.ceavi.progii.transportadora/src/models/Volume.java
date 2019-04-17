@@ -1,14 +1,4 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package models;
-
-/**
- *
- * @author Lucas Levi Gonçalves
- */
 public class Volume {
     private int id;
     private float pesoLiquido;
@@ -17,10 +7,6 @@ public class Volume {
 
     public int getId() {
         return id;
-    }
-
-    public void setId(int id) {
-        this.id = id;
     }
 
     public float getPesoLiquido() {

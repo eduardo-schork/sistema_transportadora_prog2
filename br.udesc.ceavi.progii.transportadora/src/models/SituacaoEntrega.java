@@ -1,5 +1,5 @@
 package models;
-
+//tipos de situacao para entrega
 public enum SituacaoEntrega {
     SOLICITADA_COLETA("Solicitada Entrega"),
     AGUARDANDO_CARREGAMENTO("Aguardando Carregamento"),

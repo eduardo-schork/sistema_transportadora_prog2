@@ -1,7 +1,8 @@
 package models;
 
 import java.util.ArrayList;
-
+//classe entrega possui uma lista de TrackingEntrega, que representam um rastreamento das entregas
+// uma lista de volumes, são os itens da entrega
 public class Entrega {
 
     private int id;

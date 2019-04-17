@@ -10,7 +10,7 @@ import views.forms.FormVolume;
 public class VolumeController extends BaseController {
 
     @Override
-    public boolean add() {
+    public boolean openInsertionFrom() {
         FormVolume view = new FormVolume();
         view.setResizable(false);
         view.setLocationRelativeTo(null);
@@ -19,7 +19,7 @@ public class VolumeController extends BaseController {
     }
 
     @Override
-    public boolean edit(int id) {
+    public boolean openEditionForm(int id) {
         FormVolume view = new FormVolume();
         view.setResizable(false);
         view.setLocationRelativeTo(null);
@@ -43,12 +43,12 @@ public class VolumeController extends BaseController {
     }
 
     @Override
-    public boolean addPost() {
+    public boolean insertObject() {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
     @Override
-    public boolean editPost() {
+    public boolean editObject() {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
