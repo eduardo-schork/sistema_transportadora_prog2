@@ -1,5 +1,6 @@
 package views.forms;
 
+import controllers.VolumeController;
 import java.awt.Dimension;
 import java.awt.Font;
 import java.awt.GridBagConstraints;
@@ -31,7 +32,7 @@ public class FormVolume extends BaseForm {
     private LayoutManager layout;
 
     public FormVolume() {
-        super("Formulário Volume", new Dimension(400, 250));
+        super("Formulário Volume", new Dimension(400, 250), new VolumeController());
 
         initComponents();
         addComponents();

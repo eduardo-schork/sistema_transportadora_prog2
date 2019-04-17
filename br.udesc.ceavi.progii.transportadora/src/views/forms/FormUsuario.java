@@ -1,5 +1,6 @@
 package views.forms;
 
+import controllers.UsuarioController;
 import java.awt.Dimension;
 import java.awt.Font;
 import java.awt.GridBagConstraints;
@@ -34,7 +35,7 @@ public class FormUsuario extends BaseForm {
     private LayoutManager layout;
 
     public FormUsuario() {
-        super("Formulário Usuário", new Dimension(450, 300));
+        super("Formulário Usuário", new Dimension(450, 300), new UsuarioController());
 
         initComponents();
         addComponents();

@@ -1,5 +1,6 @@
 package views.forms;
 
+import controllers.TransportadoraRedespachoController;
 import java.awt.Dimension;
 import java.awt.Font;
 import java.awt.GridBagConstraints;
@@ -40,7 +41,7 @@ public class FormTransRedespacho extends BaseForm {
     private LayoutManager layout;
 
     public FormTransRedespacho() {
-        super("Formulário Transportadora Redespacho", new Dimension(400, 400));
+        super("Formulário Transportadora Redespacho", new Dimension(400, 400), new TransportadoraRedespachoController());
 
         initComponents();
         addComponents();

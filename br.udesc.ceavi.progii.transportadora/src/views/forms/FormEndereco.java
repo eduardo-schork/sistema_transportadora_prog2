@@ -1,5 +1,6 @@
 package views.forms;
 
+import controllers.EnderecoController;
 import java.awt.Dimension;
 import java.awt.Font;
 import java.awt.GridBagConstraints;
@@ -39,7 +40,7 @@ public class FormEndereco extends BaseForm {
     private LayoutManager layout;
 
     public FormEndereco() {
-        super("Formulário Endereço", new Dimension(450, 350));
+        super("Formulário Endereço", new Dimension(450, 350), new EnderecoController());
 
         initComponents();
         addComponents();

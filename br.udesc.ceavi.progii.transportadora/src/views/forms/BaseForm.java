@@ -19,20 +19,20 @@ public class BaseForm extends JFrame {
     private LayoutManager layout;
     private Dimension dimensao;
 
-    public BaseForm(String titulo, Dimension dimensao) {
+    public BaseForm(String titulo, Dimension dimensao, BaseController controller) {
         super(titulo);
 
         this.dimensao = dimensao;
 
-        initComponents();
+        initComponents(controller);
         addComponents();
     }
 
-    private void initComponents() {
+    private void initComponents(BaseController controller) {
         basePanel = new JPanel();
         this.setSize(dimensao);
 
-        formPanel = new FormPanel(this);
+        formPanel = new FormPanel(this, controller);
 
         layout = new BorderLayout();
         basePanel.setLayout(layout);

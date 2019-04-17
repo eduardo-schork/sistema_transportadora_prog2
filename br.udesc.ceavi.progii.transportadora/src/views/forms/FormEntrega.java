@@ -1,5 +1,6 @@
 package views.forms;
 
+import controllers.EntregaController;
 import java.awt.Dimension;
 import java.awt.Font;
 import java.awt.GridBagConstraints;
@@ -42,7 +43,7 @@ public class FormEntrega extends BaseForm {
     private LayoutManager layout;
 
     public FormEntrega() {
-        super("Formulário Entrega", new Dimension(750, 550));
+        super("Formulário Entrega", new Dimension(750, 550), new EntregaController());
 
         initComponents();
         addComponents();

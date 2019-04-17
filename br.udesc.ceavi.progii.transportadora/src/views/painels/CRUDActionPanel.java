@@ -5,6 +5,7 @@ import java.awt.Container;
 import java.awt.Dimension;
 import java.awt.FlowLayout;
 import java.awt.LayoutManager;
+import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
@@ -49,12 +50,14 @@ public class CRUDActionPanel extends JPanel {
 
         btNovo = new JButton("Adicionar");
         btNovo.setSize(dimensaoBotao);
+        btNovo.setIcon(new ImageIcon(Class.class.getResource("/views/icons/addIcon.png")));
         btNovo.addActionListener((e) -> {
             controller.add();
         });
 
         btEditar = new JButton("Editar");
         btEditar.setSize(dimensaoBotao);
+        btEditar.setIcon(new ImageIcon(Class.class.getResource("/views/icons/editIcon.png")));
         btEditar.addActionListener((e) -> {
             int idSelecionada = this.getIdRowTable();
             if (idSelecionada > 0) {
@@ -63,6 +66,7 @@ public class CRUDActionPanel extends JPanel {
         });
         btVisualizar = new JButton("Visualizar");
         btVisualizar.setSize(dimensaoBotao);
+        btVisualizar.setIcon(new ImageIcon(Class.class.getResource("/views/icons/findIcon.png")));
         btVisualizar.addActionListener((e) -> {
             int idSelecionada = this.getIdRowTable();
             if (idSelecionada > 0) {
@@ -72,6 +76,7 @@ public class CRUDActionPanel extends JPanel {
 
         btExcluir = new JButton("Excluir");
         btExcluir.setSize(dimensaoBotao);
+        btExcluir.setIcon(new ImageIcon(Class.class.getResource("/views/icons/removeIcon.png")));
         btExcluir.addActionListener((e) -> {
             int idSelecionada = this.getIdRowTable();
             if (idSelecionada > 0) {
@@ -107,6 +112,10 @@ public class CRUDActionPanel extends JPanel {
         return btExcluir;
     }
 
+    /**
+     * Retorna o id da linha selecionada para ser usado 
+     * para carregar o modelo em questao.
+     */
     public int getIdRowTable() {
         int column = 0;
         int row = this.tableGrid.getSelectedRow();

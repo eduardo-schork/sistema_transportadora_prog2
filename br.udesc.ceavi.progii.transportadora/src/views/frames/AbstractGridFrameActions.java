@@ -37,7 +37,7 @@ public class AbstractGridFrameActions extends JFrame{
     /**
      * Scroll para table
      */
-    private JPanel scrollActions;
+    private JPanel panelActions;
     private JScrollPane scrollTable;
     
     public AbstractGridFrameActions(BaseController controller, String title, AbstractTableModel tableAppend) {
@@ -58,13 +58,13 @@ public class AbstractGridFrameActions extends JFrame{
         tableObjetos = new JTable(tableModel);
         scrollTable = new JScrollPane(tableObjetos);
         CRUDActionPanel crudActions = new CRUDActionPanel(this, controller, tableObjetos);
-        scrollActions = new JPanel();
-        scrollActions.add(crudActions);
+        panelActions = new JPanel();
+        panelActions.add(crudActions);
     }
 
     private void addComponents() {
         Container container = this.getContentPane();
-        container.add(scrollActions);
+        container.add(panelActions);
         container.add(scrollTable);
     }
 }

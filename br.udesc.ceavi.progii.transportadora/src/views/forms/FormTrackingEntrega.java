@@ -1,5 +1,6 @@
 package views.forms;
 
+import controllers.TrackingEntregaController;
 import java.awt.Dimension;
 import java.awt.Font;
 import java.awt.GridBagConstraints;
@@ -33,7 +34,7 @@ public class FormTrackingEntrega extends BaseForm {
     private LayoutManager layout;
 
     public FormTrackingEntrega() {
-        super("Formulário Tracking de Entrega", new Dimension(400, 250));
+        super("Formulário Tracking de Entrega", new Dimension(400, 250), new TrackingEntregaController());
 
         initComponents();
         addComponents();

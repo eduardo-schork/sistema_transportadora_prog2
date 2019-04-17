@@ -1,5 +1,6 @@
 package views.forms;
 
+import controllers.TrackingCarregamentoController;
 import java.awt.Dimension;
 import java.awt.Font;
 import java.awt.GridBagConstraints;
@@ -32,7 +33,7 @@ public class FormTrakingCarregamento extends BaseForm {
     private LayoutManager layout;
 
     public FormTrakingCarregamento() {
-        super("Formulário Tracking de Carregamento", new Dimension(400, 250));
+        super("Formulário Tracking de Carregamento", new Dimension(400, 250), new TrackingCarregamentoController());
 
         initComponents();
         addComponents();

@@ -1,5 +1,6 @@
 package views.forms;
 
+import controllers.VeiculoController;
 import java.awt.Dimension;
 import java.awt.Font;
 import java.awt.GridBagConstraints;
@@ -35,7 +36,7 @@ public class FormVeiculo extends BaseForm {
     private LayoutManager layout;
 
     public FormVeiculo() {
-        super("Formulário Veiculo", new Dimension(450, 300));
+        super("Formulário Veiculo", new Dimension(450, 300), new VeiculoController());
 
         initComponents();
         addComponents();

@@ -5,6 +5,7 @@
  */
 package views.forms;
 
+import controllers.CarregamentoController;
 import java.awt.Dimension;
 import java.awt.Font;
 import java.awt.GridBagConstraints;
@@ -50,7 +51,7 @@ public class FormCarregamento extends BaseForm {
     private LayoutManager layout;
 
     public FormCarregamento() {
-        super("Formulário Carregamento", new Dimension(400, 500));
+        super("Formulário Carregamento", new Dimension(400, 500), new CarregamentoController());
 
         initComponents();
         addComponents();

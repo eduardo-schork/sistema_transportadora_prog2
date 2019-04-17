@@ -1,5 +1,6 @@
 package views.forms;
 
+import controllers.FilialController;
 import java.awt.Dimension;
 import java.awt.Font;
 import java.awt.GridBagConstraints;
@@ -34,7 +35,7 @@ public class FormFilial extends BaseForm {
     private LayoutManager layout;
 
     public FormFilial() {
-        super("Formulário Filial", new Dimension(400, 200));
+        super("Formulário Filial", new Dimension(400, 200), new FilialController());
 
         initComponents();
         addComponents();

@@ -1,5 +1,6 @@
 package views.forms;
 
+import controllers.PessoaController;
 import java.awt.Dimension;
 import java.awt.Font;
 import java.awt.GridBagConstraints;
@@ -32,7 +33,7 @@ public class FormPessoaFisica extends BaseForm {
     private LayoutManager layout;
 
     public FormPessoaFisica() {
-        super("Formulário Pessoa Física", new Dimension(400, 260));
+        super("Formulário Pessoa Física", new Dimension(400, 260), new PessoaController());
 
         initComponents();
         addComponents();
