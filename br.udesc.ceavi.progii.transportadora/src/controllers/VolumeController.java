@@ -5,17 +5,25 @@
  */
 package controllers;
 
-public class VolumeController extends BaseController{
+import views.forms.FormVolume;
+
+public class VolumeController extends BaseController {
 
     @Override
     public boolean add() {
-        System.out.println("ADD");
+        FormVolume view = new FormVolume();
+        view.setResizable(false);
+        view.setLocationRelativeTo(null);
+        view.run();
         return true;
     }
 
     @Override
     public boolean edit(int id) {
-        System.out.println("EDIT");
+        FormVolume view = new FormVolume();
+        view.setResizable(false);
+        view.setLocationRelativeTo(null);
+        view.run();
         return true;
     }
 
@@ -27,7 +35,10 @@ public class VolumeController extends BaseController{
 
     @Override
     public boolean view(int id) {
-       System.out.println("VIEW");
+        FormVolume view = new FormVolume();
+        view.setResizable(false);
+        view.setLocationRelativeTo(null);
+        view.run();
         return true;
     }
 
@@ -40,5 +51,5 @@ public class VolumeController extends BaseController{
     public boolean editPost() {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
-    
+
 }

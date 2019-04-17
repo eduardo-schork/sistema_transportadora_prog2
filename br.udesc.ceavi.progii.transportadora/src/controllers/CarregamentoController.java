@@ -11,11 +11,13 @@ import views.forms.FormCarregamento;
  *
  * @author Lucas Dolsan
  */
-public class CarregamentoController extends BaseController{
+public class CarregamentoController extends BaseController {
 
     @Override
     public boolean add() {
         FormCarregamento view = new FormCarregamento();
+        view.setResizable(false);
+        view.setLocationRelativeTo(null);
         view.run();
         return true;
     }
@@ -23,6 +25,8 @@ public class CarregamentoController extends BaseController{
     @Override
     public boolean edit(int id) {
         FormCarregamento view = new FormCarregamento();
+        view.setResizable(false);
+        view.setLocationRelativeTo(null);
         view.run();
         return true;
     }
@@ -35,7 +39,10 @@ public class CarregamentoController extends BaseController{
 
     @Override
     public boolean view(int id) {
-       System.out.println("VIEW");
+        FormCarregamento view = new FormCarregamento();
+        view.setResizable(false);
+        view.setLocationRelativeTo(null);
+        view.run();
         return true;
     }
 
@@ -48,5 +55,5 @@ public class CarregamentoController extends BaseController{
     public boolean editPost() {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
-    
+
 }

@@ -5,20 +5,30 @@
  */
 package controllers;
 
+import views.forms.FormFilial;
+
 /**
  *
  * @author André Cristen
  */
-public class FilialController extends BaseController{
+public class FilialController extends BaseController {
 
     @Override
     public boolean add() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        FormFilial view = new FormFilial();
+        view.setResizable(false);
+        view.setLocationRelativeTo(null);
+        view.run();
+        return true;
     }
 
     @Override
     public boolean addPost() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        FormFilial view = new FormFilial();
+        view.setResizable(false);
+        view.setLocationRelativeTo(null);
+        view.run();
+        return true;
     }
 
     @Override
@@ -38,7 +48,11 @@ public class FilialController extends BaseController{
 
     @Override
     public boolean view(int id) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        FormFilial view = new FormFilial();
+        view.setResizable(false);
+        view.setLocationRelativeTo(null);
+        view.run();
+        return true;
     }
-    
+
 }

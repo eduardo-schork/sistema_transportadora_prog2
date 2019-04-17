@@ -5,21 +5,29 @@
  */
 package controllers;
 
+import views.forms.FormVeiculo;
+
 /**
  *
  * @author André Cristen
  */
-public class VeiculoController extends BaseController{
+public class VeiculoController extends BaseController {
 
     @Override
     public boolean add() {
-        System.out.println("ADD");
+        FormVeiculo view = new FormVeiculo();
+        view.setResizable(false);
+        view.setLocationRelativeTo(null);
+        view.run();
         return true;
     }
 
     @Override
     public boolean edit(int id) {
-        System.out.println("EDIT");
+       FormVeiculo view = new FormVeiculo();
+        view.setResizable(false);
+        view.setLocationRelativeTo(null);
+        view.run();
         return true;
     }
 
@@ -31,7 +39,10 @@ public class VeiculoController extends BaseController{
 
     @Override
     public boolean view(int id) {
-       System.out.println("VIEW");
+        FormVeiculo view = new FormVeiculo();
+        view.setResizable(false);
+        view.setLocationRelativeTo(null);
+        view.run();
         return true;
     }
 
@@ -44,7 +55,5 @@ public class VeiculoController extends BaseController{
     public boolean editPost() {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
-    
-    
-    
+
 }

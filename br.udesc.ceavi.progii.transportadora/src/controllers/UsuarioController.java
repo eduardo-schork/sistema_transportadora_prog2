@@ -4,21 +4,30 @@
  * and open the template in the editor.
  */
 package controllers;
+
+import views.forms.FormUsuario;
+
 /**
  *
  * @author Lucas Levi Gonçalves
  */
-public class UsuarioController extends BaseController{
+public class UsuarioController extends BaseController {
 
     @Override
     public boolean add() {
-        System.out.println("ADD");
+        FormUsuario view = new FormUsuario();
+        view.setResizable(false);
+        view.setLocationRelativeTo(null);
+        view.run();
         return true;
     }
 
     @Override
     public boolean edit(int id) {
-        System.out.println("EDIT");
+        FormUsuario view = new FormUsuario();
+        view.setResizable(false);
+        view.setLocationRelativeTo(null);
+        view.run();
         return true;
     }
 
@@ -30,7 +39,10 @@ public class UsuarioController extends BaseController{
 
     @Override
     public boolean view(int id) {
-       System.out.println("VIEW");
+        FormUsuario view = new FormUsuario();
+        view.setResizable(false);
+        view.setLocationRelativeTo(null);
+        view.run();
         return true;
     }
 
@@ -43,5 +55,5 @@ public class UsuarioController extends BaseController{
     public boolean editPost() {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
-    
+
 }

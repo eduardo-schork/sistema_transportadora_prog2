@@ -8,26 +8,34 @@ package controllers;
 import java.util.ArrayList;
 import java.util.List;
 import models.Endereco;
+import views.forms.FormTransRedespacho;
 
 /**
  *
  * @author Lucas Dolsan
  */
-public class TransportadoraRedespachoController extends BaseController{
-    
-    
-    public List<Endereco> getAllEnderecos(){
+public class TransportadoraRedespachoController extends BaseController {
+
+    public List<Endereco> getAllEnderecos() {
         return new ArrayList<Endereco>();
     }
 
     @Override
     public boolean add() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        FormTransRedespacho view = new FormTransRedespacho();
+        view.setResizable(false);
+        view.setLocationRelativeTo(null);
+        view.run();
+        return true;
     }
 
     @Override
     public boolean edit(int id) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        FormTransRedespacho view = new FormTransRedespacho();
+        view.setResizable(false);
+        view.setLocationRelativeTo(null);
+        view.run();
+        return true;
     }
 
     @Override
@@ -37,7 +45,11 @@ public class TransportadoraRedespachoController extends BaseController{
 
     @Override
     public boolean view(int id) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        FormTransRedespacho view = new FormTransRedespacho();
+        view.setResizable(false);
+        view.setLocationRelativeTo(null);
+        view.run();
+        return true;
     }
 
     @Override

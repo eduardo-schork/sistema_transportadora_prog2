@@ -5,15 +5,21 @@
  */
 package controllers;
 
+import views.forms.FormEntrega;
+
 /**
  *
  * @author André Cristen
  */
-public class EntregaController extends BaseController{
+public class EntregaController extends BaseController {
 
     @Override
     public boolean add() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        FormEntrega view = new FormEntrega();
+        view.setResizable(false);
+        view.setLocationRelativeTo(null);
+        view.run();
+        return true;
     }
 
     @Override
@@ -23,7 +29,11 @@ public class EntregaController extends BaseController{
 
     @Override
     public boolean edit(int id) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        FormEntrega view = new FormEntrega();
+        view.setResizable(false);
+        view.setLocationRelativeTo(null);
+        view.run();
+        return true;
     }
 
     @Override
@@ -38,7 +48,11 @@ public class EntregaController extends BaseController{
 
     @Override
     public boolean view(int id) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        FormEntrega view = new FormEntrega();
+        view.setResizable(false);
+        view.setLocationRelativeTo(null);
+        view.run();
+        return true;
     }
-    
+
 }
