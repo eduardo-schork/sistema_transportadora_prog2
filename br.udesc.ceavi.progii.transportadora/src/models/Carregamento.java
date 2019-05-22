@@ -19,16 +19,18 @@ import javax.persistence.Table;
 public class Carregamento {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    @Column(name="pk_carregamento")
+    @Column(name="car_id")
     private int id;
     
-//     @OneToMany(cascade = CascadeType.ALL,orphanRemoval = true)
+//    @ManyToMany(cascade = CascadeType.ALL)
 //    private ArrayList<Entrega> entregas;
     
     @ManyToOne
+    @JoinColumn(name = "car_end_saida_id", referencedColumnName = "end_id")
     private Endereco enderecoSaida;
     
     @ManyToOne
+    @JoinColumn(name = "car_end_chegada_id", referencedColumnName = "end_id")
     private Endereco enderecoChegada;
 
     public int getId() {

@@ -10,21 +10,21 @@ import javax.persistence.*;
 public class Endereco {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    @Column(name = "pk_endereco")
+    @Column(name = "end_id")
     private int id;
-    @Column(name = "numero_end")
+    @Column(name = "end_num")
     private int numero;
-    @Column(name = "cep_end")
+    @Column(name = "end_cep")
     private int cep;
-    @Column(name = "rua_end")
+    @Column(name = "end_rua")
     private String rua;
-    @Column(name = "bairro_end")
+    @Column(name = "end_bairro")
     private String bairro;
-    @Column(name = "cidade_end")
+    @Column(name = "end_cidade")
     private String cidade;
-    @Column(name = "uf_end")
+    @Column(name = "end_uf")
     private String uf;
-    @Column(name = "pais_end")
+    @Column(name = "end_pais")
     private String pais;
 
     public int getId() {

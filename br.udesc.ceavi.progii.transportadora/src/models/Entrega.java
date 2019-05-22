@@ -9,24 +9,25 @@ import javax.persistence.*;
 public class Entrega {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    @Column(name = "pk_entrega")
+    @Column(name = "ent_id")
     private int id;
     
 //    @OneToMany(cascade = CascadeType.ALL,orphanRemoval = true)
 //    private ArrayList<TrackingEntrega> movimentacoes;
     
     @OneToOne(cascade = CascadeType.ALL)
-    @JoinColumn(name = "endereco_destino_ent", referencedColumnName = "pk_endereco")
+    @JoinColumn(name = "ent_endereco_destino", referencedColumnName = "end_id")
     private Endereco enderecoDestino;
     
-    @Column(name = "situacao_ent")
+    @Column(name = "end_situacao")
     private int situacao;
     
 //    @OneToMany(cascade = CascadeType.ALL,orphanRemoval = true)
 //    private ArrayList<Volume> volumes;
     
-//    @ManyToMany(cascade = CascadeType.ALL)
-//    private TransportadoraRedespacho redespacho;
+    @ManyToOne
+    @JoinColumn(name = "tra_red_id", nullable= false)
+    private TransportadoraRedespacho redespacho;
 
     public int getId() {
         return id;
@@ -68,13 +69,13 @@ public class Entrega {
 //        this.volumes = volumes;
 //    }
 
-//    public TransportadoraRedespacho getRedespacho() {
-//        return redespacho;
-//    }
-//
-//    public void setRedespacho(TransportadoraRedespacho redespacho) {
-//        this.redespacho = redespacho;
-//    }
+    public TransportadoraRedespacho getRedespacho() {
+        return redespacho;
+    }
+
+    public void setRedespacho(TransportadoraRedespacho redespacho) {
+        this.redespacho = redespacho;
+    }
 
     
 }

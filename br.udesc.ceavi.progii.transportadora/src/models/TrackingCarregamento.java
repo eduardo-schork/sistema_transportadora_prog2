@@ -6,6 +6,7 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 import javax.persistence.Temporal;
@@ -16,16 +17,18 @@ import javax.persistence.TemporalType;
 public class TrackingCarregamento {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    @Column(name="pk_tracking_carregamento")
+    @Column(name="tra_car_id")
     private int id;
     
     @ManyToOne
+    @JoinColumn(name = "car_id", referencedColumnName = "end_id")
     private Carregamento carregamento;
     
-    @Column(name="situacao_codigo_tca")
+    @Column(name="tra_car_situacao")
     private int situacaoCodigo;
     
     @Temporal (TemporalType.DATE)
+    @Column(name="tra_car_data")
     private Date data;
 
     public int getId() {

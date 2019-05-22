@@ -9,19 +9,22 @@ public class TrackingEntrega {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    @Column(name = "pk_tracking_entrega")
+    @Column(name = "tra_ent_id")
     private int id;
     
     @OneToOne(cascade=CascadeType.ALL)
+    @JoinColumn(name = "ent_id", referencedColumnName = "ent_id")
     private Entrega entrega;
     
     @OneToOne(cascade=CascadeType.ALL)
+    @JoinColumn(name = "usu_id", referencedColumnName = "usu_id")
     private Usuario usuario;
     
     @Enumerated(EnumType.STRING)
     private SituacaoEntrega situacaoCodigo;
     
     @Temporal(TemporalType.DATE) 
+    @Column(name="tra_ent_data")
     private Date data;
     
 

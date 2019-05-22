@@ -190,7 +190,7 @@ public class Menu extends JFrame {
                     veiculo.setId(i);
                     veiculo.setPlaca("PLACA-" + i);
                     //veiculo.setStatus(10*3+i);
-                    veiculo.setTipo(i * 10);
+                    //veiculo.setTipo(i * 10);
                     veiculos.add(veiculo);
                 }
                 String[] colunasVeiculos;

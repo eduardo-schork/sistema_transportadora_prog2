@@ -28,11 +28,7 @@ public class Home implements Runnable {
 
    public static void main(String[] args) throws Exception {
        Home tela = new Home();
-       Pessoa pessoa = new Pessoa();
-       pessoa.setNome("Alou");
-       pessoa.setSobrenome("Cristen");
        JPADAO dao = new JPADAO();
-       dao.persist(pessoa);
        Thread thread = new Thread(tela);
        thread.start();
     }

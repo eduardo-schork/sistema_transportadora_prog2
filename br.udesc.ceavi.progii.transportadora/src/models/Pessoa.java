@@ -17,13 +17,13 @@ public class Pessoa {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    @Column(name="pk_pessoa")
+    @Column(name="pes_id")
     private int id;
 
-    @Column(name="nome_pes")
+    @Column(name="pes_nome")
     private String nome;
     
-    @Column(name="sobrenome_pes")
+    @Column(name="pes_sobrenome")
     private String sobrenome;
 
     public int getId() {

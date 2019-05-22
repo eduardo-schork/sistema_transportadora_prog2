@@ -7,11 +7,11 @@ public class TransportadoraRedespacho {
     
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    @Column(name ="pk_transportadora_redespacho")
+    @Column(name ="tra_red_id")
     private int id;
     
     @OneToOne
-    @JoinColumn(name = "fk_pessoa_juridica", referencedColumnName = "pk_pessoa_juridica")
+    @JoinColumn(name = "pes_jur_id", referencedColumnName = "pes_id")
     private PessoaJuridica pessoaJuridica;
 
     public int getId() {

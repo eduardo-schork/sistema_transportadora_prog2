@@ -12,16 +12,16 @@ import javax.persistence.Table;
 public class Volume {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    @Column(name="pk_volume")
+    @Column(name="vol_id")
     private int id;
     
-    @Column(name="peso_liquido_vol")
+    @Column(name="vol_peso_liquido")
     private float pesoLiquido;
     
-    @Column(name="peso_bruto_vol")
+    @Column(name="vol_peso_bruto")
     private float pesoBruto;
     
-    @Column(name="cubagem_vol")
+    @Column(name="vol_cubagem")
     private double cubagem;
 
     public int getId() {

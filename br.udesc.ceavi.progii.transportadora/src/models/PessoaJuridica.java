@@ -5,24 +5,50 @@ package models;
 import java.io.Serializable;
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
 @Entity
 @Table(name="pessoa_juridica")
-public class PessoaJuridica extends Pessoa implements Serializable{
+public class PessoaJuridica{
     
-    public PessoaJuridica() {
-    }
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    @Column(name="pes_jur_id")
+    private int id;
     
-    @Column(name="nome_fan_pesjur")
+    @ManyToOne
+    @JoinColumn(name = "pes_id", referencedColumnName = "pes_id")
+    private Pessoa pessoa;
+    
+    @Column(name="pes_jur_nome_fantasia")
     private String nomeFantasia;
     
-    @Column(name="cnpj_pesjur")
+    @Column(name="pes_jur_cnpj")
     private long cnpj;
     
-    @Column(name="ie_pesjur")
+    @Column(name="pes_jur_ie")
     private String ie;
-    
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public Pessoa getPessoa() {
+        return pessoa;
+    }
+
+    public void setPessoa(Pessoa pessoa) {
+        this.pessoa = pessoa;
+    }
 
     public String getNomeFantasia() {
         return nomeFantasia;

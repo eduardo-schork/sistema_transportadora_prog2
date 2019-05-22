@@ -3,6 +3,8 @@ package models;
 import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.EnumType;
+import javax.persistence.Enumerated;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
@@ -15,20 +17,21 @@ import javax.persistence.Table;
 public class Usuario {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    @Column(name="pk_usuario")
+    @Column(name="usu_id")
     private int id;
     
     @OneToOne(cascade = CascadeType.ALL)
-    @JoinColumn(name = "fk_pessoa", referencedColumnName = "pk_pessoa")
+    @JoinColumn(name = "pes_id", referencedColumnName = "pes_id")
     private Pessoa pessoa;
     
-    @Column(name="tipo_usu")
-    private int tipo;
+    @Enumerated(EnumType.STRING)
+    @Column(name="usu_tipo")
+    private TipoPessoa tipo;
     
-    @Column(name="login_usu")
+    @Column(name="usu_login")
     private String login;
     
-    @Column(name="senha_usu")
+    @Column(name="usu_senha")
     private String senha;
 
     public int getId() {
@@ -43,11 +46,11 @@ public class Usuario {
         this.pessoa = pessoa;
     }
 
-    public int getTipo() {
+    public TipoPessoa getTipo() {
         return tipo;
     }
 
-    public void setTipo(int tipo) {
+    public void setTipo(TipoPessoa tipo) {
         this.tipo = tipo;
     }
 

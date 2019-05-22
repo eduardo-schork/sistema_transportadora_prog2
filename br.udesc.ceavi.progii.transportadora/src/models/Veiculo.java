@@ -7,17 +7,19 @@ import javax.persistence.*;
 public class Veiculo {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    @Column(name = "pk_veiculo")
+    @Column(name = "vei_id")
     private int id;
     
-    @Column(name = "placa_vei")
+    @Column(name = "vei_placa")
     private String placa;
     
     @Temporal(TemporalType.DATE) 
+    @Column(name="vei_data_aquisicao")
     private Date dataAquisicao;
     
-    @Column(name = "tipo_vei")
-    private int tipo;
+    @Enumerated(EnumType.STRING)
+    @Column(name = "vei_tipo")
+    private TipoVeiculo tipo;
   
     @Enumerated(EnumType.STRING)
     private StatusVeiculo status;
@@ -46,11 +48,11 @@ public class Veiculo {
         this.dataAquisicao = dataAquisicao;
     }
 
-    public int getTipo() {
+    public TipoVeiculo getTipo() {
         return tipo;
     }
 
-    public void setTipo(int tipo) {
+    public void setTipo(TipoVeiculo tipo) {
         this.tipo = tipo;
     }
 

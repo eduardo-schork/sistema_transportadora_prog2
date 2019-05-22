@@ -17,14 +17,14 @@ public class Filial {
     
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    @Column(name="pk_filial")
+    @Column(name="fil_id")
     private int id;
 
-    @Column(name="nome_fil")
+    @Column(name="fil_nome")
     private String nome;
 
     @ManyToOne
-    @JoinColumn (name = "pk_end")
+    @JoinColumn (name = "end_id")
     private Endereco endereco;
 
     public int getId() {
