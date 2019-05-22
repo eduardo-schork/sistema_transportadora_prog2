@@ -2,15 +2,29 @@
 package models;
 // classe endereço representa uma localidade no planeta. utilizada como localização
 // de tranportadora, destino de carregamento etc
-public class Endereco {
 
+import javax.persistence.*;
+
+@Entity
+@Table(name="endereco")
+public class Endereco {
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    @Column(name = "pk_endereco")
     private int id;
+    @Column(name = "numero_end")
     private int numero;
+    @Column(name = "cep_end")
     private int cep;
+    @Column(name = "rua_end")
     private String rua;
+    @Column(name = "bairro_end")
     private String bairro;
+    @Column(name = "cidade_end")
     private String cidade;
+    @Column(name = "uf_end")
     private String uf;
+    @Column(name = "pais_end")
     private String pais;
 
     public int getId() {
