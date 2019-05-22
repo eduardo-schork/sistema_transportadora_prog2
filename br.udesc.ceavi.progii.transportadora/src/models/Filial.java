@@ -1,12 +1,30 @@
 package models;
 
 //representa uma filial da empresa de transporte
-public class Filial {
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
+import javax.persistence.Table;
+
+@Entity
+@Table(name="filial")
+public class Filial {
+    
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    @Column(name="pk_filial")
     private int id;
 
+    @Column(name="nome_fil")
     private String nome;
 
+    @ManyToOne
+    @JoinColumn (name = "pk_end")
     private Endereco endereco;
 
     public int getId() {
