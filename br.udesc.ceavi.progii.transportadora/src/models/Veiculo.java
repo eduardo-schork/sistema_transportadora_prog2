@@ -1,15 +1,27 @@
 package models;
 import java.sql.Date;
+import javax.persistence.*;
 
+@Entity
+@Table(name = "veiculo")
 public class Veiculo {
-    
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    @Column(name = "pk_veiculo")
     private int id;
     
+    @Column(name = "placa_vei")
     private String placa;
     
+    @Temporal(TemporalType.DATE)
+    @Column(name = "data_aquisicao_vei")
     private Date dataAquisicao;
+    
+    @Column(name = "tipo_vei")
     private int tipo;
   
+    @Enumerated(EnumType.STRING)
+    @Column(name = "status")
     private int status;
 
     public int getId() {
