@@ -189,7 +189,7 @@ public class Menu extends JFrame {
                     Veiculo veiculo = new Veiculo();
                     veiculo.setId(i);
                     veiculo.setPlaca("PLACA-" + i);
-                    veiculo.setStatus(10*3+i);
+                    //veiculo.setStatus(10*3+i);
                     veiculo.setTipo(i * 10);
                     veiculos.add(veiculo);
                 }
@@ -254,7 +254,7 @@ public class Menu extends JFrame {
                     Entrega entrega = new Entrega();
                     entrega.setId(i);
                     entrega.setEnderecoDestino(new Endereco());
-                    entrega.setRedespacho(new TransportadoraRedespacho());
+//                    entrega.setRedespacho(new TransportadoraRedespacho());
                     entregas.add(entrega);
                 }
                 String[] colunasEntregas;

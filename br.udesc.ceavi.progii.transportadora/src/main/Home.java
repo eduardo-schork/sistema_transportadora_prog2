@@ -5,10 +5,15 @@
  */
 package main;
 
+import connections.DAO;
+import connections.JPADAO;
 import java.util.ArrayList;
 import java.util.List;
 import javax.swing.JFrame;
+import models.Carregamento;
 import models.Endereco;
+import models.Pessoa;
+import models.Usuario;
 import models.Veiculo;
 import views.frames.InstanceGridFrame;
 import views.grids.EnderecoGrid;
@@ -21,8 +26,13 @@ import views.grids.VeiculoGrid;
  */
 public class Home implements Runnable {
 
-   public static void main(String[] args) {
+   public static void main(String[] args) throws Exception {
        Home tela = new Home();
+       Pessoa pessoa = new Pessoa();
+       pessoa.setNome("Alou");
+       pessoa.setSobrenome("Cristen");
+       JPADAO dao = new JPADAO();
+       dao.persist(pessoa);
        Thread thread = new Thread(tela);
        thread.start();
     }

@@ -1,5 +1,5 @@
 package models;
-import java.sql.Date;
+import java.util.Date;
 import javax.persistence.*;
 
 @Entity
@@ -13,16 +13,14 @@ public class Veiculo {
     @Column(name = "placa_vei")
     private String placa;
     
-    @Temporal(TemporalType.DATE)
-    @Column(name = "data_aquisicao_vei")
+    @Temporal(TemporalType.DATE) 
     private Date dataAquisicao;
     
     @Column(name = "tipo_vei")
     private int tipo;
   
     @Enumerated(EnumType.STRING)
-    @Column(name = "status")
-    private int status;
+    private StatusVeiculo status;
 
     public int getId() {
         return id;
@@ -56,11 +54,11 @@ public class Veiculo {
         this.tipo = tipo;
     }
 
-    public int getStatus() {
+    public StatusVeiculo getStatus() {
         return status;
     }
 
-    public void setStatus(int status) {
+    public void setStatus(StatusVeiculo status) {
         this.status = status;
     }
     

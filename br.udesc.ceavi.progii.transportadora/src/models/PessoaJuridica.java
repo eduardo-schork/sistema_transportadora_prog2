@@ -1,10 +1,28 @@
 package models;
 
 //é um tipo de pessoa. pessoa juridica, possui cnpj
-public class PessoaJuridica extends Pessoa{
+
+import java.io.Serializable;
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Table;
+
+@Entity
+@Table(name="pessoa_juridica")
+public class PessoaJuridica extends Pessoa implements Serializable{
+    
+    public PessoaJuridica() {
+    }
+    
+    @Column(name="nome_fan_pesjur")
     private String nomeFantasia;
+    
+    @Column(name="cnpj_pesjur")
     private long cnpj;
+    
+    @Column(name="ie_pesjur")
     private String ie;
+    
 
     public String getNomeFantasia() {
         return nomeFantasia;

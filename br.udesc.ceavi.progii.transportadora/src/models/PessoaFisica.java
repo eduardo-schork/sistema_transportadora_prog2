@@ -1,9 +1,25 @@
 package models;
-import java.sql.Date;
+import java.io.Serializable;
+import java.util.Date;
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Table;
+import javax.persistence.Temporal;
+import javax.persistence.TemporalType;
 
 // é um tipo de pessoa, representa pessoa fisica, possui cpf
-public class PessoaFisica extends Pessoa {
+@Entity
+@Table(name="pessoa_fisica")
+public class PessoaFisica extends Pessoa implements Serializable{
+
+    public PessoaFisica() {
+    }
+    
+    
+    @Column(name="cpf_pesfis")
     private long cpf;
+    
+    @Temporal (TemporalType.DATE)
     private Date dataNascimento;
 
     public long getCpf() {

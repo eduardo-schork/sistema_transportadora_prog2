@@ -1,6 +1,6 @@
 package models;
 
-import java.sql.Date;
+import java.util.Date;
 import javax.persistence.*;
 
 @Entity
@@ -12,20 +12,16 @@ public class TrackingEntrega {
     @Column(name = "pk_tracking_entrega")
     private int id;
     
-    @OneToOne
-    @JoinColumn(name = "fk_entrega", columnDefinition = "pk_entrea")
+    @OneToOne(cascade=CascadeType.ALL)
     private Entrega entrega;
     
-    @OneToOne
-    @JoinColumn(name = "fk_usuario", columnDefinition = "pk_usuario")
+    @OneToOne(cascade=CascadeType.ALL)
     private Usuario usuario;
     
     @Enumerated(EnumType.STRING)
-    @Column(name = "situacao_codigo_ten")
-    private int situacaoCodigo;
-
-    @Temporal(TemporalType.DATE)
-    @Column(name = "data_ten")
+    private SituacaoEntrega situacaoCodigo;
+    
+    @Temporal(TemporalType.DATE) 
     private Date data;
     
 
@@ -41,11 +37,11 @@ public class TrackingEntrega {
         this.entrega = entrega;
     }
 
-    public int getSituacaoCodigo() {
+    public SituacaoEntrega getSituacaoCodigo() {
         return situacaoCodigo;
     }
 
-    public void setSituacaoCodigo(int situacaoCodigo) {
+    public void setSituacaoCodigo(SituacaoEntrega situacaoCodigo) {
         this.situacaoCodigo = situacaoCodigo;
     }
 

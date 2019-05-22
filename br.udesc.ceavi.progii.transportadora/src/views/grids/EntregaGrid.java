@@ -29,7 +29,7 @@ public class EntregaGrid extends AbstractGrid{
             case 1:
                 return entrega.getEnderecoDestino().getId();
             case 2:
-                return entrega.getRedespacho();
+                return entrega.getId();
             default:
                 return null;
         }

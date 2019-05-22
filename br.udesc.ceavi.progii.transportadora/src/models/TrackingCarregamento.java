@@ -1,6 +1,6 @@
 package models;
 
-import java.sql.Date;
+import java.util.Date;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -26,7 +26,6 @@ public class TrackingCarregamento {
     private int situacaoCodigo;
     
     @Temporal (TemporalType.DATE)
-    @Column(name="data_tca")
     private Date data;
 
     public int getId() {
