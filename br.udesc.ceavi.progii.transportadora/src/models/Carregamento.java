@@ -1,6 +1,7 @@
 package models;
 
 import java.util.ArrayList;
+import java.util.List;
 import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -41,13 +42,13 @@ public class Carregamento {
         this.id = id;
     }
 
-//    public ArrayList<Entrega> getEntregas() {
-//        return entregas;
-//    }
-//
-//    public void setEntregas(ArrayList<Entrega> entregas) {
-//        this.entregas = entregas;
-//    }
+    public List<Entrega> getEntregas() {
+        return entregas;
+    }
+
+    public void setEntregas(List<Entrega> entregas) {
+        this.entregas = entregas;
+    }
 
     public Endereco getEnderecoSaida() {
         return enderecoSaida;

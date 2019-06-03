@@ -21,6 +21,7 @@ public class TrackingEntrega {
     private Usuario usuario;
     
     @Enumerated(EnumType.STRING)
+    @Column(name="tra_ent_situacao")
     private SituacaoEntrega situacaoCodigo;
     
     @Temporal(TemporalType.DATE) 
